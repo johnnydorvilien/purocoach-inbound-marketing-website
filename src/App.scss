@@ -48,12 +48,14 @@
 	--body: #ffffff;
 	--section: #f2f4f8;
 	--white: #ffffff;
-	--base: #333399;
+	// --base: #333399;
+	--base:rgba(48, 72, 128, 0.90);
 	--base-2: #fec15a;
 	--base-3: #308038;
 	--danger: #ca0025;
 	--body-fonts: "Poppins", sans-serif;
-	--heading-fonts: "Poppins", sans-serif;
+	--heading-fonts:Times New Roman;
+	--home-font:prata;
 	--border: #ebebeb;
 }
 
@@ -61,7 +63,8 @@ body {
 	background: var(--body);
 	font-family: var(--body-fonts);
 	color: var(--text);
-	font-size: 18px;
+	// font-size: 18px;
+	font-size: 16px;
 	line-height: 1.5;
 	font-weight: normal;
 	@include breakpoint(max-sm) {
@@ -75,7 +78,7 @@ h4,
 h5,
 h6 {
 	color: var(--title);
-	font-family: var(--heading-fonts);
+	// font-family: var(--heading-fonts);
 	font-weight: 700;
 }
 
@@ -84,6 +87,9 @@ h1 {
 }
 h2 {
 	font-size: 34px;
+	@include breakpoint(xl){
+		font-size: 30px;
+	}
 }
 h3 {
 	font-size: 28px;
@@ -97,6 +103,18 @@ h5 {
 h6 {
 	font-size: 18px;
 }
+
+img{
+	max-width: 100%;
+}
+.swiper-wrapper{
+	min-height:-webkit-fill-available!important;
+	// @include breakpoint(xl){
+	// 	min-height: 64vh !important;
+	// }
+}
+
+
 @include breakpoint(max-md) {
 	h1 {
 		font-size: 34px;
@@ -181,8 +199,11 @@ a {
 .container {
 	padding-left: 20px;
 	padding-right: 20px;
+	max-width: 1440px;
 	@include breakpoint(xl) {
-		max-width: calc(100% - 20px);
+		// max-width: calc(100% - 20px);
+		padding: 0 40px;
+		max-width: 1280px;
 	}
 	@include breakpoint(xxl) {
 		max-width: 1330px;
@@ -253,7 +274,7 @@ a {
 				color: var(--base);
 				margin-bottom: 30px;
 				@include breakpoint(xl) {
-					font-size: 31px;
+					font-size: 30px;
 				}
 			}
 		}
@@ -367,7 +388,7 @@ a {
 	background-color: var(--section);
 	border: 1px solid #ebebeb;
 	border-radius: 10px;
-	height: 48px;
+	height: 40px;
 	box-shadow: none !important;
 	&:focus {
 		background-color: var(--section);
@@ -411,6 +432,7 @@ a {
 	text-decoration: underline;
 	color: var(--title);
 }
+
 .cmn-btn {
 	background: var(--base);
 	color: var(--white);
@@ -423,7 +445,7 @@ a {
 	box-shadow: none;
 	border: none;
 	padding: 9.5px 25px;
-	border: 2px solid var(--base);
+	border: 1px solid var(--base);
 	transition: all ease 0.3s;
 	display: inline-flex;
 	justify-content: center;
@@ -462,6 +484,15 @@ a {
 			padding: 15.5px 33px;
 		}
 	}
+	@include breakpoint(xl){
+		font-size: 14px;
+		padding: 5px 15px;
+		&.btn-standard {
+			padding: 15.5px 25px;
+			height: 40px;
+			align-items: center;
+		}
+	}
 }
 .or {
 	font-weight: 400;
@@ -488,6 +519,7 @@ a {
 	background: transparent !important;
 	color: var(--title) !important;
 	display: flex;
+	height: 40px;
 	align-items: center;
 	gap: 14px;
 	justify-content: center;
@@ -550,6 +582,9 @@ a {
 	@include breakpoint(sm) {
 		width: 163px;
 	}
+	@include breakpoint(xl){
+		width: 130px;
+	}
 }
 header {
 	background: var(--white);
@@ -591,14 +626,21 @@ header {
 		color: #9d99b2;
 	}
 }
+
 .section-title {
 	text-align: center;
 	margin-bottom: 60px;
 	.title {
 		margin: 0;
 		font-weight: 600;
+		font-family: var(--body-fonts);
 		padding-bottom: 50px;
+		font-size: 50px;
 	}
+	h2{
+		font-size: 37px !important;
+	}
+	
 	@include breakpoint(max-sm) {
 		.title {
 			font-size: 20px;
@@ -611,8 +653,10 @@ header {
 	&.text-base {
 		.title {
 			color: var(--base);
+			// font-family: var(--body-fonts);
 		}
 	}
+
 	.shadow-border {
 		height: 1px;
 		background: linear-gradient(
@@ -628,6 +672,10 @@ header {
 		margin-inline: auto;
 	}
 	&.text-start {
+		h2{
+			font-size: 30px !important;
+		}
+		
 		.shadow-border {
 			margin-left: 0;
 			background: linear-gradient(
@@ -652,6 +700,7 @@ header {
 	&.text-white {
 		.title {
 			color: var(--white);
+			font-family: var(--body-fonts);
 		}
 		.shadow-border {
 			height: 1px;
@@ -697,6 +746,25 @@ header {
 			}
 		}
 	}
+	@include breakpoint(xl){
+		margin-bottom: 25px;
+		.title {
+			padding-bottom: 20px;
+		}
+		h2{
+			font-size: 32px !important;
+		}
+		&.text-start {
+			h2{
+				font-size: 25px !important;
+			}
+		}
+		&.text-white {
+			.title {
+				font-size: 32px !important;
+			}
+		}
+	}
 }
 .py-80 {
 	padding-block: 80px;
@@ -722,6 +790,9 @@ header {
 	display: flex;
 	gap: 25px;
 	flex-direction: column;
+	@include breakpoint(xl){
+		gap: 20px;
+	}
 }
 .accordion-item {
 	border: none;
@@ -735,14 +806,16 @@ header {
 			padding-block: 22px;
 			min-height: 50px;
 			box-shadow: none;
+			font-family: var(--body-fonts);
 			background: transparent !important;
-			color: var(--title);
+			color: rgba(48, 72, 128, 1);
+			// color: #ffffff;
 			white-space: initial;
 			word-break: break-word;
 			font-weight: 600;
 			font-size: 20px;
 			line-height: 155%;
-			color: var(--base);
+			// color: var(--base);
 			&::after {
 				display: none;
 			}
@@ -764,7 +837,7 @@ header {
 		}
 	}
 	.accordion-body {
-		padding: 0 23px 28px;
+		padding: 0 23px 10px;
 		font-weight: 300;
 		font-size: 12px;
 		line-height: 185%;
@@ -808,6 +881,17 @@ header {
 			}
 		}
 	}
+	@include breakpoint(xl){
+		.accordion-button {
+			padding-inline: 15px !important;
+			padding-block: 10px !important;
+			span{
+				font-size: 15px !important;
+			}
+			
+			// min-height: 100%;
+		}
+	}
 }
 .trial-banner-section {
 	display: flex;
@@ -840,6 +924,7 @@ header {
 		max-width: 699px;
 		color: var(--title);
 		.title {
+			font-family: var(--body-fonts);
 			font-size: 34px;
 			line-height: 145%;
 			color: var(--base);
@@ -912,9 +997,46 @@ header {
 		padding-top: 0;
 		margin-top: -70px;
 	}
+	@include breakpoint(xl){
+		.right-form-wrapper {
+			padding: 15px 25px 30px;
+			
+			.title {
+				font-size: 26px;
+				line-height: 115%;
+				margin-bottom: 15px;
+			}
+			.steps {
+				margin-bottom: 10px;
+				li{
+					span{
+						font-size: 15px;
+					}
+				}
+			}
+			.txt {
+				margin-bottom: 15px;
+				line-height: normal;
+				font-size: 14px;
+			}
+			.cmn-btn {
+				height: 40px;
+				align-items: center;
+				padding-block: 20px;
+			}
+			.form--control,
+			.select-item {
+				font-size: 14px;
+				height: 40px;
+			}
+		}
+	}
 }
 .gap-25px {
-	gap: 25px;
+	gap: 28px;
+	// @include breakpoint(xl){
+	// 	gap: 19px;
+	// }
 }
 .gap-15px {
 	gap: 15px;
@@ -973,6 +1095,7 @@ header {
 		}
 	}
 	.title {
+		font-family: var(--body-fonts);
 		color: var(--white);
 		margin-bottom: 20px;
 		font-weight: 600;
@@ -982,6 +1105,7 @@ header {
 		}
 	}
 	.subtitle {
+		font-family: var(--body-fonts);
 		color: var(--white);
 		font-weight: 500;
 		font-size: 22px;
@@ -1044,9 +1168,27 @@ header {
 			font-size: 20px;
 		}
 	}
+	@include breakpoint(xl){
+		.title {
+			font-size: 34px;
+		}
+		.subtitle {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+		.list{
+			gap: 10px;
+			span{
+				font-size: 15px;
+			}
+		}
+	}
 }
 .mb-20 {
 	margin-bottom: 20px;
+	@include breakpoint(xl){
+		margin-bottom: 10px
+	}
 }
 .shapes-bg {
 	position: absolute;
@@ -1057,30 +1199,33 @@ header {
 	@media screen and (min-width: 1200px) and (max-width: 1500px) {
 		bottom: 18px;
 	}
+	@include breakpoint(xl){
+		bottom: 0 !important;
+	}
 	background: radial-gradient(
 		56.97% 104.84% at 28% 27.74%,
 		#6a6ad2 0%,
-		#333399 100%
+		rgba(48, 72, 128, 0.90) 100%
 	);
 	background: -webkit-gradient(
 		56.97% 104.84% at 28% 27.74%,
 		#6a6ad2 0%,
-		#333399 100%
+		rgba(48, 72, 128, 0.90) 100%
 	);
 	background: -moz-gradient(
 		56.97% 104.84% at 28% 27.74%,
 		#6a6ad2 0%,
-		#333399 100%
+		rgba(48, 72, 128, 0.90) 100%
 	);
 	background: -ms-gradient(
 		56.97% 104.84% at 28% 27.74%,
 		#6a6ad2 0%,
-		#333399 100%
+		rgba(48, 72, 128, 0.90) 100%
 	);
 	background: -o-gradient(
 		56.97% 104.84% at 28% 27.74%,
 		#6a6ad2 0%,
-		#333399 100%
+		rgba(48, 72, 128, 0.90) 100%
 	);
 	span {
 		width: 2500px;
@@ -1111,7 +1256,7 @@ header {
 			width: 200px;
 			height: 200px;
 			border-radius: 50%;
-			background: #2715c6;
+			background: #333399;
 			// background: #ff05d8;
 			bottom: calc(100% - 200px);
 			left: 200px;
@@ -1248,12 +1393,15 @@ header {
 	.login-btn {
 		display: flex;
 		align-items: center;
-		gap: 15px;
-
+		gap: 10px;
+		font-size: 15px;
+		// color: var(--title);
+		color: rgba(128, 128, 128, 0.75);
+		// font-family:var(--heading-fonts);
+		font-style: normal;
 		font-weight: 400;
-		font-size: 16px;
-		line-height: 24px;
-		color: var(--title);
+		line-height: normal;
+		letter-spacing: 0.48px;
 	}
 	@include breakpoint(max-lg) {
 		column-gap: 15px;
@@ -1295,19 +1443,26 @@ header {
 		column-gap: 45px;
 		li {
 			.menu-link {
-				font-weight: 400;
+				color: rgba(128, 128, 128, 0.75);
+				text-align: center;
+				// font-family:var(--heading-fonts);
 				font-size: 16px;
-				line-height: 24px;
-				letter-spacing: 0.03em;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				letter-spacing: 0.48px;
 				display: block;
 				cursor: pointer;
-				color: var(--title);
+
+				@include breakpoint(xl) {
+					font-size: 15px;
+				}
 				&:hover {
 					color: var(--base);
 				}
 				&.active {
 					color: var(--base);
-					font-weight: 500;
+					font-weight: 400;
 				}
 			}
 			.caret {
@@ -1342,16 +1497,32 @@ header {
 		.menu {
 			column-gap: 25px;
 		}
+		@include breakpoint(xl) {
+			column-gap: 20px;
+			.header-right {
+				column-gap: 15px;
+				.cmn-btn {
+					font-size: 15px;
+					font-weight: 600;
+				}
+				.login-btn {
+					svg {
+						width: 20px;
+					}
+				}
+			}
+		}
 		@include breakpoint(lg) {
 			.header-right {
 				column-gap: 20px;
 				.cmn-btn {
 					font-size: 14px;
 					font-weight: 400;
+					
 				}
 				.login-btn {
 					svg {
-						width: 25px;
+						width: 20px;
 					}
 				}
 			}
@@ -1461,17 +1632,18 @@ header {
 	transition: all ease 0.3s;
 	@include breakpoint(lg) {
 		position: absolute;
-		left: -15px;
-		top: calc(100% + 32px);
+		// left: -15px;
+		top: calc(100% + 26px);
 		width: 888px;
 		background: #e8eff3;
 		padding: 4px;
 		display: flex;
 		@include breakpoint(max-xxl) {
-			width: 790px;
+			// width: 790px;
+			width: 700px;
 		}
 		@media screen and (max-width: 1250px) {
-			left: -55px;
+			// left: -55px;
 		}
 		@include breakpoint(max-xl) {
 			top: calc(100% + 26px);
@@ -1507,15 +1679,16 @@ header {
 				}
 			}
 			.subtitle {
-				font-weight: 500;
-				font-size: 16px;
+				font-weight:400;
+				font-size: 15px;
 				line-height: 24px;
 				letter-spacing: 0.03em;
 				margin-bottom: 3px;
+
 			}
 			p {
 				font-weight: 300;
-				font-size: 11px;
+				font-size: 12px;
 				line-height: 155%;
 				letter-spacing: 0.01em;
 				margin: 0;
@@ -1564,7 +1737,7 @@ header {
 			width: 0;
 			flex-grow: 1;
 			.subtitle {
-				font-weight: 500;
+				font-weight: 400;
 				font-size: 14px;
 				line-height: 24px;
 				color: var(--title);
@@ -1603,6 +1776,26 @@ header {
 			}
 		}
 	}
+	@include breakpoint(xl){
+			width: 700px;
+			left: 0px;
+		&-left {
+			width: 200px;
+			.item {
+				padding:10px 15px;
+			}
+		}
+		&-right {
+			padding: 20px 25px;
+		}
+		.sub-item {
+			.icon {
+				svg {
+					width: 39px;
+				}
+			}
+		}
+	}
 }
 .header-bar {
 	display: flex;
@@ -1612,6 +1805,7 @@ header {
 	aspect-ratio: 1;
 }
 .banner-section {
+	padding-bottom: 80px;
 	position: relative;
 	overflow: hidden;
 	z-index: 100;
@@ -1620,6 +1814,9 @@ header {
 		.swiper-pagination {
 			display: none !important	;
 		}
+	}
+	@include breakpoint(xl){
+		padding-bottom: 0px;
 	}
 	@include breakpoint(max-sm) {
 		&:not(.contact-banner) {
@@ -1644,32 +1841,34 @@ header {
 	.banner-content {
 		width: 50%;
 		.title {
-			font-weight: 600;
+			font-weight: 500;
 			font-size: 78px;
-			line-height: 117px;
+			// line-height: normal;
 			color: var(--white);
 			margin: 0;
+			font-family: var(--home-font);
+		font-style: normal;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		line-height: normal;
 		}
 		.subtitle {
-			font-weight: 600;
+			font-weight: 500;
 			font-size: 50px;
-			line-height: 140%;
+			line-height: 116%;
 			color: var(--white);
-			margin-bottom: 20px;
+			margin-bottom: 16px;
+			font-family: Poppins;
+			font-style: normal;
 		}
 		.txt {
 			font-weight: 500;
 			font-size: 22px;
-			line-height: 175%;
+			line-height: 145%;
 			letter-spacing: 0.03em;
 			color: var(--white);
-			margin-bottom: 50px;
+			margin-bottom: 41px;
 		}
-		@include breakpoint(xl) {
-			@media (max-width: 1560px) {
-				padding-bottom: 40px;
-			}
-		}
+		// s
 	}
 	.btn-grp {
 		display: flex;
@@ -1689,7 +1888,7 @@ header {
 			line-height: 150%;
 			gap: 10px;
 			@include breakpoint(lg) {
-				height: 60px;
+				// height: 60px;
 				font-size: 17px;
 				min-width: 219px;
 			}
@@ -1706,15 +1905,19 @@ header {
 			line-height: 150%;
 			gap: 10px;
 			@include breakpoint(lg) {
-				height: 60px;
+				// height: 60px;
 				font-size: 17px;
 				min-width: 219px;
+			}
+			@include breakpoint(xl){
+				min-width: 200px;
 			}
 		}
 	}
 	.banner-thumb {
 		width: 50%;
 		padding-top: 18px;
+	
 	}
 	@include breakpoint(max-xl) {
 		.banner-content {
@@ -1733,7 +1936,7 @@ header {
 		}
 		.banner-thumb {
 			img {
-				height: 540px;
+				height: 540px !important;
 			}
 		}
 	}
@@ -1891,6 +2094,26 @@ header {
 				// min-width: 200px;
 				margin-left: -28px;
 			}
+		}
+	}
+	@include breakpoint(xl){
+		.banner-content {
+			width: 50%;
+			.title {
+				font-size: 50px;
+			}
+			.subtitle {
+				font-size: 42px;
+			}
+			.txt {
+				font-size: 17.5px;
+			}
+		}
+		.banner-thumb {
+			img {
+				height: 100%;
+			}
+			padding-top: 40px;
 		}
 	}
 }
@@ -2087,6 +2310,9 @@ header {
 	@include breakpoint(max-md) {
 		padding-bottom: 63px;
 	}
+	@include breakpoint(xl){
+		padding-top: 80px;
+	}
 }
 .service-card {
 	max-width: 400px;
@@ -2098,6 +2324,7 @@ header {
 	.title {
 		font-weight: 600;
 		font-size: 21px;
+		font-family: var(--body-fonts);
 		line-height: 155%;
 		letter-spacing: 0.02em;
 	}
@@ -2121,23 +2348,36 @@ header {
 			}
 		}
 	}
+	@include breakpoint(xl){
+		.icon {
+			margin-bottom: 10px;
+		}
+		.title {
+			font-size: 18px;
+		}
+	}
 }
 .service-card-wrapper {
-	> div:nth-child(1) {
-		p {
-			max-width: 350px;
-		}
+	p{
+		font-size: 13px;
 	}
-	> div:nth-child(6) {
-		p {
-			max-width: 350px;
-		}
-	}
+	// > div:nth-child(1) {
+	// 	p {
+	// 		max-width: 350px;
+	// 		// font-size: 12px;
+	// 	}
+	// }
+	// > div:nth-child(6) {
+	// 	p {
+	// 		max-width: 350px;
+	// 	}
+	// }
 	@include breakpoint(max-md) {
 		padding: 40px 15px 60px;
 		background: #e5e5e5;
 		margin: 0;
 		border-radius: 15px;
+		
 	}
 }
 .crm-content {
@@ -2145,16 +2385,23 @@ header {
 		color: var(--base);
 		margin-bottom: 25px;
 		@include breakpoint(xl) {
-			font-size: 41px;
+			font-size: 32px;
+			// width: 80%;
 		}
 	}
+	span{
+		@include breakpoint(xl){
+			font-size: 14px;
+		}
+	}
+	
 	p {
 		font-weight: 300;
 		font-size: 20px;
 		line-height: 195%;
 		letter-spacing: 0.04em;
 		color: #242424;
-		margin-bottom: 40px;
+		margin-bottom: 25px;
 	}
 	@include breakpoint(max-md) {
 		.title {
@@ -2170,14 +2417,25 @@ header {
 			margin-bottom: 20px;
 		}
 	}
+	@include breakpoint(xl){
+		p {
+			font-size: 13px;
+		}
+	}
 }
 .__crm-btn-grp {
+	.cmn-btn{
+		max-width: 238px;
+		width: 100%;
+		height: 60px;
+		max-height: 57px;
+	}
 	@include breakpoint(md) {
 		.cmn-btn {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			min-width: 225px;
+			min-width: 218px;
 			min-height: 60px;
 		}
 	}
@@ -2202,11 +2460,24 @@ header {
 			}
 		}
 	}
+	@include breakpoint(xl){
+		.cmn-btn{
+		min-width: 180px;
+		max-width: 180px;
+		min-height: 40px;
+		max-height: 45px;
+		}
+	}
 }
 .trusted-crm-section {
 	padding: 130px 0px 110px;
 	@include breakpoint(max-lg) {
 		padding: 0 0 60px;
+	}
+	@include breakpoint(xl){
+		// padding: 80px 0 110px;
+		padding-top: 80px;
+		padding-bottom: 0;
 	}
 }
 .left-line {
@@ -2218,6 +2489,9 @@ header {
 	&.bg-dark {
 		background: linear-gradient(to right, var(--base), #ffffff00) !important;
 	}
+	@include breakpoint(xl){
+		margin-block: 15px;
+	}
 }
 .request-result {
 	background: var(--base);
@@ -2226,10 +2500,9 @@ header {
 	border-radius: 15px;
 	.title {
 		color: var(--white);
-		@include breakpoint(xl) {
-			font-weight: 600;
-			font-size: 41px;
-		}
+		font-weight: 600;
+		font-size: 41px;
+		font-family: var(--body-fonts);
 	}
 	.left-line {
 		margin-block: 34px;
@@ -2284,6 +2557,33 @@ header {
 			font-size: 15px;
 		}
 	}
+	@include breakpoint(xl){
+		padding:25px 30px;
+		.title{
+				font-size: 30px;
+		}
+		.left-line {
+			margin-block: 20px;
+		}
+		.list-info {
+			gap: 20px;
+			margin-bottom: 25px;
+			li {
+				gap: 20px;
+				.serial {
+					// width: 35px;
+					font-size: 16px;
+				}
+			}
+			span{
+				font-size: 14px;
+				line-height: normal;
+			}
+		}
+		p{
+			font-size: 15px;
+		}
+	}
 }
 .earning-estimator {
 	padding: 30px 35px;
@@ -2291,12 +2591,13 @@ header {
 	border: 1px solid #ebebeb;
 	box-shadow: -15px 25px 65px rgba(11, 11, 80, 0.06);
 	border-radius: 15px;
+	
 	.title {
 		color: var(--base);
-		@include breakpoint(xl) {
-			font-weight: 600;
-			font-size: 41px;
-		}
+		font-weight: 600;
+		font-size: 41px;
+		font-family: var(--body-fonts);
+		
 	}
 	.light-label {
 		margin-bottom: 25px;
@@ -2317,7 +2618,7 @@ header {
 		height: 60px;
 		font-weight: 300;
 		font-size: 20px;
-		line-height: 195%;
+		line-height: 162%;
 		option {
 			font-size: 16px;
 		}
@@ -2333,6 +2634,19 @@ header {
 			font-size: 15px;
 		}
 	}
+	@include breakpoint(xl){
+		padding: 25px 30px;
+		.form-select {
+			height: 40px;
+			font-size: 15px;
+		}
+		.title {
+				font-size: 30px;
+		}
+		.light-label {
+			margin-bottom: 15px;
+		}
+	}
 }
 .mt-40 {
 	margin-top: 40px;
@@ -2342,6 +2656,9 @@ header {
 	width: 100%;
 	height: 60px;
 	align-items: center;
+	@include breakpoint(xl){
+		height: 45px;
+	}
 }
 .light-label {
 	font-weight: 300;
@@ -2351,6 +2668,9 @@ header {
 	@include breakpoint(max-sm) {
 		font-size: 15px;
 		line-height: 1.5;
+	}
+	@include breakpoint(xl){
+		font-size: 15px;
 	}
 }
 .range-slider-amounts {
@@ -2377,8 +2697,12 @@ header {
 	@include breakpoint(max-sm) {
 		font-size: 14px;
 	}
+	@include breakpoint(xl){
+		font-size: 19px;
+	}
 }
 .range-slider {
+	height: 5px;
 	[data-lower="true"] {
 		opacity: 0;
 		visibility: hidden;
@@ -2405,6 +2729,13 @@ header {
 		background: var(--base);
 		left: 0 !important;
 		border-radius: 4px 0 0 4px;
+	}
+	@include breakpoint(xl){
+		height: 3px;
+		.range-slider__thumb {
+			width: 20px;
+		height: 20px;
+		}
 	}
 }
 .earning-estimator-section {
@@ -2435,7 +2766,7 @@ header {
 			transform: skewX(0) skewY(-10deg);
 		}
 	}
-	padding-bottom: 50px;
+	padding-top: 80px;
 }
 .feature-section {
 	padding-block: 260px 140px;
@@ -2459,6 +2790,9 @@ header {
 		}
 		padding-top: 80px;
 		padding-bottom: 145px;
+	}
+	@include breakpoint(xl){
+		padding-block: 200px 75px;
 	}
 }
 .top-right-shape {
@@ -2484,14 +2818,18 @@ header {
 			width: 50%;
 		}
 	}
+	@include breakpoint(xl){
+		padding-top: 80px;
+	}
 }
 .who-we-are-item {
 	.subtitle {
 		font-weight: 600;
 		font-size: 28px;
-		line-height: 155%;
+		font-family: var(--body-fonts);
+		line-height: 129%;
 		letter-spacing: 0.02em;
-		margin-bottom: 20px;
+		margin-bottom: 17px;
 		@include breakpoint(max-md) {
 			margin-bottom: 15px;
 		}
@@ -2522,6 +2860,19 @@ header {
 		font-size: 12px;
 		.subtitle {
 			font-size: 21px;
+		}
+	}
+	@include breakpoint(xl){
+		.read-more {
+			font-size: 15px;
+		}
+		.subtitle {
+			font-size: 23px;
+			margin-bottom: 10px;
+		}
+		p {
+			margin-bottom: 10px;
+			font-size: 12.5px;
 		}
 	}
 }
@@ -2563,6 +2914,15 @@ header {
 			}
 		}
 	}
+	@include breakpoint(xl) {
+		.icon {
+			width: 64px;
+			height: 64px;
+			svg {
+				width: 20px;
+			}
+		}
+	}
 }
 /*Slider*/
 
@@ -2580,6 +2940,13 @@ header {
 	width: 100%;
 	height: 100%;
 }
+// @include breakpoint(xl){
+// 	.swiper-backface-hidden .swiper-slide{
+// 		height: 250px !important;
+// 		margin-bottom: 50px !important;
+// 	}
+// }
+
 .slider__flex {
 	display: flex;
 	align-items: flex-start;
@@ -2639,11 +3006,11 @@ header {
 				height: 62px;
 				position: absolute;
 				z-index: 999;
-				background: linear-gradient(
-					180deg,
-					rgba(#333399, 0) 0%,
-					rgba(#333399, 1) 100%
-				);
+				// background: linear-gradient(
+				// 	180deg,
+				// 	rgba(#333399, 0) 0%,
+				// 	rgba(#333399, 1) 100%
+				// );
 			}
 		}
 	}
@@ -2670,6 +3037,7 @@ header {
 		}
 		max-width: 400px;
 		margin-bottom: 15px;
+		font-family: var(--body-fonts);
 		font-weight: 600;
 		color: var(--white);
 	}
@@ -2715,6 +3083,20 @@ header {
 		p {
 			line-height: 1.5;
 			margin-bottom: 20px;
+		}
+	}
+	@include breakpoint(xl){
+		padding: 25px;
+		.cmn-btn {
+			height: 45px;
+			font-size: 15px;
+		}
+		p{
+			margin-bottom: 15px;
+		}
+		h3{
+			font-size: 24px;
+			width: 69%;
 		}
 	}
 	@include breakpoint(max-lg) {
@@ -2777,10 +3159,17 @@ header {
 	}
 }
 .title-dark {
+	
 	color: var(--title);
 	.title,
 	.accordion-button span {
 		color: var(--title);
+		font-size: 16px;
+	}
+	@include breakpoint(xl){
+		.accordion-button span{
+			font-size: 15px !important;
+		}
 	}
 }
 .why-choose-us {
@@ -2796,6 +3185,10 @@ header {
 			max-width: 502px;
 		}
 	}
+	@include breakpoint(xl){
+		padding-bottom: 0px;
+		padding-top: 80px;
+	}
 }
 .light-txt {
 	font-weight: 300;
@@ -2806,15 +3199,30 @@ header {
 	@include breakpoint(max-md) {
 		font-size: 12px;
 	}
+	@include breakpoint(xl){
+		font-size: 14px;
+	}
 }
 .why-choose-us {
 	@include breakpoint(md) {
 		.section-title {
 			.title {
-				padding-bottom: 40px;
+				padding-bottom: 34px;
 			}
-			margin-bottom: 35px;
+			margin-bottom: 40px;
 		}
+	}
+	@include breakpoint(xl){
+		.section-title {
+			.title {
+				padding-bottom: 20px;
+			}
+			h2{
+				font-size: 30px !important;
+			}
+			margin-bottom: 25px;
+		}
+		// padding-block: 100px;
 	}
 }
 .skills {
@@ -2827,7 +3235,7 @@ header {
 	.skill-item {
 		font-weight: 600;
 		font-size: 20px;
-		line-height: 155%;
+		line-height: 129%;
 		letter-spacing: 0.02em;
 		width: 50px;
 		flex-grow: 1;
@@ -2892,6 +3300,16 @@ header {
 			color: var(--base-3);
 		}
 	}
+	@include breakpoint(xl){
+		.skill-item {
+			font-size: 17px;
+			.skill-inner {
+				.skill-total {
+					height: 200px;
+				}
+			}
+		}
+	}
 }
 .about-section {
 	padding: 73px 0 143px;
@@ -2902,6 +3320,9 @@ header {
 			bottom: 0;
 			top: -200px;
 		}
+	}
+	@include breakpoint(xl){
+		padding: 80px 0;
 	}
 }
 .about-item {
@@ -2942,6 +3363,10 @@ header {
 				font-size: 32px;
 				line-height: 145%;
 				margin-bottom: 15px;
+				font-family: var(--body-fonts);
+				@include breakpoint(xl){
+					font-size: 30px;
+				}
 			}
 			font-weight: 300;
 			font-size: 13px;
@@ -2949,7 +3374,11 @@ header {
 			letter-spacing: 0.03em;
 			color: rgba(#242424, 0.8);
 			p {
+				font-size: 13px;
 				margin-bottom: 30px;
+				@include breakpoint(xl){
+					margin-bottom: 15px;
+				}
 			}
 			.cmn-btn {
 				height: 60px;
@@ -2957,6 +3386,9 @@ header {
 				@include breakpoint(max-md) {
 					font-size: 15px;
 					font-weight: 500;
+				}
+				@include breakpoint(xl){
+					height: 45px;
 				}
 			}
 		}
@@ -3041,12 +3473,21 @@ header {
 		letter-spacing: 0.03em;
 		color: rgba(#242424, 0.8);
 	}
+	@include breakpoint(xl){
+		.title{
+			padding-bottom: 20px;
+		}
+		
+	}
 }
 .values-section {
 	padding: 130px 0 20px;
 	@include breakpoint(max-md) {
 		padding-bottom: 63px;
 		padding-top: 65px;
+	}
+	@include breakpoint(xl){
+		padding-top: 80px;
 	}
 }
 .rounded-15 {
@@ -3056,6 +3497,9 @@ header {
 	margin-bottom: 60px !important;
 	@include breakpoint(max-md) {
 		margin-bottom: 25px !important;
+	}
+	@include breakpoint(xl){
+		margin-bottom: 30px !important;
 	}
 }
 .values-section {
@@ -3098,6 +3542,10 @@ header {
 		padding-top: 80px;
 		padding-bottom: 65px;
 	}
+	@include breakpoint(xl){
+		padding-block: 200px 100px;
+		// padding-block: 0px;
+	}
 }
 .partner-content {
 	.title {
@@ -3105,6 +3553,7 @@ header {
 		font-size: 44px;
 		line-height: 145%;
 		margin-bottom: 25px;
+		font-family: var(--body-fonts);
 	}
 	.text {
 		margin-bottom: 37px;
@@ -3152,9 +3601,28 @@ header {
 		.title {
 			font-size: 23px;
 			margin-bottom: 15px;
+			
 		}
 		.text {
 			margin-bottom: 18px;
+		}
+	}
+	@include breakpoint(xl){
+		.title {
+			font-size: 35px;
+			line-height: 140%;
+			margin-bottom: 15px;
+		}
+		.cmn-btn {
+			height: 45px;
+		}
+		.text{
+			font-size: 15px;
+			margin-bottom: 30px;
+			line-height: normal;
+		}
+		.info {
+			gap: 15px;
 		}
 	}
 }
@@ -3181,11 +3649,17 @@ header {
 	@include breakpoint(max-lg) {
 		margin-block: 40px;
 	}
+	@include breakpoint(xl){
+		margin: 50px auto;
+	}
 }
 .white-divider {
 	margin-block: 100px 70px;
 	@include breakpoint(max-lg) {
 		margin-block: 40px;
+	}
+	@include breakpoint(xl){
+		margin-block: 60px;
 	}
 }
 .partner-with-us {
@@ -3201,6 +3675,12 @@ header {
 			.info {
 				font-size: 14px;
 				font-weight: 300;
+			}
+		}
+		@include breakpoint(xl){
+			.info {
+				font-size: 14px;
+				letter-spacing: 0;
 			}
 		}
 	}
@@ -3234,7 +3714,7 @@ header {
 			max-width: 258px;
 		}
 	}
-	padding-top: 120px;
+	// padding-top: 120px;
 }
 .team-wrapper {
 	display: flex;
@@ -3295,6 +3775,18 @@ header {
 			}
 		}
 	}
+	@include breakpoint(xl){
+		.team-card {
+			.name {
+				font-size: 18px;
+				line-height: 120%;
+				margin-bottom: 3px;
+			}
+			span{
+				font-size: 14px;
+			}
+		}
+	}
 }
 .section-divider {
 	margin-block: 120px;
@@ -3309,6 +3801,9 @@ header {
 	);
 	@include breakpoint(max-lg) {
 		margin-block: 40px;
+	}
+	@include breakpoint(xl){
+		margin-block: 70px;
 	}
 }
 .quote-image {
@@ -3356,6 +3851,18 @@ header {
 			}
 		}
 	}
+	@include breakpoint(xl){
+		.name-area {
+			padding: 10px 30px;
+			h6 {
+				font-size: 18px;
+				line-height: 129%;
+			}	
+			span{
+				font-size: 15px;
+			}
+		}
+	}
 }
 .client-quote {
 	font-weight: 400;
@@ -3375,12 +3882,17 @@ header {
 	@include breakpoint(max-sm) {
 		font-size: 14px;
 	}
+	@include breakpoint(xl) {
+		font-size: 18px;
+	}
 }
 .service-page-header {
 	padding: 92px 0 0px;
 	position: relative;
 	.section-title {
 		.title {
+			color: #ffffff;
+			text-align: end;
 			@include breakpoint(lg) {
 				font-size: 45px;
 				font-family: Poppins;
@@ -3388,10 +3900,17 @@ header {
 				padding-bottom: 40px;
 				line-height: 145%;
 			}
+			@include breakpoint(xl){
+				font-size: 40px !important;
+				padding-bottom: 0px;
+			}
 		}
 	}
 	@include breakpoint(max-sm) {
 		padding-top: 50px;
+	}
+	@include breakpoint(xl){
+		padding: 50px;
 	}
 }
 .__rounded-img {
@@ -3414,6 +3933,7 @@ header {
 		font-size: 15px;
 		p {
 			margin-bottom: 30px;
+			line-height: 129%;
 		}
 		.title {
 			font-size: 44px;
@@ -3423,6 +3943,23 @@ header {
 		}
 		.cmn-btn {
 			padding: 15px 43px;
+		}
+	}
+	@include breakpoint(xl){
+		p {
+			margin-bottom: 15px;
+		}
+		.title{
+			font-size:30px ;
+			margin-bottom: 15px;
+		}
+		.cmn-btn {
+			padding: 10px 33px;
+		}
+	}
+	@include breakpoint(xl){
+		p{
+			font-size: 13px;
 		}
 	}
 }
@@ -3502,9 +4039,22 @@ header {
 	}
 	color: var(--white);
 	p {
+		font-size: 14px;
 		margin-bottom: 20px;
 		@include breakpoint(md) {
 			margin-bottom: 30px;
+		}
+		@include breakpoint(xl){
+			margin-bottom: 10px
+		}
+	}
+	@include breakpoint(xl){
+		.title{
+			gap: 15px;
+			svg {
+				width: 50px;
+				height: 50px;
+			}
 		}
 	}
 }
@@ -3518,6 +4068,9 @@ header {
 			top: -200px;
 			bottom: -200px;
 		}
+	}
+	@include breakpoint(xl){
+		padding: 80px 0 60px;
 	}
 }
 .contact-sales-form-wrapper {
@@ -3536,9 +4089,15 @@ header {
 		font-weight: 500;
 		line-height: 145%;
 		margin: 0;
+		font-family: var(--body-fonts);
 	}
 	p {
 		margin-bottom: 25px;
+	}
+	@include breakpoint(xl){
+		.title{
+			font-size: 30px;
+		}
 	}
 	@include breakpoint(sm) {
 		.form-control {
@@ -3563,6 +4122,23 @@ header {
 		font-size: 16px;
 		.title {
 			font-size: 24px;
+		}
+	}
+	@include breakpoint(xl){
+		padding: 20px 25px;
+		p {
+			margin-bottom: 15px;
+			font-size: 14px;
+		}
+		.form-control {
+			font-size: 14px;
+		}
+		.cmn-btn {
+			height: 40px;
+		}
+		.form-control:not(textarea) {
+			height: 40px;
+			font-size: 14px;
 		}
 	}
 }
@@ -3621,7 +4197,7 @@ header {
 	}
 }
 .business-consulting-content-wrapper {
-	background: var(--base);
+	background: rgba(48, 72, 128, 1);
 	border-radius: 15px;
 	position: relative;
 	&::before {
@@ -3633,7 +4209,7 @@ header {
 		position: absolute;
 		background: linear-gradient(
 			-90deg,
-			#333399 44.77%,
+			rgba(48, 72, 128, 0.90) 44.77%,
 			rgba(51, 51, 153, 0) 100%
 		);
 		border-radius: 15px;
@@ -3695,6 +4271,10 @@ header {
 		right: 50%;
 		top: -160px;
 	}
+	@include breakpoint(xl){
+		top: -100px;
+		right: calc(50% + 350px);
+	}
 }
 .pricing-tag {
 	color: var(--white, #fff);
@@ -3713,9 +4293,15 @@ header {
 		font-size: 24px;
 		padding: 12px 0;
 	}
+	@include breakpoint(xl){
+		font-size: 40px;
+	}
 }
 .my-30px {
 	margin-block: 30px;
+	@include breakpoint(xl){
+		margin-block: 20px
+	}
 }
 .pricing-section {
 	position: relative;
@@ -3737,6 +4323,9 @@ header {
 	padding-top: 70px;
 	@include breakpoint(max-md) {
 		padding-top: 40px;
+	}
+	@include breakpoint(xl){
+		padding-top: 40px
 	}
 }
 .tab-btn-grp {
@@ -3762,6 +4351,12 @@ header {
 			font-size: 15px;
 			font-weight: 500;
 			padding: 14px 25px;
+		}
+	}
+	@include breakpoint(xl){
+		a{
+			padding: 10px 25px;
+			font-size: 16px;
 		}
 	}
 }
@@ -3801,6 +4396,25 @@ header {
 			}
 		}
 	}
+	@include breakpoint(xl){
+		display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	.left {
+		.title {
+			font-size: 34px;
+			margin-bottom: 0px;
+		}
+		>div{
+			font-size: 15px;
+		}
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 195%;
+		letter-spacing: 0.72px;
+	}
+	}
 }
 .range-slider-amounts-2 {
 	@include breakpoint(md) {
@@ -3810,6 +4424,11 @@ header {
 				width: 2px;
 				height: 24px;
 			}
+		}
+	}
+	@include breakpoint(xl){
+		span{
+			font-size: 15px;
 		}
 	}
 }
@@ -3825,6 +4444,10 @@ header {
 		height: 8px;
 		width: 1px;
 		display: block;
+	}
+	@include breakpoint(xl){
+		margin-top: 15px;
+	margin-bottom: -35px;
 	}
 }
 .range-tooltip {
@@ -3865,6 +4488,9 @@ header {
 	@include breakpoint(max-sm) {
 		left: 50% !important;
 	}
+	@include breakpoint(xl){
+		padding: 10px;
+	}
 }
 .range-slider-item {
 	width: 90%;
@@ -3873,6 +4499,7 @@ header {
 }
 .plan-card {
 	background: var(--white);
+	font-family: var(--body-fonts);
 	border-radius: 15px;
 	border: 1px solid var(--border);
 	box-shadow: 15px 15px 35px 0px rgba(0, 0, 0, 0.05);
@@ -3883,6 +4510,7 @@ header {
 		margin-bottom: 14px;
 		letter-spacing: -0.44px;
 		font-weight: 400;
+		font-family: var(--body-fonts);
 	}
 	.price {
 		font-size: 30px;
@@ -3959,6 +4587,32 @@ header {
 			}
 		}
 	}
+	@include breakpoint(xl){
+		padding: 22px 23px 25px;
+	.name {
+		font-size: 18px;
+	}
+	
+	.txt {
+		@include breakpoint(xl){
+			font-size: 13px;
+		}
+	}
+	ul {
+		gap: 10px;
+		li {
+			gap: 10px;
+			font-size: 15px;
+		}
+		margin-bottom: 30px;
+	}
+	.cmn-btn {
+		height: 45px;
+		@include breakpoint(xl){
+			height: 40px;
+		}
+	}
+	}
 }
 .btn-text {
 	background: transparent;
@@ -3973,6 +4627,9 @@ header {
 	line-height: 150%;
 	letter-spacing: 0.66px;
 	margin: 0 auto 98px;
+	@include breakpoint(xl){
+		margin: 0 auto 50px;
+	}
 }
 .feature-details-section {
 	position: relative;
@@ -4067,6 +4724,9 @@ header {
 		.banner-content {
 			width: 0;
 			flex-grow: 1;
+			.title{
+				font-family: var(--body-fonts);
+			}
 			.txt {
 				color: var(--white);
 				opacity: 0.800000011920929;
@@ -4085,6 +4745,11 @@ header {
 			@include breakpoint(lg) {
 				.title {
 					font-size: 57px;
+				}
+			}
+			@include breakpoint(xl){
+				.title{
+					font-size: 40px;
 				}
 			}
 		}
@@ -4143,6 +4808,7 @@ header {
 		font-weight: 600;
 		line-height: 155%;
 		letter-spacing: 0.32px;
+		font-family: var(--body-fonts);
 	}
 	color: var(--white, #fff);
 	font-size: 13px;
@@ -4151,6 +4817,14 @@ header {
 	letter-spacing: 0.52px;
 	a {
 		color: var(--white, #fff);
+	}
+	@include breakpoint(xl){
+		.icon {
+			margin-bottom: 0px;
+		}
+		.sub-title{
+			margin-bottom: 0px !important;
+		}
 	}
 }
 .payment-section-bg {
@@ -4434,6 +5108,11 @@ header {
 			line-height: 135%;
 		}
 	}
+	@include breakpoint(xl){
+		.modal-title{
+			font-size: 27px;
+		}
+	}
 	.modal-footer {
 		.btn-shade {
 			background: rgba(255, 255, 255, 0.3);
@@ -4507,7 +5186,7 @@ body {
 }
 .request-demo-section {
 	@include breakpoint(md) {
-		padding: 140px 0 160px;
+		padding: 50px 0 160px;
 		.contact-sales-form-wrapper {
 			max-width: 475px;
 			margin-left: auto;
@@ -4515,7 +5194,11 @@ body {
 				font-size: 34px;
 				font-weight: 600;
 				line-height: 145%;
-				margin-bottom: 6px;
+				margin-bottom: 3px;
+				font-family: var(--body-fonts);
+			}
+			p{
+				font-size: 15px;
 			}
 		}
 		@include breakpoint(xl) {
@@ -4554,6 +5237,15 @@ body {
 			padding-inline: 20px;
 		}
 	}
+	@include breakpoint(xl){
+		.contact-sales-form-wrapper {
+			max-width: 380px;
+			margin-left: auto;
+			.title {
+				font-size: 25px;
+			}
+		}
+	}
 }
 .statement-wrapper {
 	display: flex;
@@ -4568,6 +5260,7 @@ body {
 		font-size: 14px;
 		font-weight: 300;
 		color: var(--white);
+		
 		line-height: 1.95;
 		h5 {
 			color: var(--white, #fff);
@@ -4576,6 +5269,7 @@ body {
 			line-height: 155%;
 			letter-spacing: 0.4px;
 			margin-bottom: 16px;
+			font-family: var(--body-fonts);
 		}
 		p {
 			margin-bottom: 26px;
@@ -4589,7 +5283,8 @@ body {
 		h4 {
 			color: var(--white);
 			padding: 45px 0;
-			text-align: center;
+			text-align: start;
+			font-family: var(--body-fonts);
 			font-size: 26px;
 			font-weight: 600;
 			line-height: 155%;
@@ -4627,6 +5322,7 @@ body {
 		margin-right: -35px;
 		@include breakpoint(sm) {
 			font-size: 20px;
+			
 			font-weight: 300;
 			padding-inline-start: 20px;
 		}
@@ -4636,7 +5332,8 @@ body {
 	.cmn-btn {
 		font-weight: 600;
 		padding-block: 17px;
-		font-size: 17px;
+		height: 35px;
+		font-size: 14px;
 		border-top-left-radius: 35px !important;
 		border-bottom-left-radius: 35px !important;
 		position: relative;
@@ -4644,11 +5341,23 @@ body {
 		&:hover {
 			background: var(--white);
 		}
+		
 	}
 	@include breakpoint(max-xl) {
 		.cmn-btn {
 			font-size: 15px;
 			padding-inline: 20px;
+		}
+	}
+	@include breakpoint(xl){
+		.form-control {
+			height: 35px;
+			font-size: 14px;
+		}
+		.cmn-btn {
+				padding-block: 0px;
+				align-items: center;
+				font-weight: 400;
 		}
 	}
 }
@@ -4681,6 +5390,10 @@ footer {
 				// top: 15px;
 			}
 		}
+	}
+	@include breakpoint(xl){
+		padding-top: 50px;
+		padding-bottom: 40px;
 	}
 }
 .footer-top-widget {
@@ -4723,9 +5436,10 @@ footer {
 		row-gap: 40px;
 		.subtitle {
 			color: var(--base);
-			font-size: 20px;
+			font-family: var(--body-fonts);
+			font-size: 17px;
 			font-weight: 600;
-			line-height: 141%;
+			line-height: 117.5%;
 			text-transform: uppercase;
 		}
 		.links {
@@ -4739,8 +5453,8 @@ footer {
 					font-size: 16px;
 					font-family: Poppins;
 					font-weight: 500;
-					line-height: 141%;
-					opacity: 0.699999988079071;
+					line-height: 117.5%;
+					opacity: 0.5833333233992258;
 					text-transform: capitalize;
 					&:hover {
 						opacity: 1;
@@ -4748,6 +5462,31 @@ footer {
 				}
 			}
 		}
+	}
+	@include breakpoint(xl){
+		.widget-left {
+			p {
+				margin-bottom: 25px;
+				font-size: 14px;
+			}
+		}
+		.widget-right {
+			max-width: 450px;
+			justify-content: space-around;
+			column-gap: 0px;
+			.subtitle {
+				font-size: 15px;
+			}
+			.links {
+				gap: 10px;
+				li {
+					a {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
 	}
 	@include breakpoint(max-lg) {
 		flex-wrap: wrap;
@@ -4825,7 +5564,8 @@ footer {
 	display: flex;
 	position: relative;
 	z-index: 2;
-	margin-top: 42px;
+	// margin-top: 42px;
+	margin-top: 50px;
 	li {
 		width: 25%;
 		button {
@@ -4851,7 +5591,7 @@ footer {
 	}
 }
 .boost-wrapper {
-	padding-top: 100px;
+	padding-top: 60px;
 	animation: fadeIn 0.3s;
 	@include breakpoint(max-lg) {
 		padding-top: 40px;
@@ -4874,12 +5614,20 @@ footer {
 		}
 	}
 }
+@include breakpoint(xl){
+	.boost-title {
+		.section-title {
+			.title {
+				font-size: 32px !important;
+			}
+		}
+	}	
+}
 @include breakpoint(max-md) {
 	.boost-title {
 		.section-title {
 			.title {
-				font-size: 24px;
-				// font-size: 30px;
+				font-size: 30px;
 			}
 		}
 	}
@@ -4931,6 +5679,7 @@ footer {
 			font-size: 20px;
 			font-weight: 600;
 			margin-bottom: 12px;
+			font-family: var(--body-fonts);
 			color: var(--white);
 		}
 		ul {
@@ -4949,7 +5698,8 @@ footer {
 					width: 7px;
 					height: 7px;
 					border-radius: 7px;
-					background: #45b36c;
+					// background: #45b36c;
+					background: rgba(115, 185, 239, 1);
 					display: inline-block;
 					margin-right: 10px;
 				}
@@ -5019,7 +5769,13 @@ footer {
 	}
 	.title {
 		@include breakpoint(lg) {
-			font-size: 45px;
+			// font-size: 45px;
+			text-align: center;
+			font-family: Times New Roman;
+			font-size: 38px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 145%;
 		}
 	}
 }

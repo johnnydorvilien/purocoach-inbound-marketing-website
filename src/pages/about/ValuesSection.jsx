@@ -9,11 +9,9 @@ const ValuesSection = () => {
 				<div className="section-title section-title-2">
 					<h2 className="title text-base">Our Values</h2>
 					<p className="text">
-						We run our business according to our core principles to ensure
-						you and your clients get the best support. Seven core values:
+					We run our business according to our seven core principles to ensure every client get the best support.
 					</p>
 				</div>
-				<img src={img} className="w-100 rounded-15 mb-60" alt="" />
 				<div className="row g-3">
 					<div className="col-md-6">
 						<FaqItems data={data} id="values" />
@@ -21,7 +19,9 @@ const ValuesSection = () => {
 					<div className="col-md-6">
 						<FaqItems data={data2} id="values-2" firstClose="undefined" />
 					</div>
+					<img src={img} className="w-100 rounded-15 mt-16" style={{marginTop:"50px"}} alt="" />
 				</div>
+				
 			</div>
 		</section>
 	);
@@ -41,7 +41,7 @@ const data = [
 		text: "Attention to detail, high standards, and professionalism will setyou apart. We pride ourselves on these qualities and infusethem into everything we do.",
 	},
 	{
-		title: "Togetherness",
+		title: "Diversity",
 		text: "Attention to detail, high standards, and professionalism will setyou apart. We pride ourselves on these qualities and infusethem into everything we do.",
 	},
 ];
@@ -55,7 +55,7 @@ const data2 = [
 		text: "Attention to detail, high standards, and professionalism will setyou apart. We pride ourselves on these qualities and infusethem into everything we do.",
 	},
 	{
-		title: "Diversity",
+		title: "Togetherness",
 		text: "Attention to detail, high standards, and professionalism will setyou apart. We pride ourselves on these qualities and infusethem into everything we do.",
 	},
 ];

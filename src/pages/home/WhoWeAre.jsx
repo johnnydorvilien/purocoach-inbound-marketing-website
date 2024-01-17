@@ -15,7 +15,7 @@ const WhoWeAre = () => {
 					<div className="boost-title">
 						<Title
 							className="text-base text-start text-md-center"
-							title="Learn More About How We Can Help You"
+							title="Our Framework"
 						/>
 					</div>
 					<div className="row gy-5">
@@ -149,24 +149,24 @@ const WhoWeAre = () => {
 
 const data = [
 	{
-		title: "Who We Are?",
+		title: "Attract",
 		text: [
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+			"Define your target audience and ideal client prospects. Instead of chasing prospect client, we attract them directly to your business on a consistent basis.",
+			"Attract draws in the right people with valuable content and conversations that set you up a trusted coach or consultant.",
 		],
 	},
 	{
-		title: "Who We Do?",
+		title: "Engage",
 		text: [
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+			"Increased engagement and a stronger relationship with your clients prior to purchase. By providing trustworthy content, engaging prospect client helps to build a relationship of trust with the customer.",
+			"Engaging presents insights and solutions that align with your prospect’s pain points and goals so they are more likely to buy from you.",
 		],
 	},
 	{
-		title: "Who We Do?",
+		title: "Delight",
 		text: [
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
 		],
 	},
 ];

@@ -34,10 +34,10 @@ const Service = () => {
 				<div className="boost-title">
 					<Title
 						className="text-base text-start text-md-center shape-full"
-						title="All-In-One Stop Shop For All Your Business Needs"
+						title="Your One Stop Shop For All Your Business Needs"
 					/>
 				</div>
-				<div className="row gy-5 gx-4 service-card-wrapper">
+				<div className="row gy-3 gx-4 service-card-wrapper">
 					{data?.map((item, i) => (
 						<div className="col-sm-6 col-lg-4" key={i}>
 							<div className="service-card">
@@ -55,34 +55,34 @@ const Service = () => {
 
 const data = [
 	{
+		icon:   <Rocket />,
+		title: "SEO",
+		text: "Lead the way in optimized SEO and get ahead of your competitors. Our team of experts will help you boost your online presence and rise to top of search engine rankings.",
+	},
+	{
+		icon:  <SalesDev />,
+		title: "Emails & Lead Nurturing",
+		text: "The highly effective way for your businesses to nurture leads and drive conversions is through email marketing. You’ll gain trust, credibility and convert prospects fast.",
+	},
+	{
+		icon: <InboundMarketingIcon /> ,
+		title: "Content Creation",
+		text: "The content you create is heavily tied to your business growth. Like all marketing pursuits, creating well-planned, well-executed content that engages with your audience will directly affect your sales.",
+	},
+	{
+		icon:  <AutomationIcon2 />,
+		title: "Social Media Management",
+		text: "Building more personal connections with your target audiences at scale is key. It helps to build brand trust, affinity and best of all, loyalty to your customers.",
+	},
+	{
 		icon: <PieChartIcon />,
-		title: "Client Relational Management",
-		text: "Power Your Start-Up Forward With a Business Coach.",
+		title: "Reports & Analytics",
+		text: "Running marketing reports that better inform your decisions, bolster your marketing resources, and help your business grow better is vital.",
 	},
 	{
-		icon: <InboundMarketingIcon />,
-		title: "Inbound Marketing",
-		text: "As a one-stop-shop for all of your coaching business’ automation and inbound marketing needs, we partner ...",
-	},
-	{
-		icon: <AutomationIcon2 />,
+		icon: <Integration /> ,
 		title: "Automation",
-		text: "The perfect automation for your marketing campaigns start here. We are powered by the #1 marketing tool- HubSpot.",
-	},
-	{
-		icon: <Integration />,
-		title: "System Integration",
-		text: "Streamline and connect data through integration for Better Client Experience.",
-	},
-	{
-		icon: <SalesDev />,
-		title: "Sales Development",
-		text: "Connecting Marketing and Sales Experience with a Business Development Plan to set your business to success.",
-	},
-	{
-		icon: <Rocket />,
-		title: "Business Coaching & Startups",
-		text: "Your Partner in Navigating Business Challenges.",
+		text: "Automating the many steps between marketing and sales gives your team more time to focus on overall strategy and nurturing the leads that show real promise.",
 	},
 ];
 

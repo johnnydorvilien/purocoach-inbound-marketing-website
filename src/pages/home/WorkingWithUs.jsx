@@ -13,7 +13,7 @@ const WorkingWithUs = () => {
 				<div className="container">
 					<div className="boost-title">
 						<div className="section-title m-0">
-							<h2 className="title text-base text-start text-md-center text-xl font-semibold pb-max-md-2">
+							<h2 className="title text-base text-start text-md-center text-xl font-semibold pb-max-md-2" style={{paddingBottom:'40px'}}>
 								Working With Us
 							</h2>
 						</div>
@@ -49,10 +49,10 @@ const WorkingWithUs = () => {
 										to="/#request-demo"
 										className="cmn-btn"
 										style={{
-											maxWidth: "238px",
-											width: "100%",
-											height: "60px",
-											minHeight: "57px",
+											// maxWidth: "238px",
+											// width: "100%",
+											// height: "60px",
+											// minHeight: "57px",
 											alignItems: "center",
 										}}
 									>

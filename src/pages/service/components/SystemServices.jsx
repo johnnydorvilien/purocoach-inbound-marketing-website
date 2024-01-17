@@ -59,7 +59,7 @@ const SystemServices = ({ systemData }) => {
 								</div>
 							</div>
 							{i != data?.length - 1 || systemData?.length - 1 ? (
-								<WhiteDivider margin="65px" />
+								<WhiteDivider margin="40px" />
 							) : (
 								""
 							)}

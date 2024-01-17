@@ -40,9 +40,9 @@ const ContactSalesForm = () => {
 		<>
 			<div className="contact-sales-form-wrapper">
 				<h4 className="title text-base" style={{ fontWeight: "600" }}>
-					Contact Sales
+				Contact Us
 				</h4>
-				<p>Don’t throw your future away.</p>
+				<p>Let us know how we can help your business scale and grow.</p>
 				<form onSubmit={handleSubmit}>
 					<div className="d-flex flex-column gap-25px">
 						<Input
@@ -76,14 +76,14 @@ const ContactSalesForm = () => {
 						<Input
 							textarea
 							placeholder="Message"
-							height="192px"
+							height="100%"
 							value={message}
 							setValue={setMessage}
 							submit={submit}
 							errText={"Please Enter a message"}
 						/>
 						<button type="submit" className="cmn-btn">
-							Send
+							Request Demo
 						</button>
 					</div>
 				</form>

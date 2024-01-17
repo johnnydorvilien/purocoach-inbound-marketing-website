@@ -60,11 +60,10 @@ const PartnerWithUs = () => {
 									className="title text-white mb-25"
 									style={{ maxWidth: "525px" }}
 								>
-									How We Work
+									Our Solutions
 								</h2>
 								<p className="text" style={{ maxWidth: "625px" }}>
-									Lorem ipsum dolor sit amet, adipiscing elit, sed do
-									eiusmod tempor incididunt ut labore et dolore.
+								Help attract, engage and convert prospects to paying customers for the growth of your coaching and consulting businesses through remarkable inbound marketing.
 								</p>
 								<ul className="info">
 									{data?.map((item, i) => (
@@ -192,15 +191,15 @@ const data = [
 	},
 	{
 		icon: <Speaker />,
-		title: "Our solutions are designed to work with you",
+		title: "Savings on cost, greater efficiency on productivity, and higher sales conversion for greater return on investment.",
 	},
 	{
 		icon: <Filter />,
-		title: "Traditional methods of doing business change almost daily",
+		title: "More time and freedom so you can focus on what matters the most—your valuable clients.",
 	},
 	{
 		icon: <Info />,
-		title: "Our team of dedicated leaders, managers and consultants",
+		title: "Allow you the ability to define your target audience, carve out a unique brand identity, and create a roadmap for your brand’s growth.",
 	},
 ];
 

@@ -31,9 +31,7 @@ const Footer = () => {
 									</div>
 								</form>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur
-									adipiscingelit. Ut elit tellus, luctus nec
-									ullamcorper mattis, pulvinar dapibus leo.
+								Get on our newsletter email list to be the first to see inspiring content, news and exclusive offers.
 								</p>
 								<ul className="social-icons justify-content-start">
 									<li>
@@ -63,8 +61,8 @@ const Footer = () => {
 				</div>
 				<div className="footer-bottom">
 					<div className="container">
-						<div>
-							<Link to="#">Privacy Policy</Link> &copy; Company 2023. All
+						<div style={{fontWeight:"400"}}>
+							<Link to="#" style={{fontWeight:"400"}}>Privacy Policy</Link> &copy; Company 2024. All
 							rights reserved.
 						</div>
 					</div>

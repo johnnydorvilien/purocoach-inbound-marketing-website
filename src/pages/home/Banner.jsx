@@ -29,7 +29,7 @@ const Banner = () => {
 					<span></span>
 				</div>
 				<Swiper
-					slidesPerView={1}
+					slidesPerView={0}
 					effect={"fade"}
 					modules={[EffectFade, Pagination]}
 					pagination={{ clickable: true }}
@@ -40,12 +40,12 @@ const Banner = () => {
 							<div className="container">
 								<div className="banner-wrapper">
 									<div className="banner-content">
-										<h1 className="title">The #1 CRM</h1>
+										<h1 className="title">Inbound Marketing</h1>
 										<h2 className="subtitle">
-											Platform for{" "}
-											<span style={{ color: "#FEC15A" }}>
-												Coaches
-											</span>
+											 for{" "}
+											<span style={{ color: "#FEC15A" , fontStyle:"italic"}}>Coaches</span>{" "}
+											 &{" "}
+                                            <span style={{ color: "#FEC15A" , fontStyle:"italic"}}>Consltants</span>
 										</h2>
 										<div className="txt">{item?.txt}</div>
 										<BtnGrp open={open} setOpen={setOpen} />
@@ -87,7 +87,8 @@ export const BtnGrp = ({ open, setOpen }) => {
 
 const data = [
 	{
-		txt: "We run the engine that drives your coaching business",
+		// txt: "We run the engine that drives your coaching business",
+		txt: "Get  Noticed - Generate Leads- Win Customers",
 	},
 	{
 		txt: "lorem ipsum dolor ",

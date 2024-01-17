@@ -19,24 +19,21 @@ const TrustedCrm = () => {
 						<div className="col-lg-6 ps-xl-4">
 							<div className="crm-content">
 								<h2 className="title d-none d-sm-block">
-									The Trusted CRM For Coaches
+								Traffic, Visibility, Conversion – We Deliver
 								</h2>
 								<h2 className="title d-sm-none">
-									The Trusted <br /> CRM For Coaches
+									The Trusted <br /> CRM For Coache
 								</h2>
-								<ul className="infos-data-crm">
+								{/* <ul className="infos-data-crm">
 									{infodata?.map(({ text }, i) => (
 										<li key={i}>
 											<Check2 color="var(--base-3)" />{" "}
 											<span>{text}</span>
 										</li>
 									))}
-								</ul>
+								</ul> */}
 								<p className="text">
-									Manage all your business operations with a state of
-									the art Client Relational Management software system,
-									integrated with HubSpot and Salesforce to help boost
-									your marketing and sales productivity.
+								Working with PUROCoach will bring a wealth of benefits to your business by helping it scale and grow. Whether you’re a small startup or a large coaching or consultant firm, having a full marketing team at your disposal who can deliver will help you be found online, attract prospects, convert clients at ease and achieve your business goals.
 								</p>
 								<div className="d-flex flex-wrap gap-3 __crm-btn-grp">
 									<Link

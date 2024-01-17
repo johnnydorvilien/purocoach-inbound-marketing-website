@@ -7,7 +7,7 @@ const ServiceFeatures = () => {
 			<div className="container">
 				<div className="section-title mb-60">
 					<h2 className="title title-xl-title text-white pb-0">
-						Features
+					Service Features
 					</h2>
 				</div>
 				<div className="row g-4">
@@ -36,85 +36,85 @@ const ServiceFeatures = () => {
 
 const data1 = [
 	{
-		title: "Inbound Marketing",
+		title: "Search Engine Optimization",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 	{
-		title: "Automation",
+		title: "Social Media Marketing",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 	{
-		title: "System Integration",
+		title: "Email Marketing",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 	{
-		title: "Client Relational Management",
+		title: "Landing Pages",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 	{
-		title: "Business Coaching & Startups",
+		title: "Branding",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 	{
-		title: "Business Coaching & Startups",
+		title: "Workflows and Sequences",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 	{
-		title: "Business Coaching & Startups",
+		title: "Market Research",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 	{
-		title: "Business Coaching & Startups",
+		title: "Lead Magnet",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 	{
-		title: "Business Coaching & Startups",
+		title: "Marketing Strategies",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 	{
-		title: "Business Coaching & Startups",
+		title: "Customer Service",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 ];
 const data2 = [
 	{
-		title: "Sales Development",
+		title: "Lead Nurturing",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 	{
-		title: "Sales Development",
+		title: "Content Writing",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 	{
-		title: "Client Relational Management",
+		title: "Lead Naturing",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 	{
-		title: "Client Relational Management",
+		title: "Website Optimization",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 	{
-		title: "Business Coaching & Startups",
+		title: "Web Design and Development",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 	{
-		title: "Business Coaching & Startups",
+		title: "Lead Generation",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 	{
-		title: "Business Coaching & Startups",
+		title: "Sales Funnels",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 	{
-		title: "Business Coaching & Startups",
+		title: "Marketing Campaigns",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 	{
-		title: "Business Coaching & Startups",
+		title: "Per-Per-Click",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 	{
-		title: "Business Coaching & Startups",
+		title: "Technical Support",
 		text: "Lorem ipsum dolor sit amet consectetur. Sed viverra quis dapibus pellentesque vitae facilisis fringilla. Risus phasellus varius arcu ac donec non sed. Velit bibendum tempus cursus mauris facilisis enim eget rhoncus. Pellentesque euismod quisque sagittis malesuada lorem. Elementum faucibus sit elementum enim nibh. Ornare adipiscing eget arcu in potenti.",
 	},
 ];

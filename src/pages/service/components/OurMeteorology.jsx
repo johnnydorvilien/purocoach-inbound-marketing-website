@@ -75,15 +75,15 @@ const data2 = [
 const data = [
 	{
 		title: "a) Attract",
-		text: "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima.",
+		text: "Increased engagement and a stronger relationship with your clients prior to purchase. By providing trustworthy content, engaging prospect client helps to build a relationship of trust with the customer.",
 	},
 	{
 		title: "b) Engage",
-		text: "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima.",
+		text: "Increased engagement and a stronger relationship with your clients prior to purchase. By providing trustworthy content, engaging prospect client helps to build a relationship of trust with the customer.",
 	},
 	{
 		title: "c) Delight customer for our clients",
-		text: "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima.",
+		text: "Increased engagement and a stronger relationship with your clients prior to purchase. By providing trustworthy content, engaging prospect client helps to build a relationship of trust with the customer.",
 	},
 ];
 

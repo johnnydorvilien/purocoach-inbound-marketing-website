@@ -17,16 +17,13 @@ const QuoteSection = () => {
 					</div>
 					<div className="col-md-6">
 						<div className="ps-xl-4">
-							<blockquote className="client-quote">
-								<div className="mb-4 pb-xxl-3">
+							<blockquote className="	">
+								<div className="mb-3 pb-xxl-3">
 									<QuoteIcon />
 								</div>
 								<div>
-									Johnny is a Master Coach and the Founder of Humane
-									Coaching. He is driven by the belief that each person
-									– with their dreams in hand – is capable of changing
-									the narrative of their own story to lead to greater
-									success.
+									<p style={{fontSize:"14px"}}>A seasoned IT field, software architect, sales and marketing director and business executive coach with a track record of helping Fortune 500 companies build secure and scalable software systems with innovative user experiences and marketing solutions that drive profits. Dorvilien’s most notable clients include Equifax, General Motors, HubSpot, UPS, Georgia Pacific, and The Home Depot.</p>
+									<p style={{fontSize:"14px"}}>Dorvilien is also passionate about helping CEOs of small coaching businesses identify the problems they face in their businesses and provide solutions for long-term growth. He is deeply committed to providing leadership for all aspects of PUROCoach operations with an emphasis on long-term goals, growth, profit, and return on investment.</p>
 								</div>
 							</blockquote>
 						</div>

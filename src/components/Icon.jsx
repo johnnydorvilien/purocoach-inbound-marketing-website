@@ -81,8 +81,8 @@ export const SuccessIcon = ({ width }) => (
 );
 export const Plus = () => (
 	<svg
-		width="24"
-		height="24"
+		width="17"
+		height="17"
 		viewBox="0 0 24 24"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -660,8 +660,8 @@ export const CloseModal = () => (
 );
 export const PieChartIcon = () => (
 	<svg
-		width="50"
-		height="50"
+		width="45"
+		height="45"
 		viewBox="0 0 50 50"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -686,8 +686,8 @@ export const PieChartIcon = () => (
 );
 export const InboundMarketingIcon = () => (
 	<svg
-		width="50"
-		height="50"
+		width="45"
+		height="45"
 		viewBox="0 0 50 50"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -733,8 +733,8 @@ export const InboundMarketingIcon = () => (
 );
 export const AutomationIcon2 = () => (
 	<svg
-		width="50"
-		height="50"
+		width="45"
+		height="45"
 		viewBox="0 0 50 50"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -774,8 +774,8 @@ export const AutomationIcon2 = () => (
 );
 export const Integration = () => (
 	<svg
-		width="50"
-		height="50"
+		width="45"
+		height="45"
 		viewBox="0 0 50 50"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -800,8 +800,8 @@ export const Integration = () => (
 );
 export const SalesDev = () => (
 	<svg
-		width="50"
-		height="50"
+		width="45"
+		height="45"
 		viewBox="0 0 50 50"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -849,8 +849,8 @@ export const SalesDev = () => (
 );
 export const Rocket = () => (
 	<svg
-		width="50"
-		height="50"
+		width="45"
+		height="45"
 		viewBox="0 0 50 50"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -952,8 +952,8 @@ export const NextIcon = () => (
 );
 export const Message = () => (
 	<svg
-		width="55"
-		height="55"
+		width="45"
+		height="45"
 		viewBox="0 0 55 55"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -982,8 +982,8 @@ export const Message = () => (
 );
 export const Speaker = () => (
 	<svg
-		width="55"
-		height="55"
+		width="45"
+		height="45"
 		viewBox="0 0 55 55"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -1033,8 +1033,8 @@ export const Speaker = () => (
 );
 export const Info = () => (
 	<svg
-		width="55"
-		height="55"
+		width="45"
+		height="45"
 		viewBox="0 0 55 55"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -1076,8 +1076,8 @@ export const Info = () => (
 );
 export const Filter = () => (
 	<svg
-		width="55"
-		height="55"
+		width="45"
+		height="45"
 		viewBox="0 0 55 55"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -1162,7 +1162,7 @@ export const Filter = () => (
 );
 export const QuoteIcon = () => (
 	<svg
-		width="48"
+		width="30"
 		height="30"
 		viewBox="0 0 48 30"
 		fill="none"
@@ -1215,8 +1215,8 @@ export const Check2 = ({ color }) => (
 );
 export const Pin = () => (
 	<svg
-		width="50"
-		height="50"
+		width="45"
+		height="45"
 		viewBox="0 0 50 50"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -1248,8 +1248,8 @@ export const Pin = () => (
 );
 export const Phone = () => (
 	<svg
-		width="50"
-		height="50"
+		width="45"
+		height="45"
 		viewBox="0 0 50 50"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -1281,7 +1281,7 @@ export const Phone = () => (
 );
 export const Email = () => (
 	<svg
-		width="54"
+		width="45"
 		height="35"
 		viewBox="0 0 54 35"
 		fill="none"
@@ -1363,8 +1363,8 @@ export const InfoIcon = () => (
 );
 export const Facebook = ({ color }) => (
 	<svg
-		width="40"
-		height="40"
+		width="30"
+		height="30"
 		viewBox="0 0 40 40"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -1385,8 +1385,8 @@ export const Facebook = ({ color }) => (
 );
 export const Twitter = ({ color }) => (
 	<svg
-		width="40"
-		height="40"
+		width="30"
+		height="30"
 		viewBox="0 0 40 40"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -1408,8 +1408,8 @@ export const Twitter = ({ color }) => (
 );
 export const Linkedin = ({ color }) => (
 	<svg
-		width="40"
-		height="40"
+		width="30"
+		height="30"
 		viewBox="0 0 40 40"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"

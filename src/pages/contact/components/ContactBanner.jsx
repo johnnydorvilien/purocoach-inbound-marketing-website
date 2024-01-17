@@ -28,22 +28,18 @@ const ContactBanner = () => {
 							PUROCoach
 						</h1>
 						<div className="txt">
-							Lorem ipsum dolor sit amet consectetur. Aliquet metus hac
-							diam nec amet mus pellentesque leo facilisis. Est mattis
-							ornare sit porta lectus eget diam. Metus a sit proin
-							adipiscing urna enim at non sed. Luctus in velit duis sed
-							adipiscing neque velit. Tortor arcu habitasse convallis id
-							cras
+							<p>Our team can help you think about a business development plan, as well as establishing a long-term growth strategy. We can assess the strengths, weaknesses, opportunities, and threats to your business and come up with a roadmap to address any needs that arise.</p>
+							<p>Contact us to learn more about how we can assist with business development.</p>
 						</div>
 						<div className="contact-info">
-							<div className="item">
+							{/* <div className="item">
 								<div className="icon">
 									<Pin />
 								</div>
 								<h5 className="sub-title">Address</h5>
 								<div>12, Some Street, 11000 Belgrade, Serbia</div>
-							</div>
-							<div className="item">
+							</div> */}
+							{/* <div className="item">
 								<div className="icon">
 									<Phone />
 								</div>
@@ -51,14 +47,14 @@ const ContactBanner = () => {
 								<Link to="Tel:(+381) 11.123.4567">
 									(+381) 11.123.4567
 								</Link>
-							</div>
+							</div> */}
 							<div className="item">
 								<div className="icon">
 									<Email />
 								</div>
 								<h5 className="sub-title">Email</h5>
 								<Link to="Mailto:PuroCoach@gmail.com">
-									PuroCoach@gmail.com
+								support@purocoach.com
 								</Link>
 							</div>
 						</div>

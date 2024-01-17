@@ -23,12 +23,16 @@ const AboutBanner = () => {
 					<div className="banner-content">
 						<h1
 							className="title"
-							style={{ lineHeight: "1.25", marginBottom: "20px" }}
+							style={{ lineHeight: "1.25", marginBottom: "20px"}}
 						>
-							About the Company
+							About{" "} <span style={{ color: "#FEC15A" , fontStyle:"italic", fontFamily: "Poppins"}}>Us</span>
 						</h1>
 						<div className="txt">
-							Lorem ipsum dolor sit amet consectetur. Suscipit.
+							A world class inbound marketing agency that is committed 
+							to superior quality and results. We offer B2B marketing 
+							strategies, automation development and consulting services 
+							to business-driven coaches and consultants that offers 
+							exceptional return on investment. 
 						</div>
 						<div className="d-none d-sm-block">
 							<div className="btn-grp">

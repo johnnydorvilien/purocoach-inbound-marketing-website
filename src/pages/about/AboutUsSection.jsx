@@ -26,7 +26,14 @@ const AboutUsSection = () => {
 								<div className="about-item-cont">
 									<div className="cont">
 										<h2 className="title">{item?.title}</h2>
-										<p className="txt">{item?.text}</p>
+										{/* <h4 className="txt">{item?.text}</h4> */}
+										{Array.isArray(item?.text) ? (
+                      item?.text?.map((txt, j) => (
+                        <p key={j}>{txt}</p>
+                      ))
+                    ) : (
+                      <p>{item?.text}</p>
+                    )}
 										<div className="d-flex">
 											<Link
 												to="/services?goback"
@@ -49,18 +56,21 @@ const AboutUsSection = () => {
 const data = [
 	{
 		img: img1,
-		title: "Who We Are",
-		text: "Coaching is a powerful tool to overcome life obstacles. Coaches are guides – thoughtful and empathetic listeners ready to assist and encourage their clients. At Humane Coaching, we champion this important work and pride ourselves on providing opportunities for coaches to focus on their clients. We offer marketing strategy, business coaching, and business consulting for coaches in health & wellness, finance, career, relationships, leadership, and more.",
+		title: "Our Team",
+		text: [
+			"Our marketing, sales and engineering team consists of strong and dedicated in-house experts who are passionate and eager to provide proven marketing consulting strategies, automation and sales development services to help coaches and consultants thrive in their businesses.",
+			"We are skilled, knowledgeable, and client-focused, with years of experience in offering B2B marketing strategies and business sales development coaching and support. We help many business-driven coaches and consultants entrepreneurs achieve great business success. Whether they are focused on providing consulting services, life-coaching, business, self-development, fitness, health and wellness, finance, career development, relationship, or leadership coaching, we can get you great results as you scale and grow your business quickly, organically, and effectively.",
+		],
 	},
 	{
 		img: img3,
 		title: "Our Mission",
-		text: "By motivating coaches to start or grow their businesses, we help each client follow their calling and pursue their passion. We know the importance of coaching people in personal development and believe everyone can benefit from a coach. Therefore, we are driven to inspire current and future coaches who seek to help others to unleash their full potential and become their best self.",
+		text: "At PUROCoach, our mission is to do the heavy lifting, running the engine that drives coaching and consulting businesses. We are dedicated to helping coaches and consultants boost their marketing and sales productivity, giving them more freedom, time, and money-saving strategies, so they can focus on the clients that matter the most.",
 	},
 	{
 		img: img2,
 		title: "Our Vision",
-		text: "We want to see coaches gradually shift into prioritizing their true passion—unlocking their clients’ potential. We envision an industry where the bar is raised, and every coach can serve with excellence. Humane Coaching is just one part of a greater chain reaction of helping others. We operate on seven core values: people, authenticity, integrity, diversity, excellence, innovation, and togetherness.",
+		text: "Our mission is to offer coaches innovative, tailored business and marketing solutions and equip them with the right software tools so they can increase productivity, save time as they pursue their business goals, and have more time for their clients. Our aim is to give coaches more freedom to operate in good conscience with their day-to-day business decision-making while inspiring and empowering them to pursue their passion along their entrepreneurial journey."
 	},
 ];
 

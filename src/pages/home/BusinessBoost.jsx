@@ -32,15 +32,12 @@ const BusinessBoost = () => {
 				<div className="container">
 					<div className="boost-title">
 						<Title
-							title="Start Boosting Your Business Today!"
+							title="Our Process"
 							className="text-white text-start text-md-center"
 						/>
 					</div>
 					<p className="s-txt">
-						Whether you are just starting out in your coaching career, or
-						you have grown a steady business and see yourself looking for
-						more, we are ready to partner with you. With technical
-						knowledge across various
+					It all starts with attracting the right customers, who you then work to convert, close, and delight. Learn how our 4 step process can help connect your business with the right customers at the right time.
 					</p>
 				</div>
 				<ul className="boost-tab-menu">
@@ -50,7 +47,7 @@ const BusinessBoost = () => {
 							type="button"
 							onClick={() => setTab("Business Consulting")}
 						>
-							Business Consulting
+							1. Discovery & Exploration
 						</button>
 					</li>
 					<li>
@@ -59,7 +56,7 @@ const BusinessBoost = () => {
 							type="button"
 							onClick={() => setTab("Strategy Planning")}
 						>
-							Strategy Planning
+							2. Planning Strategies
 						</button>
 					</li>
 					<li>
@@ -68,7 +65,7 @@ const BusinessBoost = () => {
 							type="button"
 							onClick={() => setTab("Market Analysis")}
 						>
-							Market Analysis
+						    3. Execute & Automate
 						</button>
 					</li>
 					<li>
@@ -77,7 +74,7 @@ const BusinessBoost = () => {
 							type="button"
 							onClick={() => setTab("Business Strategy")}
 						>
-							Business Strategy
+							4. Test & Finalyse
 						</button>
 					</li>
 				</ul>
@@ -135,14 +132,14 @@ const TabItem = ({ title, openmenu }) => {
 							<div className="about--company">
 								<img src={consult} alt="" />
 								<div className="cont">
-									<h5 className="subtitle">About Company</h5>
+									<h5 className="subtitle">The Agenda:</h5>
 									<ul>
-										<li>Explore Our Consultancy Services</li>
-										<li>Finest Consultant Experts</li>
-										<li>Our Mission Statement</li>
-										<li>Business Work Principles</li>
-										<li>Company Carrer Oportunities</li>
-										<li>Finest Consultant Team</li>
+										<li>We listen</li>
+										<li>We get to know your business well</li>
+										<li>We uncover key pain points</li>
+										<li>We ask questions to gain understanding</li>
+										<li>We define and set key smart goals</li>
+										<li>We break goals into small chunks and set deadlines</li>
 									</ul>
 								</div>
 							</div>
@@ -150,17 +147,13 @@ const TabItem = ({ title, openmenu }) => {
 						<div className="col-xl-6">
 							<div className="statement-wrapper">
 								<div className="statement-left">
-									<h5>Our Mission Statement</h5>
+									<h5>Requirement Gathering</h5>
 									<p>
-										Sed ut perspiciatis unde omnis iste natus error
-										sit voluptatem accusantium remque laudantium,
-										totam rem aperiam, eaque ipsa quae ab illo
-										inventore veritatis et quasi architecto beatae
-										vitae dicta.
+										The purpose of the discovery is to discover your desired outcome from your consulting services block which help us to craft a practical approach to achieve your business goal. This discovery phase entails uncovering your needs, challenges, and the results you desire for your business. 
 									</p>
-									<Link to="#" className="cmn-btn btn-white text-base">
+									{/* <Link to="#" className="cmn-btn btn-white text-base">
 										Explore Our Services
-									</Link>
+									</Link> */}
 								</div>
 								<div
 									className="statement-right"
@@ -168,8 +161,8 @@ const TabItem = ({ title, openmenu }) => {
 										background: `url(${callbg}) no-repeat center center / cover`,
 									}}
 								>
-									<h4>
-										Our Call Center <br /> (555) 789 6754
+									<h4 >
+										We're one call away!
 									</h4>
 									<Link
 										to="#"
@@ -178,9 +171,11 @@ const TabItem = ({ title, openmenu }) => {
 											background: "#73B9EF",
 											borderColor: "#73B9EF",
 											color: "#fff",
+											padding: "5px 14px",
+											fontSize: "13px"
 										}}
 									>
-										Explore Our Services
+										Schedule a Discovery call
 									</Link>
 								</div>
 							</div>

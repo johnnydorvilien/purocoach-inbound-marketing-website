@@ -34,7 +34,7 @@ const Feature = () => {
 				<div className="overflow-hidden">
 					<div className="container container-1320">
 						<Title
-							title="Lorem ipsum dolor sit amet consectetur"
+							title="Your Inbound Marketing is at Our Care"
 							className="text-white text-start text-md-center"
 						/>
 						{screen >= 992 ? (

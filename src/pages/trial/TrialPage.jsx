@@ -252,16 +252,16 @@ const Step3 = ({ step, setStep }) => {
 						errText="Company Email is Required"
 					/>
 					<CheckGroup value={agree} setValue={setAgree}>
-						I agree to the <Link to="#">Main Services Agreement.</Link>
+						<p style={{fontSize:"14px"}}>I agree to the <Link to="#">Main Services Agreement.</Link></p>
 					</CheckGroup>
 					<div className="register-txt">
 						By registering, you agree to the processing of your personal
 						data by PuroCoach as described in the Privacy Statement.
 					</div>
 					<CheckGroup value={marketing} setValue={setMarketing}>
-						Yes, I would like to receive marketing communications
+						<p style={{fontSize:"14px", lineHeight:"normal"}}>Yes, I would like to receive marketing communications
 						regarding PuroCoach products, services, and events. I can
-						unsubscribe at any time.
+						unsubscribe at any time.</p>
 					</CheckGroup>
 					<div className="d-flex gap-15px w-100 mt-20">
 						<button

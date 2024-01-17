@@ -28,7 +28,7 @@ const PricingSection = () => {
 								We Offer a Variety of Packages
 							</h2>
 							<span className="shadow-border my-30px"></span>
-							<p className="txt mx-auto" style={{ maxWidth: "1170px" }}>
+							<p className="txt mx-auto" style={{ maxWidth: "1170px" ,fontSize:"14px"}}>
 								Eager to meet the needs of any coach we work with, we
 								have various price points available to suit your
 								business. <br /> You will see a high return on your
@@ -46,7 +46,7 @@ const PricingSection = () => {
 					className="service-bottom-shape d-none d-md-block"
 				/>
 				<div className="container">
-					<div className="section-title-3">
+					 <div className="section-title-3">
 						<div className="left">
 							<h2 className="title">CRM Subscriptions</h2>
 							<div>No contracts, no surprise fees</div>
@@ -71,7 +71,7 @@ const PricingSection = () => {
 
 					<RangeItem />
 					<br />
-					<br className="d-none d-md-block" />
+					<br className="d-none d-md-block" /> 
 					<div className="row g-3 justify-content-center">
 						{data?.map((item, i) => (
 							<div className="col-lg-3 col-md-6 col-sm-9" key={i}>
@@ -115,12 +115,12 @@ const PricingSection = () => {
 								.join(" ")}
 					</h2>
 					<div className="row align-items-center flex-wrap-reverse">
-						<div className="col-lg-7">
+						<div className="col-lg-6">
 							<div style={{ maxWidth: "699px" }}>
 								<ContactSalesForm />
 							</div>
 						</div>
-						<div className="col-lg-5 text-center">
+						<div className="col-lg-6 text-center">
 							<img src={contactSalesImage} className="w-100" alt="" />
 						</div>
 					</div>
@@ -132,9 +132,9 @@ const PricingSection = () => {
 
 const data = [
 	{
-		name: "Free",
-		price: 0,
-		duration: "yearly",
+		name: "Complete Inbound Bundle",
+		// price: 0,
+		// duration: "yearly",
 		subdata: [
 			"Lorem ipsum dolor sit",
 			"Lorem ipsum dolor sit amet",
@@ -144,9 +144,9 @@ const data = [
 		],
 	},
 	{
-		name: "Basic",
-		price: 49.99,
-		duration: "yearly",
+		name: "The Consult Pack",
+		// price: 49.99,
+		// duration: "yearly",
 		subdata: [
 			"Lorem ipsum dolor sit",
 			"Lorem ipsum dolor sit amet",
@@ -156,9 +156,9 @@ const data = [
 		],
 	},
 	{
-		name: "Premium",
-		price: 109.99,
-		duration: "yearly",
+		name: "Automation Pack",
+		// price: 109.99,
+		// duration: "yearly",
 		subdata: [
 			"Lorem ipsum dolor sit",
 			"Lorem ipsum dolor sit amet",
@@ -167,18 +167,18 @@ const data = [
 			"Lorem ipsum dolor sit",
 		],
 	},
-	{
-		name: "Professional",
-		price: 199.99,
-		duration: "yearly",
-		subdata: [
-			"Lorem ipsum dolor sit",
-			"Lorem ipsum dolor sit amet",
-			"Lorem ipsum dolor sit",
-			"Lorem ipsum",
-			"Lorem ipsum dolor sit",
-		],
-	},
+	// {
+	// 	name: "Professional",
+	// 	// price: 199.99,
+	// 	// duration: "yearly",
+	// 	subdata: [
+	// 		"Lorem ipsum dolor sit",
+	// 		"Lorem ipsum dolor sit amet",
+	// 		"Lorem ipsum dolor sit",
+	// 		"Lorem ipsum",
+	// 		"Lorem ipsum dolor sit",
+	// 	],
+	// },
 ];
 
 export default PricingSection;

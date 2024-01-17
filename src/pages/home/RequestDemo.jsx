@@ -78,11 +78,11 @@ const RequestDemo = () => {
 					<div className="contact-sales-form-wrapper">
 						<div className="target-id" id="request-demo"></div>
 						<h4 className="title font-semibold text-base">
-							Request Free Demo
+						   Let Us Help You!
 						</h4>
-						<p>Don’t throw your future away.</p>
+						<p>Send us your request here.</p>
 						<form onSubmit={handleSubmit}>
-							<div className="d-flex flex-column gap-25px">
+							<div className="d-flex flex-column gap-15px">
 								<Input
 									placeholder="Name"
 									value={name}
@@ -121,7 +121,7 @@ const RequestDemo = () => {
 									errText={"Please Enter a message"}
 								/>
 								<button type="submit" className="cmn-btn">
-									Send
+									Submit
 								</button>
 							</div>
 						</form>

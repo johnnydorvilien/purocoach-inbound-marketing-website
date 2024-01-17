@@ -64,13 +64,13 @@ const BusinessStartups = () => {
 				<div className="section-title mb-60">
 					<h2 className="title title-xl-title text-start text-sm-center text-base pb-0">
 						{/* <Rocket /> Business Startups */}
-						<Rocket /> Large Coaching Enterprise
+						<Rocket />Power Your Start-Up Forward With a Business Coach
 					</h2>
 				</div>
 				<div className="row g-3">
 					<div className="col-lg-4">
 						<div className="contact-sales-form-wrapper">
-							<h4 className="title">Contact Sales</h4>
+							<h4 className="title" style={{fontSize:"25px"}}>Contact Sales</h4>
 							<p>Don’t throw your future away.</p>
 							<form onSubmit={handleSubmit}>
 								<div className="d-flex flex-column gap-25px">
@@ -98,7 +98,7 @@ const BusinessStartups = () => {
 									<Input
 										textarea
 										placeholder="Message"
-										height="108px"
+										height="100%"
 										value={message}
 										setValue={setMessage}
 										submit={submit}
@@ -115,13 +115,13 @@ const BusinessStartups = () => {
 						<div className="row g-3">
 							<div className="col-sm-6">
 								<div className="small-shadow-card">
-									<h4 className="title">How it works?</h4>
-									<p>
+									<h4 className="title" style={{fontSize:"25px"}}>How it works?</h4>
+									<p style={{fontSize:"14px"}}>
 										Lorem ipsum dolor sit amet consectetur. At lacus
 										egestas sed aliquam auctor. Sapien morbi non risus
 										lacus risus posuere.
 									</p>
-									<p>
+									<p style={{fontSize:"14px"}}>
 										Neque fringilla nisl est id interdum ac ut. Rutrum
 										fringilla pellentesque augue faucibus ridiculus.
 										Ac magna mi duis amet potenti integer. Amet urna
@@ -134,8 +134,8 @@ const BusinessStartups = () => {
 							</div>
 							<div className="col-sm-6">
 								<div className="small-shadow-card">
-									<h4 className="title">What to do?</h4>
-									<p>
+									<h4 className="title" style={{fontSize:"25px"}}>What to do?</h4>
+									<p style={{fontSize:"14px"}}>
 										Lorem ipsum dolor sit amet consectetur. Porttitor
 										ullamcorper risus odio rhoncus montes arcu
 										suscipit. Lorem mollis dapibus non elit dignissim
@@ -143,7 +143,7 @@ const BusinessStartups = () => {
 										cursus sem pulvinar. Elit porttitor turpis nulla
 										ullamcorper.
 									</p>
-									<p>
+									<p style={{fontSize:"14px"}}>
 										A amet bibendum faucibus augue in lectus. Velit
 										morbi ut ultricies magna dictum. Maecenas at felis
 										proin morbi. Tellus auctor ornare sit ut id
@@ -156,7 +156,7 @@ const BusinessStartups = () => {
 						<Marquee gradient={false} speed={40}>
 							{client_logo?.map((item, i) => (
 								// <img src={item.src} className="sponsor-img" alt="" />
-								<h6 key={i} className="font-medium mx-4">
+								<h6 key={i} className="font-medium mx-4" style={{fontSize:"15px"}}>
 									{item?.title}
 								</h6>
 							))}
