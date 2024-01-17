@@ -1934,11 +1934,11 @@ header {
 				margin-bottom: 35px;
 			}
 		}
-		.banner-thumb {
-			img {
-				height: 540px !important;
-			}
-		}
+		// .banner-thumb {
+		// 	img {
+		// 		height: 540px !important;
+		// 	}
+		// }
 	}
 	@include breakpoint(max-lg) {
 		// flex-wrap: wrap;
