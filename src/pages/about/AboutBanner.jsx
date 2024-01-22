@@ -34,13 +34,13 @@ const AboutBanner = () => {
 							to business-driven coaches and consultants that offers 
 							exceptional return on investment. 
 						</div>
-						<div className="d-none d-sm-block">
+						{/* <div className="d-none d-sm-block">
 							<div className="btn-grp">
 								<HashLink className="cmn-btn btn-white" to="#values">
 									Our Values
 								</HashLink>
 							</div>
-						</div>
+						</div> */}
 
 						<div className="btn-grp d-sm-none">
 							<Link className="cmn-btn btn-white" to="/trial-signup">

@@ -131,6 +131,16 @@ const TabItem = ({ title, openmenu }) => {
 						<div className="col-xl-6">
 							<div className="about--company">
 								<img src={consult} alt="" />
+								<div className="statement-left">
+									<h5>Requirement Gathering</h5>
+									<p>
+										The purpose of the discovery is to discover your desired outcome from your consulting services block which help us to craft a practical approach to achieve your business goal. This discovery phase entails uncovering your needs, challenges, and the results you desire for your business. 
+									</p>
+								</div>
+							</div>
+						</div>
+						<div className="col-xl-6">
+							<div className="statement-wrapper">
 								<div className="cont">
 									<h5 className="subtitle">The Agenda:</h5>
 									<ul>
@@ -141,19 +151,6 @@ const TabItem = ({ title, openmenu }) => {
 										<li>We define and set key smart goals</li>
 										<li>We break goals into small chunks and set deadlines</li>
 									</ul>
-								</div>
-							</div>
-						</div>
-						<div className="col-xl-6">
-							<div className="statement-wrapper">
-								<div className="statement-left">
-									<h5>Requirement Gathering</h5>
-									<p>
-										The purpose of the discovery is to discover your desired outcome from your consulting services block which help us to craft a practical approach to achieve your business goal. This discovery phase entails uncovering your needs, challenges, and the results you desire for your business. 
-									</p>
-									{/* <Link to="#" className="cmn-btn btn-white text-base">
-										Explore Our Services
-									</Link> */}
 								</div>
 								<div
 									className="statement-right"

@@ -19,8 +19,8 @@ const AboutPage = () => {
 			<ValuesSection />
 			<PartnerWithUs />
 			<ShapeViews>
-				<Team />
-				<BlackDivider />
+				{/* <Team /> */}
+				{/* <BlackDivider /> */}
 				<QuoteSection />
 			</ShapeViews>
 			<br className="d-none d-md-block" />

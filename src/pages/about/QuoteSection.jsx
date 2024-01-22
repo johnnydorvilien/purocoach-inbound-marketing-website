@@ -6,7 +6,7 @@ const QuoteSection = () => {
 		<section className="quote-section">
 			<div className="container">
 				<div className="row gy-4 align-items-center">
-					<div className="col-md-6">
+					<div className="col-md-6 text-center">
 						<div className="quote-image">
 							<img src={quoteImg} alt="" />
 							<div className="name-area">

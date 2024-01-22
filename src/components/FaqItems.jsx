@@ -6,11 +6,11 @@ export const FaqItems = ({ data, id, firstClose, theme, width }) => {
 	const [open, setOpen] = useState(firstClose || 0);
 	return (
 		<div
-			className={`accordion ${theme == "white" ? "theme-white" : ""} ${
-				width ? "width--auto" : ""
-			}`}
-			id={id}
-		>
+      className={`accordion ${theme === "white" ? "theme-white" : ""} ${
+        width ? "width--auto" : ""
+      }`}
+      id={id}
+    >
 			{data?.map(
 				(
 					{ title, text, info, facility, icon, readMoreUrl, buttonType },
@@ -29,15 +29,18 @@ export const FaqItems = ({ data, id, firstClose, theme, width }) => {
 								}}
 							>
 								{icon && (
-									<span className="me-2 me-sm-4 start-icon">
+									<span className="me-2 me-sm-4 start-icon ">
 										{icon}
 									</span>
 								)}
-								<span className="me-2">{title} </span>
+								{/* <span className="me-2 text-white">{title} </span> */}
+								<span className={`me-2 ${theme === "white" ? "text-white" : ""}`}>
+                  					{title}{" "}
+                				</span>
 								{facility && (
 									<span className="subtxt"> ({facility})</span>
 								)}
-								<span className="plus ms-auto">
+								<span className={`plus ms-auto ${theme === "white" ? "text-white" : ""}`}>
 									{open !== i ? <Plus /> : <Minus />}
 								</span>
 							</button>

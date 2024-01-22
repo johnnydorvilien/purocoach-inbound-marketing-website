@@ -14,35 +14,28 @@ const WorkingWithUs = () => {
 					<div className="boost-title">
 						<div className="section-title m-0">
 							<h2 className="title text-base text-start text-md-center text-xl font-semibold pb-max-md-2" style={{paddingBottom:'40px'}}>
-								Working With Us
+								{/* Working With Us */}
+								How Do We Do This?
 							</h2>
 						</div>
 					</div>
 					<div className="row align-items-center gy-4">
-						<div className="col-lg-6">
-							<div
-								className="working-img"
-								onClick={() => setOpen(!open)}
-							>
-								<img src={workingWithUs} className="mw-100" alt="" />
-								<div className="icon">
-									<VideoPlayIcon />
-								</div>
-							</div>
-						</div>
 						<div className="col-lg-6 ps-xl-4">
 							<div className="crm-content">
 								<p className="text">
-									Lorem ipsum dolor sit amet consectetur. Egestas felis
-									et praesent proin scelerisque velit. Quis dolor enim
-									bibendum vel placerat nisl leo faucibus suspendisse.
+									We calculate client revenue that 
+									we’ve generated from confirmed
+									qualified leads, calls from campaigns
+									that we manage in SEO, PPC, social 
+									media among many other digital marketing strategies.
 								</p>
 								<p className="text">
-									Etiam arcu est nam adipiscing diam interdum
-									consectetur. A turpis egestas molestie tellus mauris
-									lacus. Amet arcu eget semper luctus fermentum blandit
-									ut semper et. Pellentesque urna volutpat posuere
-									donec est.
+									With these results-driven services,
+									and the help of our proprietary
+									marketing automation software, 
+									we’ve driven millions of leads 
+									and phone calls which has resulted
+									in billions of dollars in revenue for our client’s businesses.
 								</p>
 								<div className="d-flex flex-wrap gap-3 __crm-btn-grp">
 									<HashLink
@@ -59,6 +52,17 @@ const WorkingWithUs = () => {
 										{screen < 575 ? "Learn More" : "Get in Touch"}
 									</HashLink>
 								</div>
+							</div>
+						</div>
+						<div className="col-lg-6">
+							<div
+								className="working-img"
+								onClick={() => setOpen(!open)}
+							>
+								<img src={workingWithUs} className="mw-100" alt="" />
+								{/* <div className="icon">
+									<VideoPlayIcon />
+								</div> */}
 							</div>
 						</div>
 					</div>

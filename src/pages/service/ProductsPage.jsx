@@ -19,6 +19,7 @@ import {
 	BusinessIcon,
 	IntegrationIcon,
 	SalesDevelopmentIcon,
+	PieChartIcon
 } from "../../components/Icon";
 import img1 from "./img/system-services/1.png";
 import img2 from "./img/system-services/2.png";
@@ -86,7 +87,7 @@ const data = [
 		],
 	},
 	{
-		icon: <BusinessIcon />,
+		icon: <PieChartIcon />,
 		img: img4,
 		title: "Reporting & KPI Performance",
 		id: "business-coaching",

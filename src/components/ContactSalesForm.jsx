@@ -40,9 +40,9 @@ const ContactSalesForm = () => {
 		<>
 			<div className="contact-sales-form-wrapper">
 				<h4 className="title text-base" style={{ fontWeight: "600" }}>
-				Contact Us
+				Contact Sales
 				</h4>
-				<p>Let us know how we can help your business scale and grow.</p>
+				<p>Let us draw you a marketing plan and roadmap</p>
 				<form onSubmit={handleSubmit}>
 					<div className="d-flex flex-column gap-25px">
 						<Input

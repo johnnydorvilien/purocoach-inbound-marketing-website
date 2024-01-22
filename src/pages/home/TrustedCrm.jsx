@@ -41,14 +41,15 @@ const TrustedCrm = () => {
 										data-bs-toggle="modal"
 										className="cmn-btn"
 									>
-										Learn More
+											{/* Learn More */}
+											Request a Free Quote
 									</Link>
-									<Link
+									{/* <Link
 										to="/trial-signup"
 										className="cmn-btn btn-secondary"
 									>
 										Try it Free
-									</Link>
+									</Link> */}
 								</div>
 							</div>
 						</div>
