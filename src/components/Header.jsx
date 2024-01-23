@@ -19,6 +19,7 @@ import {
 	LoginIcon,
 	SalesDevelopmentIcon,
 	SearchIcon,
+	PieChartIcon
 } from "./Icon";
 
 const Header = ({ floating }) => {
@@ -120,10 +121,11 @@ const Header = ({ floating }) => {
 										</li>
 										<li className="position-relative d-none d-lg-block">
 											<div className="menu-link">
-												Products & Services{" "}
-												<span className="caret">
+												{/* Products & Services{" "} */}
+												Services
+												{/* <span className="caret">
 													<CaretDown />
-												</span>
+												</span> */}
 											</div>
 											<MegaMenu
 												subServiceIndex={subServiceIndex}
@@ -135,7 +137,8 @@ const Header = ({ floating }) => {
 												className="menu-link"
 												to="/pricing?inbound-marketing"
 											>
-												Pricing
+												{/* Pricing */}
+												Packages
 											</NavLink>
 										</li>
 										<li>
@@ -256,19 +259,19 @@ const HeaderRight = ({ setShow }) => {
 	return (
 		<>
 			<div className="header-right">
-				<Link to="/auth/login" className="login-btn">
+				{/* <Link to="/auth/login" className="login-btn">
 					<LoginIcon />
 					<span>Log in</span>
-				</Link>
+				</Link> */}
 				<Link to="/trial-signup" className="cmn-btn">
-					Try it Free
+				Get a Free Consultation
 				</Link>
 				<button
 					className="btn p-0 border-0 outline-0 login-btn"
 					type="button"
 					onClick={() => setShow(true)}
 				>
-					<SearchIcon />
+					{/* <SearchIcon /> */}
 				</button>
 			</div>
 		</>
@@ -276,53 +279,53 @@ const HeaderRight = ({ setShow }) => {
 };
 
 const data = [
-	{
-		left: {
-			title: "Products",
-			text: "Lorem ipsum dolor sit amet consectetur",
-		},
-		right: [
-			{
-				icon: <CrmIcon />,
-				title: "CRM Software",
-				text: "Lorem ipsum dolor sit amet consectetur",
-				url: "/products-crm",
-			},
-		],
-	},
+	// {
+	// 	left: {
+	// 		title: "Products",
+	// 		text: "Lorem ipsum dolor sit amet consectetur",
+	// 	},
+	// 	right: [
+	// 		{
+	// 			icon: <CrmIcon />,
+	// 			title: "CRM Software",
+	// 			text: "Lorem ipsum dolor sit amet consectetur",
+	// 			url: "/products-crm",
+	// 		},
+	// 	],
+	// },
 	{
 		left: {
 			title: "Services",
 			text: "Lorem ipsum dolor sit amet consectetur",
 		},
 		right: [
-			{
-				icon: <InboundMarketing />,
-				title: "Inbound Marketing",
-				text: "Lorem ipsum dolor sit amet consectetur",
-				url: "/services/#inbounding",
-			},
+			// {
+			// 	icon: <InboundMarketing />,
+			// 	title: "Inbound Marketing",
+			// 	text: "Lorem ipsum dolor sit amet consectetur",
+			// 	url: "/services/#inbounding",
+			// },
 			{
 				icon: <AutomationIcon />,
-				title: "Automation ",
+				title: "Sales Funnel ",
 				text: "Lorem ipsum dolor sit amet consectetur",
 				url: "/services/#automation",
 			},
 			{
 				icon: <IntegrationIcon />,
-				title: "Integration",
+				title: "Email Communication",
 				text: "Lorem ipsum dolor sit amet consectetur",
 				url: "/services/#integration",
 			},
 			{
 				icon: <SalesDevelopmentIcon />,
-				title: "Sales Development",
+				title: "Workflows & Sequences",
 				text: "Lorem ipsum dolor sit amet consectetur",
 				url: "/services/#sales-development",
 			},
 			{
-				icon: <BusinessIcon />,
-				title: "Business Coaching & Startups",
+				icon: <PieChartIcon />,
+				title: "Reporting & KPI Performances",
 				url: "/services/#business-coaching",
 			},
 		],

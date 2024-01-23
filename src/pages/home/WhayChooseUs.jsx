@@ -12,7 +12,8 @@ const WhayChooseUs = () => {
 							<div className="choose-title">
 								<Title
 									className="text-start"
-									title="Why Customers Choose Us"
+									// title="Why Customers Choose Us"
+									title="Why Choose Us"
 								/>
 							</div>
 							<div className="title-dark">
@@ -51,8 +52,11 @@ const SkillItem = () => {
 								style={{ height: item?.progress }}
 							></span>
 						</div>
-						<div>{item?.title}</div>
-						<div>{item?.progress}</div>
+						<div>
+						{item?.progress}{" "}
+						{item?.title}
+						</div>
+						
 					</li>
 				))}
 			</ul>
@@ -67,7 +71,7 @@ const data2 = [
 	},
 	{
 		title: "Star Rating on Google",
-		progress: "4.8%",
+		progress: "4.8",
 	},
 	{
 		title: "Happy Clents",

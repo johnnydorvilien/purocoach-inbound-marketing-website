@@ -1,10 +1,11 @@
 import React from "react";
 
 const Title = ({ title, className }) => {
+	const shouldShowBorder = title !== "Our Services" && title !== "CRM Software";
 	return (
 		<div className={`section-title ${className ? className : ""}`}>
 			<h2 className="title">{title}</h2>
-			<span className="shadow-border"></span>
+			{shouldShowBorder && <span className="shadow-border"></span>}
 		</div>
 	);
 };

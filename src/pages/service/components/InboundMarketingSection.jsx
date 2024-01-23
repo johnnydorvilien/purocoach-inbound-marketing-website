@@ -8,11 +8,7 @@ const InboundMarketingSection = ({ title }) => {
 		<section className="inbound-marketing-section">
 			<div className="target-id" id="inbounding"></div>
 			<div className="container">
-				<div className="section-title mb-60">
-					<h2 className="title title-xl-title text-start text-sm-center text-base pb-0">
-						<InboundMarketingIcon /> {title || "Inbound Marketing"}
-					</h2>
-				</div>
+				
 				<div className="row gy-5 flex-wrap-reverse">
 					<div className="col-lg-6">
 						<div className="me-xl-4 pe-xl-3">
@@ -21,16 +17,22 @@ const InboundMarketingSection = ({ title }) => {
 					</div>
 					<div className="col-lg-6">
 						<div>
+							<div className="section-title ">
+								<h2 className="title  text-start  text-base pb-0">
+									 {title || "KPI Performance"}
+								</h2>
+							</div>
 							<p className="light-txt mb-4">
-								Lorem ipsum dolor sit amet consectetur. Egestas felis et
-								praesent proin scelerisque velit. Quis dolor enim
-								bibendum vel placerat nisl leo faucibus suspendisse.
+								We love when people say “work with PUROCoach, 
+								they’re good people.” In a way it’s our superpower. 
+								That, and our years of experience developing unique 
+								and successful solutions to a myriad of marketing and advertising problems.
 							</p>
 							<p className="light-txt mb-4">
-								Etiam arcu est nam adipiscing diam interdum consectetur.
-								A turpis egestas molestie tellus mauris lacus. Amet arcu
-								eget semper luctus fermentum blandit ut semper et.
-								Pellentesque urna volutpat posuere donec est.
+								We’re just the right size to stay nimble in 
+								both our approach and how we align our team 
+								to meet your needs. So, when the inevitable 
+								marketing priority change happens, we easily change right alongside you.  
 							</p>
 							<br className="d-none d-sm-block" />
 							<button
@@ -38,7 +40,7 @@ const InboundMarketingSection = ({ title }) => {
 								style={{ minWidth: "273px" }}
 								onClick={() => setOpen(!open)}
 							>
-								Watch Demo
+								Talk with us!
 							</button>
 						</div>
 					</div>

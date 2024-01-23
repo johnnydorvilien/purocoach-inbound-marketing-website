@@ -16,13 +16,13 @@ const OurMeteorology = () => {
 							</div>
 						</div>
 						<div className="col-lg-6 ps-xl-5">
-							<Title className="text-start" title="The Results" />
-							<div
+							<Title className="text-start" title="Our Results" />
+							{/* <div
 								className="light-txt mb-3 mb-lg-4"
 								style={{ marginTop: "-10px" }}
 							>
 								Lorem ipsum dolor sit amet consectetur.
-							</div>
+							</div> */}
 							<SkillItem data={data2} />
 						</div>
 					</div>

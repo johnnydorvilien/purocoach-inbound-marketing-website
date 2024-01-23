@@ -5,6 +5,7 @@ import {
 	BusinessIcon,
 	IntegrationIcon,
 	SalesDevelopmentIcon,
+	PieChartIcon
 } from "../../../components/Icon";
 import WhiteDivider from "../../about/WhiteDivider";
 import img1 from "../img/system-services/1.png";
@@ -38,7 +39,7 @@ const SystemServices = ({ systemData }) => {
 								>
 									<img
 										src={item?.img}
-										style={{ maxWidth: "595px" }}
+										// style={{ maxWidth: "595px" }}
 										alt=""
 									/>
 								</div>
@@ -49,13 +50,22 @@ const SystemServices = ({ systemData }) => {
 									{item?.text?.map((txt, j) => (
 										<p key={j}>{txt}</p>
 									))}
-									<Link
-										to="/sign-up"
-										className="cmn-btn btn-white btn-standard"
-										style={{ minWidth: "175px" }}
-									>
-										Try it Free
-									</Link>
+									{item?.txt1 && (
+                  						<ul>
+                    						{item?.txt1.map((itemTxt, k) => (
+                      							<li style={{listStyle:"inside"}} key={k}>{itemTxt}</li>
+                    						))}
+                  						</ul>
+                					)}
+									{item?.title === "Reporting & KPI Performance" && (
+										<Link
+											to="/sign-up"
+											className="cmn-btn btn-white btn-standard"
+											style={{ minWidth: "175px" }}
+										>
+                    						Schedule a Meeting
+                  						</Link>
+                					)}
 								</div>
 							</div>
 							{i != data?.length - 1 || systemData?.length - 1 ? (
@@ -75,42 +85,58 @@ const data = [
 	{
 		icon: <AutomationIcon2 />,
 		img: img1,
-		title: "Automation",
+		title: "Sales Funnel",
 		id: "automation",
 		text: [
-			"The perfect automation for your marketing campaigns start here. We are powered by the #1 marketing tool- HubSpot.",
-			"Lorem ipsum dolor sit amet consectetur. Id viverra eu scelerisque in pulvinar in dictumst quis tempor. Eget nunc pellentesque eu eros viverra consequat habitasse aliquam sit.",
+			"Understand your customer's purchasing journey, while also identifying what stage of this journey your customers are in. These insights can be used to decide which marketing channels and activities will best guide your customer towards a purchase.",
+			"Your funnel will allow you to work smarter, not harder—allowing you to start with a general picture of your target audience. By knowing your target audience's social media habits, for example, you can build awareness on their favorite sites, leading some potential customers to your landing page.",
 		],
+		txt1:"",
 	},
 	{
 		icon: <IntegrationIcon />,
 		img: img2,
-		title: "System Integration",
+		title: "Email Communication",
 		id: "integration",
 		text: [
-			"Streamline and connect data through integrationfor Better Client Experience.",
-			"Lorem ipsum dolor sit amet consectetur. Id viverra eu scelerisque in pulvinar in dictumst quis tempor. Eget nunc pellentesque eu eros viverra consequat habitasse aliquam sit.",
+			"Email marketing is a solid tool for getting your brand, product, or service out there, with the added benefit that email marketing tends to go to people who are already interested in your service. However, for small businesses, especially up-and-coming ones, it may not be so easy to see the exact benefits.",
+			"",
+		],
+		txt1:[
+			"Generates traffic to your website",
+			"Strengthens relationships with customers",
+			"Increases brand awareness",
+			"Cost-effective",
 		],
 	},
 	{
 		icon: <SalesDevelopmentIcon />,
 		img: img3,
-		title: "Sales Development",
+		title: "Workflows & Sequences",
 		id: "sales-development",
 		text: [
 			"Connecting Marketing and Sales Experience with a Business Development Plan to set your business to success.",
 			"Lorem ipsum dolor sit amet consectetur. Id viverra eu scelerisque in pulvinar in dictumst quis tempor. Eget nunc pellentesque eu eros viverra consequat habitasse aliquam sit.",
 		],
+		txt1:[
+			"Define goals and objectives.",
+			"Segment your audience for targeted emails.",
+			"Personalize emails using dynamic content.",
+			"Utilize automation workflows for multi-step campaigns.",
+			"A/B test email elements for better performance.",
+			"Monitor metrics like open rates and conversions.",
+			"Continuously optimize based on data-driven insights.",
+		],
 	},
 	{
-		icon: <BusinessIcon />,
+		icon: <PieChartIcon />,
 		img: img4,
-		title: "Business Consulting ",
+		title: "Reporting & KPI Performance",
 		id: "business-coaching",
 		text: [
-			"Lorem ipsum dolor sit amet consectetur. Odio ornare feugiat quam mauris porttitor.",
-			"Lorem ipsum dolor sit amet consectetur. Id viverra eu scelerisque in pulvinar in dictumst quis tempor. Eget nunc pellentesque eu eros viverra consequat habitasse aliquam sit.",
+			"Allow you and your business leaders to quickly and easily review and analyze key performance indicators (KPIs) and thereby know how your organization is performing against specific strategic marketing and sales goals.",
 		],
+		txt1:"",
 	},
 ];
 

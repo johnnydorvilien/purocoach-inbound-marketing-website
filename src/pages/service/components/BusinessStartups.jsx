@@ -115,52 +115,45 @@ const BusinessStartups = () => {
 						<div className="row g-3">
 							<div className="col-sm-6">
 								<div className="small-shadow-card">
-									<h4 className="title" style={{fontSize:"25px"}}>How it works?</h4>
-									<p style={{fontSize:"14px"}}>
-										Lorem ipsum dolor sit amet consectetur. At lacus
-										egestas sed aliquam auctor. Sapien morbi non risus
-										lacus risus posuere.
+									<h4 className="title" style={{fontSize:"25px"}}>Get started!</h4>
+									<p style={{fontSize:"13px"}}>
+										Whether you’re a seasoned entrepreneur 
+										or a first-timer, there is great value 
+										in partnering with a business coach to 
+										help you identify opportunity, avoid 
+										collisions and develop a thorough business plan. We’ll help you:
 									</p>
-									<p style={{fontSize:"14px"}}>
-										Neque fringilla nisl est id interdum ac ut. Rutrum
-										fringilla pellentesque augue faucibus ridiculus.
-										Ac magna mi duis amet potenti integer. Amet urna
-										elit felis vulputate ante amet lorem tortor. Odio
-										nulla venenatis laoreet amet nisi orci.
-										Suspendisse vitae et morbi sed rutrum habitasse
-										risus. Odio odio in turpis
-									</p>
+									<ul>
+										<li style={{listStyle:"inside",fontSize:"13px"}}>Clarify your vision</li>
+										<li style={{listStyle:"inside",fontSize:"13px"}}>Craft a business plan</li>
+										<li style={{listStyle:"inside",fontSize:"13px"}}>Identity key challenges</li>
+										<li style={{listStyle:"inside",fontSize:"13px"}}>Accomplish your business goals</li>
+									</ul>
 								</div>
 							</div>
 							<div className="col-sm-6">
 								<div className="small-shadow-card">
-									<h4 className="title" style={{fontSize:"25px"}}>What to do?</h4>
-									<p style={{fontSize:"14px"}}>
-										Lorem ipsum dolor sit amet consectetur. Porttitor
-										ullamcorper risus odio rhoncus montes arcu
-										suscipit. Lorem mollis dapibus non elit dignissim
-										purus feugiat egestas. Mi vehicula sed turpis sem
-										cursus sem pulvinar. Elit porttitor turpis nulla
-										ullamcorper.
-									</p>
-									<p style={{fontSize:"14px"}}>
-										A amet bibendum faucibus augue in lectus. Velit
-										morbi ut ultricies magna dictum. Maecenas at felis
-										proin morbi. Tellus auctor ornare sit ut id
-										ullamcorper
-									</p>
+									<h4 className="title" style={{fontSize:"25px"}}>Count on Us!</h4>
+									<ul>
+										<li style={{listStyle:"inside",fontSize:"13px"}}>With years of experience</li>
+										<li style={{listStyle:"inside",fontSize:"13px"}}>Outstanding work success</li>
+										<li style={{listStyle:"inside",fontSize:"13px"}}>Dedicated</li>
+										<li style={{listStyle:"inside",fontSize:"13px"}}>Determined</li>
+										<li style={{listStyle:"inside",fontSize:"13px"}}>Accountable </li>
+										<li style={{listStyle:"inside",fontSize:"13px"}}>Dependable</li>
+									</ul>
 								</div>
 							</div>
 						</div>
-						<div className="mb-60"></div>
-						<Marquee gradient={false} speed={40}>
+						{/* <div className="mb-60"></div> */}
+						{/* <Marquee gradient={false} speed={40}>
 							{client_logo?.map((item, i) => (
 								// <img src={item.src} className="sponsor-img" alt="" />
 								<h6 key={i} className="font-medium mx-4" style={{fontSize:"15px"}}>
 									{item?.title}
 								</h6>
 							))}
-						</Marquee>
+						</Marquee> */}
 					</div>
 				</div>
 			</div>

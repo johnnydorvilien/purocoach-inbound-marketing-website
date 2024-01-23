@@ -36,7 +36,7 @@ function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="/about" element={<AboutPage />} />
 					<Route path="/services" element={<ServicePage />} />
-					<Route path="/products-crm" element={<ProductsPage />} />
+					{/* <Route path="/products-crm" element={<ProductsPage />} /> */}
 					<Route path="/pricing" element={<Pricing />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/payment" element={<Payment />} />
@@ -65,14 +65,14 @@ function App() {
 				</Routes>
 				<Toaster position="top-center" />
 			</Wrapper>
-			<div className="border-line-1">
+			{/* <div className="border-line-1">
 				<span></span>
 				<span></span>
 			</div>
 			<div className="border-line-2">
 				<span></span>
 				<span></span>
-			</div>
+			</div> */}
 		</BrowserRouter>
 	);
 }

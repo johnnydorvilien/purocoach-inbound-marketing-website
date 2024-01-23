@@ -35,13 +35,17 @@ const EarningEstimator = () => {
 								className="earning-estimator h-100"
 							>
 								<div>
-									<h2 className="title">Earning Estimator</h2>
-									<div className="left-line bg-dark"></div>
+									<h2 className="title">
+										{/* Earning Estimator */}
+										Your Growth
+										</h2>
+									{/* <div className="left-line bg-dark"></div> */}
 									<label className="light-label">
-										1. What is the amount you are targeting (1 -5
-										years)?
+										{/* 1. What is the amount you are targeting (1 -5
+										years)? */}
+										<span>1.</span> Increase online visibility
 									</label>
-									<div className="range-slider">
+									{/* <div className="range-slider">
 										<RangeSlider
 											className="single-thumb"
 											defaultValue={[0, range[1]]}
@@ -66,20 +70,22 @@ const EarningEstimator = () => {
 										<span>$500k</span>
 										<span>$1MM+</span>
 									</div>
-									<div className="left-line bg-dark"></div>
+									<div className="left-line bg-dark"></div> */}
 									<label className="light-label">
-										2. What is your coaching industry?
+										{/* 2. What is your coaching industry? */}
+										<span>2.</span> Reach your exact targeted audience
 									</label>
-									<Select
+									{/* <Select
 										value={industry}
 										setValue={setIndustry}
 										data={industryData}
 									/>
-									<div className="left-line bg-dark"></div>
+									<div className="left-line bg-dark"></div> */}
 									<label className="light-label">
-										3. How many client do you want to coach a week?
+										{/* 3. How many client do you want to coach a week? */}
+										<span>3.</span> Generate and attract qualified leads
 									</label>
-									<Select
+									{/* <Select
 										value={coach}
 										setValue={setCoach}
 										data={coachWeekly}
@@ -89,15 +95,34 @@ const EarningEstimator = () => {
 										className="cmn-btn btn-fullwidth mt-40"
 									>
 										Submit for Estimate
-									</button>
+									</button> */}
+									<label className="light-label">
+										{/* 3. How many client do you want to coach a week? */}
+										<span>4.</span> Keep your prospects engaged
+									</label>
+									<label className="light-label">
+										{/* 3. How many client do you want to coach a week? */}
+										<span>5.</span> Delight each prospect with great content
+									</label>
+									<label className="light-label">
+										{/* 3. How many client do you want to coach a week? */}
+										<span>6.</span> Measure results and track progress
+									</label>
+									<label className="light-label">
+										{/* 3. How many client do you want to coach a week? */}
+										<span>7.</span> Continue to scale and grow
+									</label>
 								</div>
 							</form>
 						</div>
 						<div className="col-lg-6">
 							{/* {result && ( */}
 							<div className="request-result h-100">
-								<h2 className="title">Request Result</h2>
-								<span className="left-line"></span>
+								<h2 className="title">
+									{/* Request Result */}
+									Our Mission
+								</h2>
+								{/* <span className="left-line"></span> */}
 								<ul className="list-info">
 									{request_result?.map((item, i) => (
 										<li key={i}>
@@ -107,14 +132,16 @@ const EarningEstimator = () => {
 									))}
 								</ul>
 								<p className="m-0">
-									Let us help you with a roadmap and a plan to reach
-									your targeted outcome)
+									{/* Let us help you with a roadmap and a plan to reach
+									your targeted outcome) */}
+									Reach out, and let us cultivate success together.  
 								</p>
 								<button
 									type="button"
 									className="cmn-btn btn-fullwidth btn-white mt-40"
 								>
-									Lets Draw you the plan
+									{/* Lets Draw you the plan */}
+									Let’s us draw you a strategy plan
 								</button>
 							</div>
 							{/* )} */}
@@ -159,16 +186,20 @@ const coachWeekly = [
 ];
 const request_result = [
 	{
-		title: "You will need the basic, premium or professional subscription package",
+		// title: "You will need the basic, premium or professional subscription package",
+		title: "Get your business noticed, generate leads and win customers.",
 	},
 	{
-		title: "You will need to sales rep.",
+		// title: "You will need to sales rep.",
+		title: "Help you stand out, connect and scale effortlessly.",
 	},
 	{
-		title: "You will need one marketing strategist.",
+		// title: "You will need one marketing strategist.",
+		title: "Help your business grow smarter, with strategic marketing that provide real results.",
 	},
 	{
-		title: "You will need one coach assistant.",
+		// title: "You will need one coach assistant.",
+		title: "Outperform your competitors without the extra bucks.",
 	},
 ];
 export default EarningEstimator;

@@ -71,15 +71,16 @@ export const BtnGrp = ({ open, setOpen }) => {
 		<>
 			<div className="btn-grp">
 				<Link className="cmn-btn btn-white" to="/trial-signup">
-					Start Free Trial
+					{/* Start Free Trial */}
+					Get Started
 				</Link>
-				<button
+				{/* <button
 					type="button"
 					className="cmn-btn btn-shade"
 					onClick={() => setOpen(!open)}
 				>
 					<VideoIcon /> Watch a Demo
-				</button>
+				</button> */}
 			</div>
 		</>
 	);

@@ -10,11 +10,11 @@ const PartnerWithUs = () => {
 		<>
 			<section className="partner-with-us">
 				<div className="feature-bg"></div>
-				<img
+				{/* <img
 					src={shape}
 					className="top-right-shape d-none d-sm-block"
 					alt=""
-				/>
+				/> */}
 				<div className="container">
 					<div className="row align-items-center gy-4">
 						<div className="col-lg-6">

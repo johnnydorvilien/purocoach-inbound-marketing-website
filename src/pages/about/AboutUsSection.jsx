@@ -7,6 +7,9 @@ import img3 from "./img/3.png";
 import img from "./img/about-shape.png";
 
 const AboutUsSection = () => {
+	const shouldRenderButton = (title) => {
+		return title === "Our Mission" || title === "Our Vision";
+	  };
 	return (
 		<>
 			<section className="about-section">
@@ -20,10 +23,10 @@ const AboutUsSection = () => {
 					<div className="d-flex flex-column gap-50px">
 						{data?.map((item, i) => (
 							<div className="about-item" key={i}>
-								<div className="about-item-img">
+								<div className="about-item-img col-lg-6">
 									<img src={item?.img} alt="" />
 								</div>
-								<div className="about-item-cont">
+								<div className="about-item-cont col-lg-6">
 									<div className="cont">
 										<h2 className="title">{item?.title}</h2>
 										{/* <h4 className="txt">{item?.text}</h4> */}
@@ -34,14 +37,13 @@ const AboutUsSection = () => {
                     ) : (
                       <p>{item?.text}</p>
                     )}
-										<div className="d-flex">
-											<Link
-												to="/services?goback"
-												className="cmn-btn"
-											>
-												Explore Our Services
-											</Link>
-										</div>
+										{shouldRenderButton(item?.title) && (
+                      <div className="d-flex">
+                        <Link to="/services?goback" className="cmn-btn">
+                          Explore Our Services
+                        </Link>
+                      </div>
+                    )}
 									</div>
 								</div>
 							</div>

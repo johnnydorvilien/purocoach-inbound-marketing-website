@@ -37,13 +37,13 @@ const ServicePageHeader = ({ title, sectionContent }) => {
 				)}
 				<div className="container">
 					<Title
-						title={title || "Services"}
+						title={title || "Our Services"}
 						className="text-base text-start"
 					/>
 					{sectionContent && (
-						<div className="row g-4">
+						<div className="row g-4" style={{marginTop:"100px",}}>
 							<div className="col-lg-6">
-								<FaqItems data={data} id="service-1" />
+								<FaqItems  data={data} id="service-1" />
 							</div>
 							<div className="col-lg-6">
 								<FaqItems data={data2} firstClose id="service-2" />
@@ -176,22 +176,22 @@ const data = [
 		icon: <InboundMarketingIcon />,
 		title: "Inbound Marketing",
 		text: "Streamline and connect data through integration for Better Client Experience.",
-		readMoreUrl: "#read-more",
-		buttonType: "modal",
+		// readMoreUrl: "#read-more",
+		// buttonType: "modal",
 	},
 	{
 		icon: <AutomationIcon2 />,
 		title: "Automation",
 		text: "Streamline and connect data through integration for Better Client Experience.",
-		readMoreUrl: "#read-more",
-		buttonType: "modal",
+		// readMoreUrl: "#read-more",
+		// buttonType: "modal",
 	},
 	{
 		icon: <IntegrationIcon />,
 		title: "System Integration",
 		text: "Streamline and connect data through integration for Better Client Experience.",
-		readMoreUrl: "#read-more",
-		buttonType: "modal",
+		// readMoreUrl: "#read-more",
+		// buttonType: "modal",
 	},
 ];
 const data2 = [
@@ -199,22 +199,22 @@ const data2 = [
 		icon: <SalesDevelopmentIcon />,
 		title: "Sales Development",
 		text: "Streamline and connect data through integration for Better Client Experience.",
-		readMoreUrl: "#read-more",
-		buttonType: "modal",
+		// readMoreUrl: "#read-more",
+		// buttonType: "modal",
 	},
 	{
 		icon: <CrmIcon />,
 		title: "Client Relational Management",
 		text: "Streamline and connect data through integration for Better Client Experience.",
-		readMoreUrl: "#read-more",
-		buttonType: "modal",
+		// readMoreUrl: "#read-more",
+		// buttonType: "modal",
 	},
 	{
 		icon: <Rocket />,
 		title: "Business Coaching & Startups",
 		text: "Streamline and connect data through integration for Better Client Experience.",
-		readMoreUrl: "#read-more",
-		buttonType: "modal",
+		// readMoreUrl: "#read-more",
+		// buttonType: "modal",
 	},
 ];
 export default ServicePageHeader;

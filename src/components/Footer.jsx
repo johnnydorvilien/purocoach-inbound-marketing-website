@@ -15,7 +15,7 @@ const Footer = () => {
 								<div className="mb-3">
 									<Logo />
 								</div>
-								<h3 className="title d-md-none">
+								<h3 className="title d-md">
 									Sign Up For Our Newsletter
 								</h3>
 								<form>
@@ -33,23 +33,6 @@ const Footer = () => {
 								<p>
 								Get on our newsletter email list to be the first to see inspiring content, news and exclusive offers.
 								</p>
-								<ul className="social-icons justify-content-start">
-									<li>
-										<Link to="#">
-											<Facebook color="var(--base)" />
-										</Link>
-									</li>
-									<li>
-										<Link to="#">
-											<Twitter color="var(--base)" />
-										</Link>
-									</li>
-									<li>
-										<Link to="#">
-											<Linkedin color="var(--base)" />
-										</Link>
-									</li>
-								</ul>
 							</div>
 							<div className="widget-right">
 								{data?.map((item, i) => (
@@ -61,9 +44,32 @@ const Footer = () => {
 				</div>
 				<div className="footer-bottom">
 					<div className="container">
-						<div style={{fontWeight:"400"}}>
+						<div style={{fontWeight:"400",display:"flex",justifyContent:"space-between",alignItems:"center",}}>
+							<div className="widget-left">
+								
+								<ul className="social-icons justify-content-start">
+									<li>
+										<Link to="#">
+											<Facebook color="var(--base)" />
+										</Link>
+									</li>
+									{/* <li>
+										<Link to="#">
+											<Twitter color="var(--base)" />
+										</Link>
+									</li> */}
+									<li>
+										<Link to="#">
+											<Linkedin color="var(--base)" />
+										</Link>
+									</li>
+								</ul>
+							</div>
+							<div>
 							<Link to="#" style={{fontWeight:"400"}}>Privacy Policy</Link> &copy; Company 2024. All
 							rights reserved.
+							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -102,25 +108,24 @@ const data = [
 		title: "Company",
 		links: [
 			{
-				title: "about",
+				title: "About PUROCoach",
 				url: "/about",
 			},
 			{
-				title: "pricing",
+				title: "Our Mission",
 				url: "/pricing",
 			},
 			{
-				title: "contact us",
+				title: "Our Vision",
 				url: "/contact",
 			},
-		],
-	},
-	{
-		title: "Products",
-		links: [
 			{
-				title: "CRM",
-				url: "/services#crm",
+				title: "Our Team",
+				url: "/contact",
+			},
+			{
+				title: "Contact Us",
+				url: "/contact",
 			},
 		],
 	},
@@ -128,23 +133,27 @@ const data = [
 		title: "Services",
 		links: [
 			{
-				title: "Inbound Marketing",
+				title: "Organic SEO",
 				url: "/services#inbounding",
 			},
 			{
-				title: "Automation",
+				title: "Email Marketing",
 				url: "/services#automation",
 			},
 			{
-				title: "Sustem Integration",
+				title: "Social Media Managment",
 				url: "/services#integration",
 			},
 			{
-				title: "Sales Development",
+				title: "Content Creation",
 				url: "/services#sales-development",
 			},
 			{
-				title: "Business Startups",
+				title: "Reports and Analytics",
+				url: "/services#business-coaching",
+			},
+			{
+				title: "Automation",
 				url: "/services#business-coaching",
 			},
 		],
