@@ -21,13 +21,20 @@ const SystemServices = ({ systemData }) => {
 
 	return (
 		<>
-			<section className="system-solutions">
+			<div className="system-solutions">
+			
 				<div className="container">
+								<h2
+									className="title "
+									style={{ textAlign:"center",justifyContent:"center",paddingTop:"120px",paddingBottom:"40px",marginBottom:"0"}}
+								>
+									Automate All Your Marketing Processes
+								</h2>
 					{showData?.map((item, i) => (
 						<div className="item" key={i}>
 							<div className="target-id" id={item?.id}></div>
 							<div
-								className="row gy-5 flex-wrap-reverse align-items-center"
+								className="row  flex-wrap-reverse align-items-center"
 								style={{
 									flexDirection: i % 2 == 0 ? "row" : "row-reverse",
 								}}
@@ -76,7 +83,7 @@ const SystemServices = ({ systemData }) => {
 						</div>
 					))}
 				</div>
-			</section>
+			</div>
 		</>
 	);
 };

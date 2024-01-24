@@ -1,5 +1,15 @@
 @mixin breakpoint($point) {
-	@if $point==sm {
+	@if $point==xs {
+		@media (min-width: 320px) {
+			@content;
+		}
+	}
+	@else if $point==max-xs {
+		@media (max-width: 479px) {
+			@content;
+		}
+	}
+	@else if $point==sm {
 		@media (min-width: 576px) {
 			@content;
 		}
@@ -204,6 +214,7 @@ a {
 	padding-left: 20px;
 	padding-right: 20px;
 	max-width: 1440px;
+	min-width: 320px;
 	@include breakpoint(xl) {
 		// max-width: calc(100% - 20px);
 		padding: 0 40px;
@@ -214,12 +225,19 @@ a {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+	@include breakpoint(xs){
+		// max-width: 479px;
+		// min-width: 320px;
+	}
 }
 .bg-section {
 	background: var(--section) !important;
 }
 section{
-	margin:40px 0;
+	margin-bottom: 80px;
+	@include breakpoint(max-xs){
+		margin-bottom: 24px;
+	}
 }
 .bg-body {
 	background: var(--body) !important;
@@ -905,7 +923,7 @@ header {
 	flex-wrap: wrap;
 	align-items: flex-start;
 	overflow: hidden;
-	padding-bottom: 80px;
+	// padding-bottom: 80px;
 	column-gap: 16px;
 }
 .left-side,
@@ -1825,6 +1843,9 @@ header {
 	@include breakpoint(xl){
 		padding-bottom: 0px;
 	}
+	@include breakpoint(max-xs){
+		padding-bottom: 0px;
+	}
 	@include breakpoint(max-sm) {
 		&:not(.contact-banner) {
 			padding-top: 45px;
@@ -2022,7 +2043,7 @@ header {
 			}
 		}
 		.banner-thumb {
-			// padding-top: 40px;
+			padding-top: 40px;
 			img {
 				height: 300px;
 			}
@@ -2121,6 +2142,49 @@ header {
 				height: 100%;
 			}
 			padding-top: 40px;
+		}
+	}
+	@include breakpoint(max-xs){
+		display: block;
+		.banner-content {
+			width: 100%;
+			.title {
+				font-size: 32px;
+			}
+			.subtitle {
+				font-size: 30px;
+				margin-bottom: 8px;
+			}
+			.txt {
+				font-size: 17px;
+				max-width: 100%;
+				margin-bottom: 12px;
+			}
+			.btn-grp{
+				padding-bottom: 10px;
+				justify-content: left;
+				
+				.cmn-btn {
+					flex-grow: 0;
+					height: 35px;
+					padding: 10px 20px;
+					gap: 8px;
+					flex-shrink: 0;
+					width: fit-content;
+					font-size: 14px !important;
+				}
+				
+			}
+		}
+		
+		.banner-thumb {
+			width: 100%;
+			padding-top: 0px;
+			padding-bottom: 0;
+			img{
+				height: 100%;
+				margin-left: 0px;
+			}
 		}
 	}
 }
@@ -2295,26 +2359,59 @@ header {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	top: -292px;
+	// top: -292px;
+	top: -170px;
 	z-index: -1;
-	border-radius: 0 150px;
+	// border-radius: 0 50px;
+	border-bottom-left-radius: 100px;
 	transform: skewY(-4.5deg);
 	@include breakpoint(max-md) {
 		bottom: -120px;
 		border-bottom-left-radius: 0;
 		top: 30px;
-		transform: skewX(0) skewY(-10deg);
+		// transform: skewX(0) skewY(-10deg);
 	}
 }
 .service-bottom-shape {
 	position: absolute;
 	z-index: -2;
-	bottom: -54px;
+	bottom: -65px;
 	right: 0;
 }
 .service-section {
+
+	.service-section-bg {
+		background: #f2f4f8;
+		position: absolute;
+		bottom: 40px;
+		left: 0;
+		right: 0;
+		// top: -292px;
+		top: -170px;
+		z-index: -1;
+		// border-radius: 0 50px;
+		border-bottom-left-radius: 100px;
+		transform: skewY(-4.5deg);
+		@include breakpoint(max-md) {
+			bottom: -120px;
+			border-bottom-left-radius: 0;
+			top: 30px;
+			// transform: skewX(0) skewY(-10deg);
+		}
+	}
+	.service-bottom-shape {
+		position: absolute;
+		z-index: -2;
+		bottom: 0;
+		right: 0;
+	}
+	.container{
+		padding-bottom: 90px;
+	}
 	// padding: 52px 0 143px;
-	padding: 0px 0 100px;
+	// padding-bottom: 60px;
+	// padding: 80px 0;
+	// padding: 0px 0 100px;
 	// @include breakpoint(max-md) {
 	// 	padding-bottom: 63px;
 	// }
@@ -2480,13 +2577,13 @@ header {
 }
 .trusted-crm-section {
 	// padding: 130px 0px 110px;
-	padding: 50px 0px;
+	// padding: 50px 0px;
 	@include breakpoint(max-lg) {
-		padding: 0 0 60px;
+		// padding: 0 0 60px;
 	}
 	// @include breakpoint(xl){
 	// 	// padding: 80px 0 110px;
-	// 	padding-top: 80px;
+		// padding-top: 80px;
 	// 	padding-bottom: 0;
 	// }
 }
@@ -2788,15 +2885,18 @@ header {
 	// padding-top: 80px;
 }
 .feature-section {
-	padding-block: 260px 140px;
+	// padding-block: 260px 140px;
+	padding-block: 100px 80px;
 	position: relative;
 	.feature-bg {
 		background: var(--base);
 		position: absolute;
-		bottom: 0;
+		// bottom: 0;
+		bottom: 37px;
 		left: 0;
 		right: 0;
-		top: 130px;
+		// top: 130px;
+		top: 37px;
 		z-index: 1;
 		border-radius: 0 150px;
 		transform: skewY(-4.5deg);
@@ -2807,25 +2907,25 @@ header {
 			transform: skewY(-5.5deg);
 			top: 15px;
 		}
-		padding-top: 80px;
-		padding-bottom: 145px;
+		// padding-top: 80px;
+		// padding-bottom: 145px;
 	}
 	@include breakpoint(xl){
-		padding-block: 200px 75px;
+		// padding-block: 200px 75px;
 	}
 }
 .top-right-shape {
 	left: 0;
 	max-width: 50%;
 	position: absolute;
-	top: 100px;
+	top: 0;
 	@include breakpoint(max-md) {
 		top: 0;
 	}
 }
 
 .who-we-are {
-	padding-top: 120px;
+	// padding-top: 120px;
 	@include breakpoint(max-lg) {
 		padding-top: 80px;
 		.service-section-bg {
@@ -2838,7 +2938,7 @@ header {
 		}
 	}
 	@include breakpoint(xl){
-		padding-top: 80px;
+		// padding-top: 80px;
 	}
 }
 .who-we-are-item {
@@ -3194,7 +3294,7 @@ header {
 .why-choose-us {
 	// padding-bottom: 120px;
 	@include breakpoint(max-lg) {
-		padding-bottom: 70px;
+		// padding-bottom: 70px;
 	}
 	@include breakpoint(max-md) {
 		// padding-bottom: 40px;
@@ -3205,8 +3305,8 @@ header {
 		}
 	}
 	@include breakpoint(xl){
-		padding-bottom: 0px;
-		padding-top: 80px;
+		// padding-bottom: 0px;
+		// padding-top: 80px;
 	}
 }
 .light-txt {
@@ -3331,7 +3431,30 @@ header {
 	}
 }
 .about-section {
-	padding: 73px 0 143px;
+
+	// padding: 73px 0 143px;
+	.service-section-bg {
+		background: #f2f4f8;
+		position: absolute;
+		bottom: 41px;
+		left: 0;
+		right: 0;
+		// top: -292px;
+		top: -170px;
+		z-index: -1;
+		// border-radius: 0 50px;
+		border-bottom-left-radius: 100px;
+		transform: skewY(-4.5deg);
+	}
+	.service-bottom-shape {
+		position: absolute;
+		z-index: -2;
+		bottom: 0;
+		right: 0;
+	}
+	.container{
+		padding-bottom: 60px;
+	}
 	position: relative;
 	@include breakpoint(max-md) {
 		padding-bottom: 63px;
@@ -3341,7 +3464,7 @@ header {
 		}
 	}
 	@include breakpoint(xl){
-		padding: 80px 0;
+		// padding: 80px 0;
 	}
 }
 .about-item {
@@ -3502,13 +3625,13 @@ header {
 	}
 }
 .values-section {
-	padding: 130px 0 20px;
+	// padding: 130px 0 20px;
 	@include breakpoint(max-md) {
-		padding-bottom: 63px;
-		padding-top: 65px;
+		// padding-bottom: 63px;
+		// padding-top: 65px;
 	}
 	@include breakpoint(xl){
-		padding-top: 80px;
+		// padding-top: 80px;
 	}
 }
 .rounded-15 {
@@ -3537,19 +3660,66 @@ header {
 		}
 	}
 }
-.partner-with-us {
-	padding-block: 260px 140px;
-	position: relative;
+.partner-with-us,
+.shapes-view-2{
+	.service-bottom-shape {
+		position: absolute;
+		z-index: -2;
+		bottom: 0px;
+		right: 0;
+	}
+
+	//Consulting Services
 	.feature-bg {
 		background: var(--base);
 		position: absolute;
-		bottom: 0;
+		// bottom: 0;
+		bottom: 37px !important;
 		left: 0;
 		right: 0;
-		top: 130px;
+		// top: 130px;
+		// top: 31px;
+		top: 81px !important;
 		z-index: 1;
 		border-radius: 0 150px;
 		transform: skewY(-4.5deg);
+	}
+	.top-right-shape {
+		left: 0;
+		max-width: 50%;
+		position: absolute;
+		// top: 0;
+		top: 48px !important;
+	}
+	.container{
+		// padding-top: 100px;
+		// padding-bottom: 0 !important;
+	}
+}
+.partner-with-us {
+	// padding-block: 260px 140px;
+	// padding: 100px 0;
+	position: relative;
+	.white-divider,
+	.divider-white {
+		margin: 0 auto;
+	}
+	.container{
+		padding-bottom: 80px;
+	}
+	.feature-bg {
+		background:rgba(48, 72, 128, 0.70);
+		position: absolute;
+		bottom: 0;
+		// bottom: 35px;
+		left: 0;
+		right: 0;
+		// top: 130px;
+		// top: 57px;
+		top: 33px;
+		z-index: 1;
+		border-radius: 0 65px;
+		transform: skewY(-3.5deg);
 	}
 	img {
 		max-width: 100%;
@@ -3560,11 +3730,11 @@ header {
 			transform: skewY(-5.5deg);
 			top: 15px;
 		}
-		padding-top: 80px;
-		padding-bottom: 65px;
+		// padding-top: 80px;
+		// padding-bottom: 65px;
 	}
 	@include breakpoint(xl){
-		padding-block: 200px 100px;
+		// padding-block: 200px 100px;
 		// padding-block: 0px;
 	}
 }
@@ -3709,7 +3879,7 @@ header {
 .partner-with-us {
 	@include breakpoint(max-lg) {
 		img {
-			max-width: 450px;
+			// max-width: 450px;
 		}
 		.partner-content {
 			.text,
@@ -3735,7 +3905,7 @@ header {
 			max-width: 258px;
 		}
 	}
-	// padding-top: 120px;
+	padding-top: 120px;
 }
 .team-wrapper {
 	display: flex;
@@ -3912,7 +4082,7 @@ header {
 	}
 }
 .service-page-header {
-	padding: 92px 0 0px;
+	padding-top: 50px;
 	position: relative;
 	.section-title {
 		.title {
@@ -3932,10 +4102,10 @@ header {
 		}
 	}
 	@include breakpoint(max-sm) {
-		padding-top: 50px;
+		// padding-top: 50px;
 	}
 	@include breakpoint(xl){
-		padding: 50px;
+		// padding: 50px;
 	}
 }
 .__rounded-img {
@@ -4012,12 +4182,13 @@ header {
 	}
 }
 .inbound-marketing-section {
-	padding: 120px 0 90px;
+	// padding: 120px 0 90px;
 	@include breakpoint(max-md) {
-		padding: 60px 0;
+		// padding: 60px 0;
 	}
 }
 .system-solutions {
+	padding-bottom: 100px;
 	font-size: 15px;
 	font-weight: 300;
 	line-height: 1.95;
@@ -4025,6 +4196,9 @@ header {
 	@include breakpoint(max-md) {
 		line-height: 1.5;
 		font-size: 12px;
+	}
+	.container{
+		padding-bottom: 0;
 	}
 	// img {
 	// 	width: 100%;
@@ -4086,7 +4260,7 @@ header {
 }
 .business-startup-section {
 	position: relative;
-	padding: 120px 0 60px;
+	padding-bottom: 80px;
 	@include breakpoint(max-md) {
 		padding-bottom: 0;
 		padding-top: 100px;
@@ -4096,7 +4270,32 @@ header {
 		}
 	}
 	@include breakpoint(xl){
-		padding: 80px 0 60px;
+		// padding: 80px 0 60px;
+	}
+	.service-section-bg {
+		background: #f2f4f8;
+		position: absolute;
+		bottom: 40px;
+		left: 0;
+		right: 0;
+		// top: -292px;
+		top: -170px;
+		z-index: -1;
+		// border-radius: 0 50px;
+		border-bottom-left-radius: 100px;
+		transform: skewY(-4.5deg);
+		@include breakpoint(max-md) {
+			bottom: -120px;
+			border-bottom-left-radius: 0;
+			top: 30px;
+			// transform: skewX(0) skewY(-10deg);
+		}
+	}
+	.service-bottom-shape {
+		position: absolute;
+		z-index: -2;
+		bottom: 0;
+		right: 0;
 	}
 }
 .contact-sales-form-wrapper {
@@ -4207,7 +4406,7 @@ header {
 	margin: 0 35px;
 }
 .business-consulting-content {
-	padding: 140px 0 0;
+	// padding: 140px 0 0;
 	@include breakpoint(max-md) {
 		padding-top: 80px;
 	}
@@ -5220,11 +5419,17 @@ body {
 	}
 }
 .request-demo-section {
+	.container{
+		padding-top: 62px;
+		// padding-bottom: 125px;
+		padding-bottom: 200px;
+	}
+	
 	.contact-sales-form-wrapper{
-		margin-top: 89px;
+		// margin-top: 89px;
 	}
 	@include breakpoint(md) {
-		padding: 50px 0 160px;
+		// padding: 50px 0 160px;
 		.contact-sales-form-wrapper {
 			max-width: 475px;
 			// margin-left: auto;
@@ -5241,7 +5446,7 @@ body {
 		}
 		@include breakpoint(xl) {
 			@include breakpoint(max-xxl) {
-				padding-bottom: 120px;
+				// padding-bottom: 120px;
 			}
 		}
 	}
@@ -5259,16 +5464,41 @@ body {
 	@include breakpoint(max-md) {
 		padding: 57px 0 0;
 	}
+	.service-bottom-shape {
+		position: absolute;
+		z-index: -2;
+		// bottom: 0;
+		bottom: 10px;
+		right: 0;
+	}
 	.service-section-bg {
-		@include breakpoint(xl) {
-			top: -80px;
-		}
-		@include breakpoint(max-xl) {
-			background-position: right center !important;
-		}
-		@include breakpoint(max-lg) {
-			background-position: center center !important;
-		}
+		background: #f2f4f8;
+		position: absolute;
+		// bottom: 0;
+		bottom: 75px;
+		// bottom: 162px;
+		left: 0;
+		right: 0;
+		// top: -292px;
+		top: -117px;
+		z-index: -1;
+		// border-radius: 0 50px;
+		border-bottom-left-radius: 50px;
+		transform: skewY(0);
+		@include breakpoint(max-md) {
+		bottom: -120px;
+		border-bottom-left-radius: 50px;
+		// transform: skewX(0) skewY(-10deg);
+	}
+		// @include breakpoint(xl) {
+		// 	top: -80px;
+		// }
+		// @include breakpoint(max-xl) {
+		// 	background-position: right center !important;
+		// }
+		// @include breakpoint(max-lg) {
+		// 	background-position: center center !important;
+		// }
 	}
 	@include breakpoint(max-sm) {
 		.container {
@@ -5277,7 +5507,7 @@ body {
 	}
 	@include breakpoint(xl){
 		.contact-sales-form-wrapper {
-			max-width: 380px;
+			max-width: 430px;
 			// margin-left: auto;
 			.title {
 				font-size: 25px;
@@ -5448,14 +5678,14 @@ footer {
 	}
 }
 .footer-top {
-	padding-top: 70px;
-	padding-bottom: 91px;
+	// padding-top: 70px;
+	// padding-bottom: 91px;
 	@include breakpoint(max-sm) {
 		padding-bottom: 0;
 		padding-top: 75px;
 		.container {
-			padding-top: 40px;
-			padding-bottom: 40px;
+			// padding-top: 40px;
+			// padding-bottom: 40px;
 			* {
 				position: relative;
 				z-index: 1;
@@ -5471,8 +5701,8 @@ footer {
 		}
 	}
 	@include breakpoint(xl){
-		padding-top: 50px;
-		padding-bottom: 40px;
+		// padding-top: 50px;
+		// padding-bottom: 40px;
 	}
 }
 .footer-top-widget {
@@ -6126,7 +6356,8 @@ footer {
 }
 @media screen and (max-width: 500px) {
 	.container {
-		width: 90%;
+		// width: 90%;
+		width: 100%;
 	}
 	.footer-top {
 		.container {

@@ -74,8 +74,8 @@ const PricingSection = () => {
 
 					{/* <RangeItem />
 					<br /> */}
-					<br className="d-none d-md-block" /> 
-					<div className="row g-3 justify-content-center">
+					{/* <br className="d-none d-md-block" />  */}
+					<div className="row g-3 justify-content-center" style={{paddingTop:"120px"}}>
 						{data?.map((item, i) => (
 							<div className="col-lg-3 col-md-6 col-sm-9" key={i}>
 								<PlanCard {...item} index={i} yearly={yearly} />

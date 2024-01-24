@@ -20,7 +20,7 @@ const AboutUsSection = () => {
 					className="service-bottom-shape d-none d-md-block"
 				/>
 				<div className="container">
-					<div className="d-flex flex-column gap-50px">
+					<div className="d-flex flex-column ">
 						{data?.map((item, i) => (
 							<div className="about-item" key={i}>
 								<div className="about-item-img col-lg-6">

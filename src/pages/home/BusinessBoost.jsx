@@ -29,7 +29,7 @@ const BusinessBoost = () => {
 					alt=""
 					className="service-bottom-shape d-md-none w-50"
 				/>
-				<div className="container">
+				<div className="container" style={{paddingTop:"100px",paddingBottom:"0"}}>
 					<div className="boost-title">
 						<Title
 							title="Our Process"

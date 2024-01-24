@@ -16,7 +16,7 @@ const PartnerWithUs = () => {
 					alt=""
 				/> */}
 				<div className="container">
-					<div className="row align-items-center gy-4">
+					<div className="row align-items-center ">
 						<div className="col-lg-6">
 							<div className="partner-content text-white">
 								<h2
@@ -26,9 +26,7 @@ const PartnerWithUs = () => {
 									Partner With Us to Build Your Business
 								</h2>
 								<p className="text" style={{ maxWidth: "625px" }}>
-									Work with us to achieve your goals, take the next
-									step in your coaching career, and focus your time on
-									your clients.
+								Our model is that we put our clients first and at the core of our business in order to provide a positive experience and build long-term relationships. That model is simple: we connect, we serve, and we support.
 								</p>
 								<div className="d-flex">
 									<Link
@@ -36,7 +34,7 @@ const PartnerWithUs = () => {
 										data-bs-toggle="modal"
 										className="cmn-btn btn-white"
 									>
-										Work with Us
+										Connect with Us Now
 									</Link>
 								</div>
 							</div>
@@ -46,7 +44,7 @@ const PartnerWithUs = () => {
 						</div>
 					</div>
 					<div className="divider-white"></div>
-					<div className="row align-items-center gy-4">
+					<div className="row align-items-center ">
 						<div className="col-lg-6 pe-xm-5">
 							<img
 								src={partner2}
@@ -73,7 +71,17 @@ const PartnerWithUs = () => {
 										</li>
 									))}
 								</ul>
+								<div className="d-flex" style={{marginTop:"30px",}}>
+									<Link
+										to="#partnerWithUs"
+										data-bs-toggle="modal"
+										className="cmn-btn btn-white"
+									>
+										Connect with Us Now
+									</Link>
+								</div>
 							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -185,10 +193,10 @@ const PartnerWithUs = () => {
 };
 
 const data = [
-	{
-		icon: <Message />,
-		title: "We are humanitarians, motivators, and entrepreneurs",
-	},
+	// {
+	// 	icon: <Message />,
+	// 	title: "We are humanitarians, motivators, and entrepreneurs",
+	// },
 	{
 		icon: <Speaker />,
 		title: "Savings on cost, greater efficiency on productivity, and higher sales conversion for greater return on investment.",

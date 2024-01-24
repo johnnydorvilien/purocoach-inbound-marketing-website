@@ -23,8 +23,8 @@ const AboutPage = () => {
 				{/* <BlackDivider /> */}
 				<QuoteSection />
 			</ShapeViews>
-			<br className="d-none d-md-block" />
-			<br className="d-none d-md-block" />
+			{/* <br className="d-none d-md-block" />
+			<br className="d-none d-md-block" /> */}
 			<Footer />
 		</>
 	);

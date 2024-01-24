@@ -3,7 +3,7 @@ import { FaqItems } from "../../components/FaqItems";
 import Title from "../../components/Title";
 const FaqsSection = () => {
 	return (
-		<section className="faqs-section pb-80">
+		<section className="faqs-section">
 			<div className="container">
 				<Title title="Frequently Asked Questions" />
 				<div className="row g-4">

@@ -19,18 +19,20 @@ const Home = () => {
 		<>
 			<Layout>
 				<Banner />
-				{screen < 768 && <TrustedCrm />}
+				{/* {screen < 768 && <TrustedCrm />} */}
 				<Service />
-				{screen >= 768 && <TrustedCrm />}
-				{screen >= 768 && <EarningEstimator />}
+				<TrustedCrm />
+				{/* {screen >= 768 && <TrustedCrm />} */}
+				{/* {screen >= 768 && <EarningEstimator />} */}
+				<EarningEstimator />
 				<Feature />
 				<WhoWeAre />
 				<WorkingWithUs />
 				<WhayChooseUs />
 				<BusinessBoost />
 				<RequestDemo />
-				<br className="d-none d-md-block" />
-				<br className="d-none d-md-block" />
+				{/* <br className="d-none d-md-block" />
+				<br className="d-none d-md-block" /> */}
 				<Footer />
 			</Layout>
 		</>
