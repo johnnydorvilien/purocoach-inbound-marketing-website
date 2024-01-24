@@ -5,6 +5,7 @@ import img1 from "./img/1.png";
 import img2 from "./img/2.png";
 import img3 from "./img/3.png";
 import img from "./img/about-shape.png";
+import white from "./img/white.png";
 
 const AboutUsSection = () => {
 	const shouldRenderButton = (title) => {
@@ -27,7 +28,7 @@ const AboutUsSection = () => {
 									<img src={item?.img} alt="" />
 								</div>
 								<div className="about-item-cont col-lg-6">
-									<div className="cont">
+									<div className="cont"  >
 										<h2 className="title">{item?.title}</h2>
 										{/* <h4 className="txt">{item?.text}</h4> */}
 										{Array.isArray(item?.text) ? (

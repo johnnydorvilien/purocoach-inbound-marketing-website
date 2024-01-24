@@ -118,7 +118,8 @@ img{
 	max-width: 100%;
 }
 .swiper-wrapper{
-	min-height:-webkit-fill-available!important;
+	// min-height:-webkit-fill-available!important;
+	min-height: 70vh !important;
 	// @include breakpoint(xl){
 	// 	min-height: 64vh !important;
 	// }
@@ -171,7 +172,7 @@ ul {
 	li {
 		list-style: none;
 		svg{
-			background-color: #eaecf2;
+			// background-color: #eaecf2;
 		border-radius: 5px;
 		}
 	}
@@ -234,9 +235,11 @@ a {
 	background: var(--section) !important;
 }
 section{
-	margin-bottom: 80px;
+	margin-bottom: 100px;
+	// padding-bottom: 80px;
 	@include breakpoint(max-xs){
-		margin-bottom: 24px;
+		// margin-bottom: 24px;
+
 	}
 }
 .bg-body {
@@ -2134,7 +2137,7 @@ header {
 				font-size: 42px;
 			}
 			.txt {
-				font-size: 17.5px;
+				font-size: 20px;
 			}
 		}
 		.banner-thumb {
@@ -2406,7 +2409,8 @@ header {
 		right: 0;
 	}
 	.container{
-		padding-bottom: 90px;
+		// padding-bottom: 90px;
+		padding-bottom: 150px;
 	}
 	// padding: 52px 0 143px;
 	// padding-bottom: 60px;
@@ -2855,6 +2859,9 @@ header {
 	}
 }
 .earning-estimator-section {
+	.container{
+		padding-top: 150px;
+	}
 	position: relative;
 	&::before {
 		background: #f2f4f8;
@@ -2888,6 +2895,11 @@ header {
 	// padding-block: 260px 140px;
 	padding-block: 100px 80px;
 	position: relative;
+	.container{
+		padding-top: 50px;
+		padding-bottom: 100px;
+	}
+
 	.feature-bg {
 		background: var(--base);
 		position: absolute;
@@ -3488,7 +3500,8 @@ header {
 		width: 0;
 		flex-grow: 1;
 		position: relative;
-		padding: 21px  20px;
+		padding: 40px  43px;
+		// padding: 21px  20px;
 		// margin-top: 56px;
 		&::before {
 			content: "";
@@ -3594,7 +3607,7 @@ header {
 		.about-item-cont {
 			&::before {
 				left: 0;
-				right: -100px;
+				right: -250px;
 			}
 		}
 	}
@@ -3674,12 +3687,12 @@ header {
 		background: var(--base);
 		position: absolute;
 		// bottom: 0;
-		bottom: 37px !important;
+		bottom: 51px !important;
 		left: 0;
 		right: 0;
 		// top: 130px;
-		// top: 31px;
-		top: 81px !important;
+		top: 31px;
+		// top: 73px !important;
 		z-index: 1;
 		border-radius: 0 150px;
 		transform: skewY(-4.5deg);
@@ -3689,7 +3702,7 @@ header {
 		max-width: 50%;
 		position: absolute;
 		// top: 0;
-		top: 48px !important;
+		top: 0 !important;
 	}
 	.container{
 		// padding-top: 100px;
@@ -3704,11 +3717,17 @@ header {
 	.divider-white {
 		margin: 0 auto;
 	}
-	.container{
-		padding-bottom: 80px;
+	.boost-title{
+		padding-top: 50px;
 	}
+	// .container{
+	// 	padding-bottom: 250px;
+	// }
 	.feature-bg {
 		background:rgba(48, 72, 128, 0.70);
+		// background-image: url('./pages//home/img/shape.png');
+		// background-repeat: no-repeat;
+		// background-size: cover;
 		position: absolute;
 		bottom: 0;
 		// bottom: 35px;
@@ -3718,8 +3737,8 @@ header {
 		// top: 57px;
 		top: 33px;
 		z-index: 1;
-		border-radius: 0 65px;
-		transform: skewY(-3.5deg);
+		border-radius: 0 100px;
+		transform: skewY(-4.5deg);
 	}
 	img {
 		max-width: 100%;
@@ -4188,7 +4207,7 @@ header {
 	}
 }
 .system-solutions {
-	padding-bottom: 100px;
+	padding-bottom: 150px;
 	font-size: 15px;
 	font-weight: 300;
 	line-height: 1.95;
@@ -4350,7 +4369,7 @@ header {
 		}
 	}
 	@include breakpoint(xl){
-		padding: 20px 25px;
+		padding: 20px 25px 50px;
 		p {
 			margin-bottom: 15px;
 			font-size: 14px;
@@ -5419,10 +5438,15 @@ body {
 	}
 }
 .request-demo-section {
+	// background-image: url(./pages//home//img//req.png);
+	// background-repeat: no-repeat;
+	// background-size: cover;
+	// background-position: unset;
 	.container{
-		padding-top: 62px;
+		// padding-top: 62px;
 		// padding-bottom: 125px;
-		padding-bottom: 200px;
+		padding: 200px 0;
+	
 	}
 	
 	.contact-sales-form-wrapper{
@@ -5480,14 +5504,19 @@ body {
 		left: 0;
 		right: 0;
 		// top: -292px;
-		top: -117px;
+		top: -180px;
 		z-index: -1;
 		// border-radius: 0 50px;
-		border-bottom-left-radius: 50px;
-		transform: skewY(0);
+		// border-bottom-left-radius: 100px;
+		border-radius: 0 60px;
+		transform: skewY(-3.5deg);
 		@include breakpoint(max-md) {
 		bottom: -120px;
-		border-bottom-left-radius: 50px;
+		border-radius: 0 60px;
+		transform: skewY(-4.5deg);
+		// border-bottom-left-radius: 50px;
+		// transform: skewY(0);
+		// transform: skewY(-4.5deg);
 		// transform: skewX(0) skewY(-10deg);
 	}
 		// @include breakpoint(xl) {
@@ -5778,7 +5807,7 @@ footer {
 	@include breakpoint(xl){
 		.widget-left {
 			p {
-				margin-bottom: 25px;
+				padding-bottom: 40px;
 				font-size: 14px;
 			}
 		}

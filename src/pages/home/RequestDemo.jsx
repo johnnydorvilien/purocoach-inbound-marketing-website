@@ -3,7 +3,7 @@ import { toast } from "react-hot-toast";
 import Input from "../../components/Input";
 import Select from "../../components/Select";
 import img from "./img/about-shape.png";
-import bg from "./img/req-demo-bg.png";
+import bg from "./img/req.png";
 const RequestDemo = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
@@ -54,8 +54,9 @@ const RequestDemo = () => {
 
 	return (
 		<>
-			<section className="request-demo-section">
-				<div
+			<section className="request-demo-section"style={{
+						background: `url(${bg}) no-repeat top right / cover`,display:"block",backgroundSize:"100% auto"}} >
+				{/* <div
 					className="service-section-bg d-none d-md-block"
 					style={{
 						background: `url(${bg}) no-repeat top right / cover`,
@@ -70,7 +71,7 @@ const RequestDemo = () => {
 					src={img}
 					alt=""
 					className="service-bottom-shape d-none d-md-block"
-				/>
+				/> */}
 				<div className="container">
 					<img
 						src={bg}

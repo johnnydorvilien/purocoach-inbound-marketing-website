@@ -12,21 +12,30 @@ import ServicePageHeader from "./components/ServicePageHeader";
 import ShapeViewsTwo from "./components/ShapeViewsTwo";
 import SystemServices from "./components/SystemServices";
 import shape from "./img/yellow-top.png";
+import bg from "./img/yellow.png";
+import serices from "./img/sevices.png"
 const ServicePage = () => {
 	return (
 		<>
 			<Header />
 			<ServicePageHeader sectionContent />
-			<ShapeViewsTwo>
+			{/* <ShapeViewsTwo> */}
+			<section style={{
+						background: `url(${bg}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}}>
 				<PuroCRM />
 				<WhiteDivider />
 				<ServiceFeatures />
-			</ShapeViewsTwo>
+			</section>
+				
+			{/* </ShapeViewsTwo> */}
 			<InboundMarketingSection />
 			<OurMeteorology />
-			<ShapeViewsTwo parentShape={shape}>
+			{/* <ShapeViewsTwo parentShape={shape}> */}
+			<section style={{
+						background: `url(${serices}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}}>
 				<SystemServices />
-			</ShapeViewsTwo>
+				</section>
+			{/* </ShapeViewsTwo> */}
 			<BusinessStartups />
 			<BusinessConsultingContent />
 			<Footer />

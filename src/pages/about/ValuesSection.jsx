@@ -19,7 +19,7 @@ const ValuesSection = () => {
 					<div className="col-md-6">
 						<FaqItems data={data2} id="values-2" firstClose="undefined" />
 					</div>
-					<img src={img} className="w-100 rounded-15 mt-16" style={{marginTop:"50px"}} alt="" />
+					<img src={img} className="w-100 rounded-15 mt-16" style={{paddingTop:"60px"}} alt="" />
 				</div>
 				
 			</div>

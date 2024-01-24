@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import RangeSlider from "react-range-slider-input";
 import Select from "../../components/Select";
-
+import img from "./img/yourgrowth.png";
 const EarningEstimator = () => {
 	const [industry, setIndustry] = useState();
 	const [coach, setCoach] = useState("10-50");
@@ -25,8 +25,12 @@ const EarningEstimator = () => {
 
 	return (
 		<>
-			<section className="earning-estimator-section">
-				<div className="earning-estimator-bg"></div>
+			<section className="earning-estimator-section" style={{
+						background: `url(${img}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}}>
+				{/* <div className="earning-estimator-bg"></div> */}
+				<div>
+
+				</div>
 				<div className="container">
 					<div className="row gy-5 gx-xxl-5">
 						<div className="col-lg-6">
@@ -36,41 +40,15 @@ const EarningEstimator = () => {
 							>
 								<div>
 									<h2 className="title">
-										{/* Earning Estimator */}
 										Your Growth
 										</h2>
-									{/* <div className="left-line bg-dark"></div> */}
+								
 									<label className="light-label">
 										{/* 1. What is the amount you are targeting (1 -5
 										years)? */}
 										<span>1.</span> Increase online visibility
 									</label>
-									{/* <div className="range-slider">
-										<RangeSlider
-											className="single-thumb"
-											defaultValue={[0, range[1]]}
-											thumbsDisabled={[true, false]}
-											rangeSlideDisabled={true}
-											onInput={setRange}
-											step={"any"}
-										/>
-										<div
-											className="range-tooltip"
-											style={{ left: `${range[1]}%` }}
-										>
-											<div style={{ fontSize: "12px" }}>
-												{tooltipAmount}
-											</div>
-										</div>
-									</div>
-									<div className="range-slider-amounts d-flex">
-										<span>$50k</span>
-										<span>$100k</span>
-										<span>$250k</span>
-										<span>$500k</span>
-										<span>$1MM+</span>
-									</div>
-									<div className="left-line bg-dark"></div> */}
+									
 									<label className="light-label">
 										{/* 2. What is your coaching industry? */}
 										<span>2.</span> Reach your exact targeted audience

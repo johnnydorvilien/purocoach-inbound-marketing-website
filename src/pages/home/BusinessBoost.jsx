@@ -6,14 +6,15 @@ import useScreen from "../../hooks/useScreen";
 import callbg from "./img/call-bg.png";
 import consult from "./img/consulting-img.png";
 import shape from "./img/shape.png";
-import img from "./img/shape1.png";
+import img from "./img/shape123.png";
 const BusinessBoost = () => {
 	const [tab, setTab] = useState("Business Consulting");
 	const screen = useScreen();
 	return (
 		<>
-			<section className="partner-with-us">
-				<div className="feature-bg"></div>
+			<section className="partner-with-us" style={{
+						background: `url(${img}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}} >
+				{/* <div className="feature-bg"></div>
 				<img
 					src={shape}
 					className="top-right-shape d-none d-sm-block"
@@ -28,7 +29,7 @@ const BusinessBoost = () => {
 					src={img}
 					alt=""
 					className="service-bottom-shape d-md-none w-50"
-				/>
+				/> */}
 				<div className="container" style={{paddingTop:"100px",paddingBottom:"0"}}>
 					<div className="boost-title">
 						<Title
@@ -40,7 +41,7 @@ const BusinessBoost = () => {
 					It all starts with attracting the right customers, who you then work to convert, close, and delight. Learn how our 4 step process can help connect your business with the right customers at the right time.
 					</p>
 				</div>
-				<ul className="boost-tab-menu">
+				<ul className="boost-tab-menu" >
 					<li>
 						<button
 							className={tab == "Business Consulting" ? "active" : ""}
@@ -78,7 +79,7 @@ const BusinessBoost = () => {
 						</button>
 					</li>
 				</ul>
-				<div className="container">
+				<div className="container" style={{paddingBottom:"180px"}}>
 					{screen < 768 ? (
 						<>
 							<TabItem title="Business Consulting" openmenu="true" />
