@@ -89,7 +89,7 @@ export const BtnGrp = ({ open, setOpen }) => {
 const data = [
 	{
 		// txt: "We run the engine that drives your coaching business",
-		txt: "Get  Noticed - Generate Leads- Win Customers",
+		txt: "Get  Noticed - Generate Leads - Win Customers",
 	},
 	{
 		txt: "lorem ipsum dolor ",

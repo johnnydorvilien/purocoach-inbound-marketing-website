@@ -59,8 +59,11 @@ const RequestDemo = () => {
 					className="service-section-bg d-none d-md-block"
 					style={{
 						background: `url(${bg}) no-repeat top right / cover`,
-						left: "-50px",
-						borderRadius: "0 0 0 250px",
+						// top: "-117px",
+						// borderBottomLeftRadius: "50px",
+						// transform: "skewY(0)",
+						// left: "-50px",
+						// borderRadius: "0 0 0 250px",
 					}}
 				></div>
 				<img

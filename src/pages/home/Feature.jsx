@@ -38,10 +38,10 @@ const Feature = () => {
 							className="text-white text-start text-md-center"
 						/>
 						{screen >= 992 ? (
-							<section className="slider">
+							<div className="slider">
 								<div className="slider__flex">
 									<div className="slider__images">
-										<Swiper
+										{/* <Swiper
 											thumbs={{
 												swiper:
 													imagesNavSlider &&
@@ -65,7 +65,7 @@ const Feature = () => {
 											pagination={{
 												clickable: true,
 											}}
-										>
+										> */}
 											{slides?.map((slide, index) => {
 												return (
 													<SwiperSlide key={`${index}-d`}>
@@ -75,7 +75,7 @@ const Feature = () => {
 													</SwiperSlide>
 												);
 											})}
-										</Swiper>
+										{/* </Swiper> */}
 									</div>
 									<div className="slider__col">
 										<div className="slider__thumbs">
@@ -137,7 +137,7 @@ const Feature = () => {
 										</div>
 									</div>
 								</div>
-							</section>
+							</div>
 						) : (
 							<Swiper
 								spaceBetween={0}

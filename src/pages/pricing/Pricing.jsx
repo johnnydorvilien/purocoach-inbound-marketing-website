@@ -7,8 +7,8 @@ const Pricing = () => {
 		<>
 			<Header />
 			<PricingSection />
-			<br className="d-none d-md-block" />
-			<br className="d-none d-md-block" />
+			{/* <br className="d-none d-md-block" />
+			<br className="d-none d-md-block" /> */}
 			<Footer />
 		</>
 	);
