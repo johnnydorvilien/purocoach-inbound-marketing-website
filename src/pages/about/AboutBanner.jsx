@@ -3,21 +3,23 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import img from "../../assets/img/banner/banner-shape.png";
 import bannerImage from "./img/about-banner.png";
+import bg from "./img/about.png";
 const AboutBanner = () => {
 	const [open, setOpen] = useState(false);
 	return (
-		<section className="banner-section about-banner">
-			<div
+		<section className="banner-section about-banner" style={{
+			background: `url(${bg}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}}>
+			{/* <div
 				className="shapes-bg"
-				style={{
-					WebkitMask: `url(${img}) no-repeat left bottom / cover`,
-					opacity: "1",
-				}}
+				// style={{
+				// 	WebkitMask: `url(${img}) no-repeat left bottom / cover`,
+				// 	opacity: "1",
+				// }}
 			>
 				<span></span>
 				<span></span>
 				<span></span>
-			</div>
+			</div> */}
 			<div className="container">
 				<div className="banner-wrapper flex-row">
 					<div className="banner-content">
@@ -56,7 +58,7 @@ const AboutBanner = () => {
 						</div>
 					</div>
 					<div className="banner-thumb about-thumb">
-						<img src={bannerImage} alt="" />
+						<img src={bannerImage} style={{paddingBottom:"30px",paddingTop:"110px"}} alt="" />
 					</div>
 				</div>
 			</div>

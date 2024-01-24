@@ -119,7 +119,7 @@ img{
 }
 .swiper-wrapper{
 	// min-height:-webkit-fill-available!important;
-	min-height: 70vh !important;
+	min-height: 90vh !important;
 	// @include breakpoint(xl){
 	// 	min-height: 64vh !important;
 	// }
@@ -2896,8 +2896,9 @@ header {
 	padding-block: 100px 80px;
 	position: relative;
 	.container{
-		padding-top: 50px;
-		padding-bottom: 100px;
+		padding: 50px 0;
+		// padding-top: 50px;
+		// padding-bottom: 100px;
 	}
 
 	.feature-bg {
@@ -4749,6 +4750,7 @@ header {
 	box-shadow: 15px 15px 35px 0px rgba(0, 0, 0, 0.05);
 	border-radius: 15px;
 	padding: 22px 25px 25px;
+	height: 100%;
 	.name {
 		font-size: 22px;
 		margin-bottom: 14px;
@@ -5443,9 +5445,9 @@ body {
 	// background-size: cover;
 	// background-position: unset;
 	.container{
-		// padding-top: 62px;
-		// padding-bottom: 125px;
-		padding: 200px 0;
+		padding-top: 200px;
+		padding-bottom: 200px;
+		// padding: 200px 0;
 	
 	}
 	
