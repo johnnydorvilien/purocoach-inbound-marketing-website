@@ -4,7 +4,7 @@ import { FaqItems } from "../../../components/FaqItems";
 const ServiceFeatures = () => {
 	return (
 		<section className="features-section">
-			<div className="container">
+			<div className="container" style={{paddingBottom:"150px"}}>
 				<div className="section-title mb-60">
 					<h2 className="title title-xl-title text-white pb-0">
 					Service Features

@@ -27,10 +27,10 @@ const PricingSection = () => {
 						</div>
 					<div className="pricing-spacing">
 						<div className="section-title mb-0">
-							<h2 className="title pb-0 text-base font-xl-57">
+							<h2 className="title pb-0 text-base font-xl-57" style={{marginBottom:"10px"}}>
 								We Offer a Variety of Packages
 							</h2>
-							<span className="shadow-border my-30px"></span>
+							{/* <span className="shadow-border my-30px"></span> */}
 							<p className="txt mx-auto" style={{ maxWidth: "1170px" ,fontSize:"14px"}}>
 								Eager to meet the needs of any coach we work with, we
 								have various price points available to suit your
@@ -84,39 +84,8 @@ const PricingSection = () => {
 					</div>
 				</div>
 				{/* {featureOpen && <PlanFeatureDetails />} */}
-				<div className="container">
-					{/* <div
-						className="mx-auto text-center"
-						style={{ maxWidth: "520px" }}
-					>
-						<BlackDivider margin="70px 0 40px" />
-						{!featureOpen ? (
-							<button
-								className="btn-text"
-								onClick={() => setFeatureOpen(!featureOpen)}
-							>
-								See all Features <CaretDown2 />
-							</button>
-						) : (
-							<button
-								className="btn-text"
-								onClick={() => setFeatureOpen(!featureOpen)}
-							>
-								Hide all Features <CaretUp2 />
-							</button>
-						)}
-					</div> */}
-					{/* <h2 className="font-semibold text-base mb-4">
-						{location?.search &&
-							location?.search
-								.slice(1)
-								?.split("-")
-								.map(
-									(word) =>
-										word.charAt(0).toUpperCase() + word.slice(1)
-								)
-								.join(" ")}
-					</h2> */}
+				<div className="container" style={{padding:"150px 0"}}>
+				
 					<div className="row align-items-center flex-wrap-reverse">
 						<div className="col-lg-6">
 							<div style={{ maxWidth: "699px" }}>

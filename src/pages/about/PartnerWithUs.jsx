@@ -15,7 +15,7 @@ const PartnerWithUs = () => {
 					className="top-right-shape d-none d-sm-block"
 					alt=""
 				/> */}
-				<div className="container">
+				<div className="container" style={{paddingBottom:"100px"}}>
 					<div className="row align-items-center ">
 						<div className="col-lg-6">
 							<div className="partner-content text-white">
