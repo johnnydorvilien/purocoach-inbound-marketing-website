@@ -26,7 +26,7 @@ const SystemServices = ({ systemData }) => {
 				<div className="container">
 								<h2
 									className="title "
-									style={{ textAlign:"center",justifyContent:"center",paddingTop:"120px",paddingBottom:"40px",marginBottom:"0"}}
+									style={{ textAlign:"center",justifyContent:"center",paddingTop:"130px",paddingBottom:"40px",marginBottom:"0"}}
 								>
 									Automate All Your Marketing Processes
 								</h2>

@@ -11,13 +11,15 @@ import { VideoIcon } from "../../components/Icon";
 import useScreen from "../../hooks/useScreen";
 import BannerVideo from "./BannerVideo";
 import bannerMan from "./img/banner-man.png";
+import bg from "./img/bg1.png";
 const Banner = () => {
 	const [open, setOpen] = useState(false);
 	const screen = useScreen();
 	return (
 		<>
-			<section className="banner-section">
-				<div
+			<section className="banner-section" style={{
+						background: `url(${bg}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}}>
+				{/* <div
 					className="shapes-bg"
 					style={{
 						WebkitMask: `url(${img}) no-repeat left bottom / cover`,
@@ -27,12 +29,12 @@ const Banner = () => {
 					<span></span>
 					<span></span>
 					<span></span>
-				</div>
+				</div> */}
 				<Swiper
-					slidesPerView={0}
-					effect={"fade"}
-					modules={[EffectFade, Pagination]}
-					pagination={{ clickable: true }}
+					// slidesPerView={0}
+					// effect={"fade"}
+					// modules={[EffectFade, Pagination]}
+					// pagination={{ clickable: true }}
 					className="swiper-overflow-hidden"
 				>
 					{data?.map((item, i) => (
@@ -54,6 +56,7 @@ const Banner = () => {
 										<img
 											src={screen >= 576 ? bannerImage : bannerMan}
 											alt=""
+											style={{marginLeft:"-110px",paddingTop:"70px"}}
 										/>
 									</div>
 								</div>

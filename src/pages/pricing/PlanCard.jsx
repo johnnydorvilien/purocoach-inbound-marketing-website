@@ -6,7 +6,7 @@ const PlanCard = (props) => {
 	const { name, subdata, index, txt } = props;
 	return (
 		<>
-			<div className={`plan-card ${index == "2" ? "active" : ""}`}>
+			<div className="plan-card">
 				<h6 className="name">{name}</h6>
 				{/* <h3 className="price">
 					${yearly ? (12 * price).toFixed(2) : price}{" "}

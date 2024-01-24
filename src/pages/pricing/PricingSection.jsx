@@ -49,32 +49,7 @@ const PricingSection = () => {
 					className="service-bottom-shape d-none d-md-block"
 				/>
 				<div className="container">
-					 {/* <div className="section-title-3">
-						<div className="left">
-							<h2 className="title">CRM Subscriptions</h2>
-							<div>No contracts, no surprise fees</div>
-						</div>
-						<div className="tab-btn-grp">
-							<Link
-								to="#"
-								className={yearly ? "" : "active"}
-								onClick={() => setYearly(false)}
-							>
-								Monthly
-							</Link>
-							<Link
-								to="#"
-								className={yearly ? "active" : ""}
-								onClick={() => setYearly(true)}
-							>
-								Yearly
-							</Link>
-						</div>
-					</div> */}
-
-					{/* <RangeItem />
-					<br /> */}
-					{/* <br className="d-none d-md-block" />  */}
+					
 					<div className="row g-3 justify-content-center" style={{paddingTop:"120px"}}>
 						{data?.map((item, i) => (
 							<div className="col-lg-3 col-md-6 col-sm-9" key={i}>
@@ -84,7 +59,7 @@ const PricingSection = () => {
 					</div>
 				</div>
 				{/* {featureOpen && <PlanFeatureDetails />} */}
-				<div className="container" style={{padding:"150px 0"}}>
+				<div className="container" style={{paddingBottom:"150px",paddingTop:"150px"}}>
 				
 					<div className="row align-items-center flex-wrap-reverse">
 						<div className="col-lg-6">
