@@ -2,10 +2,13 @@ import React from "react";
 import { QuoteIcon } from "../../components/Icon";
 import quoteImg from "./img/quote-img.png";
 import mobile from "./img/mobilejohn.png";
+import bg from "./img/johnnybg.png";
+import { useMediaQuery } from "react-responsive";
 const QuoteSection = () => {
+	const isMobile = useMediaQuery({ maxWidth: 479 });
 	return (
-		<section className="quote-section" style={{background: `url(${window.innerWidth > 479 ? " ": mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",}}>
-			<div className="container">
+		<section className="quote-section" style={{background: `url(${window.innerWidth > 479 ? bg : mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",}}>
+			<div className="container" style={{padding: isMobile? "0" : "200px 0 100px", marginTop: isMobile ? "" : "-230px"}}>
 				<div className="row gy-4 align-items-center">
 					<div className="col-md-6 text-center">
 						<div className="quote-image">
