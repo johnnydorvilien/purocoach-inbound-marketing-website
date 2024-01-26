@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 import { FaqItems } from "../../../components/FaqItems";
 import {
 	AutomationIcon2,
@@ -12,9 +13,10 @@ import {
 } from "../../../components/Icon";
 import Title from "../../../components/Title";
 import img from "../img/hero-top.png";
+import mobile from "../img/mobilehero.png";
 const ServicePageHeader = ({ title, sectionContent }) => {
 	const location = useLocation();
-
+	const isMobile = useMediaQuery({ maxWidth: 479 });
 	// location?.search;
 	const navigate = useNavigate();
 	return (
@@ -41,7 +43,7 @@ const ServicePageHeader = ({ title, sectionContent }) => {
 						className="text-base text-start"
 					/>
 					{sectionContent && (
-						<div className="row g-4" style={{marginTop:"100px",}}>
+						<div className="row g-4" style={{marginTop:isMobile ? "40px" : "100px",}}>
 							<div className="col-lg-6">
 								<FaqItems  data={data} id="service-1" />
 							</div>
@@ -57,11 +59,22 @@ const ServicePageHeader = ({ title, sectionContent }) => {
 					style={{
 						maxWidth: "585px",
 						position: "absolute",
-						top: "-80px",
-						right: "0",
+						top: isMobile ? "0px" : "-60px",
+						right: isMobile? "0px":"0",
 					}}
 					alt=""
 				/>
+				{/* <img
+					src={mobile}
+					className="w-50"
+					style={{
+						maxWidth: "585px",
+						position: "absolute",
+						top: "0px",
+						right: "0",
+					}}
+					alt=""
+				/> */}
 			</section>
 
 			{/* Who we are */}

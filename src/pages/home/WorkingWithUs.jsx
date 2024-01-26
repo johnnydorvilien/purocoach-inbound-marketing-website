@@ -49,7 +49,7 @@ const WorkingWithUs = () => {
 											alignItems: "center",
 										}}
 									>
-										{screen < 575 ? "Learn More" : "Get in Touch"}
+										{screen < 575 ? "Get in Touch" : "Get in Touch"}
 									</HashLink>
 								</div>
 							</div>

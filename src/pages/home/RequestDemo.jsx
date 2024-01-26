@@ -4,13 +4,15 @@ import Input from "../../components/Input";
 import Select from "../../components/Select";
 import img from "./img/about-shape.png";
 import bg from "./img/req.png";
+import mobile from "./img/reqmobile.png"
+import { useMediaQuery } from "react-responsive";
 const RequestDemo = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [service, setService] = useState("");
 	const [message, setMessage] = useState("");
 	const [phone, setPhone] = useState("");
-
+	const isMobile = useMediaQuery({ maxWidth: 479 });
 	// const handleSubmit = (e) => {
 	// 	e.preventDefault();
 	// 	if (!name) {
@@ -54,8 +56,8 @@ const RequestDemo = () => {
 
 	return (
 		<>
-			<section className="request-demo-section"style={{
-						background: `url(${bg}) no-repeat top right / cover`,display:"block",backgroundSize:"100% auto"}} >
+			<section className="request-demo-section" style={{
+						background: `url(${window.innerWidth > 479 ? bg : mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",marginTop:isMobile ? "-70px" : "-200px"}} >
 				{/* <div
 					className="service-section-bg d-none d-md-block"
 					style={{
@@ -73,12 +75,12 @@ const RequestDemo = () => {
 					className="service-bottom-shape d-none d-md-block"
 				/> */}
 				<div className="container">
-					<img
+					{/* <img
 						src={bg}
 						className="d-md-none w-100"
 						style={{ borderRadius: "16px", marginBottom: "52px" }}
 						alt=""
-					/>
+					/> */}
 					<div className="contact-sales-form-wrapper">
 						<div className="target-id" id="request-demo"></div>
 						<h4 className="title font-semibold text-base">

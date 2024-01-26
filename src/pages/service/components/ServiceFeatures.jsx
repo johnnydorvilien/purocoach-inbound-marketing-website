@@ -1,10 +1,11 @@
 import React from "react";
 import { FaqItems } from "../../../components/FaqItems";
-
+import { useMediaQuery } from "react-responsive";
 const ServiceFeatures = () => {
+	const isMobile = useMediaQuery({ maxWidth: 479 });
 	return (
 		<section className="features-section">
-			<div className="container" style={{paddingBottom:"150px"}}>
+			<div className="container" style={{paddingBottom: isMobile ? "50px" : "150px"}}>
 				<div className="section-title mb-60">
 					<h2 className="title title-xl-title text-white pb-0">
 					Service Features

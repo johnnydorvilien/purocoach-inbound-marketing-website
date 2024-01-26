@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import img from "../img/puro-crm.png";
+import { useMediaQuery } from "react-responsive";
 const PuroCRM = () => {
+	const isMobile = useMediaQuery({ maxWidth: 479 });
 	return (
 		<section className="puro-crm-section">
 			<div className="target-id" id="crm"></div>
 			<div className="container" style={{paddingBottom:"0px"}}>
-				<div className="row gy-5 align-items-center" style={{paddingTop:"100px"}}>
+				<div className="row gy-5 align-items-center" style={{paddingTop:isMobile ? "0px" : "100px"}}>
 					<div className="col-lg-6">
 						<div className="crm-txt text-white">
 							<h2 className="title text-white">Consulting Services</h2>

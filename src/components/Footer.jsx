@@ -2,19 +2,27 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../pages/Logo";
 import { CaretDown, Facebook, Linkedin, Twitter } from "./Icon";
-
+import { useMediaQuery } from "react-responsive";
 const Footer = () => {
+	const isMobile = useMediaQuery({ maxWidth: 479 });
 	return (
 		<>
 			<footer>
 				<div className="footer-top">
-					<div className="container">
-						<div className="shapes-mobile"></div>
+				<div className="container">
+						{window.innerWidth > 479 && (
+          					<div className="shapes-mobile"></div>
+        				)}
 						<div className="footer-top-widget">
 							<div className="widget-left">
-								<div className="mb-3">
+								{/* <div className="mb-3">
 									<Logo />
-								</div>
+								</div> */}
+								{window.innerWidth > 479 && (
+          							<div className="mb-3">
+            							<Logo />
+          							</div>
+        						)}
 								<h3 className="title d-md">
 									Sign Up For Our Newsletter
 								</h3>
@@ -44,10 +52,10 @@ const Footer = () => {
 				</div>
 				<div className="footer-bottom">
 					<div className="container">
-						<div style={{fontWeight:"400",display:"flex",justifyContent:"space-between",alignItems:"center",}}>
+						<div style={{fontWeight:"400",display:isMobile ? "block" : "flex",justifyContent:"space-between",alignItems:"center",}}>
 							<div className="widget-left">
 								
-								<ul className="social-icons justify-content-start">
+								<ul className="social-icons justify-content-start" >
 									<li>
 										<Link to="#">
 											<Facebook color="var(--base)" />
@@ -65,9 +73,9 @@ const Footer = () => {
 									</li>
 								</ul>
 							</div>
-							<div>
-							<Link to="#" style={{fontWeight:"400"}}>Privacy Policy</Link> &copy; Company 2024. All
-							rights reserved.
+							<div style={{paddingTop: isMobile ? "10px" : "",textAlign: isMobile ? "justify" : ""}}>
+								<Link to="#" style={{fontWeight:"400"}}>Privacy Policy</Link> &copy; Company 2024. All
+								rights reserved.
 							</div>
 							
 						</div>
@@ -82,14 +90,14 @@ export const FooterLinks = ({ title, links }) => {
 	return (
 		<>
 			<div className="item">
-				<h5 className="subtitle" onClick={() => setOpen(!open)}>
-					<span>{title}</span>{" "}
-					<span className="d-sm-none">
+				<h5 className="subtitle">
+					<span>{title}</span>
+					{/* <span className="d-sm-none">
 						{" "}
 						<CaretDown />{" "}
-					</span>
+					</span> */}
 				</h5>
-				<div className={`inner-div ${open ? "active" : ""}`}>
+				{/* <div className={`inner-div ${open ? "active" : ""}`}> */}
 					<ul className="links">
 						{links?.map((item, i) => (
 							<li key={i}>
@@ -97,7 +105,7 @@ export const FooterLinks = ({ title, links }) => {
 							</li>
 						))}
 					</ul>
-				</div>
+				{/* </div> */}
 			</div>
 		</>
 	);

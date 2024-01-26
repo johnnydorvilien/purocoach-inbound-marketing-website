@@ -24,8 +24,9 @@ const PlanCard = (props) => {
 						</li>
 					))}
 				</ul>
-				<Link to="/auth/login" className="cmn-btn">
-					Contact for Price
+				{/* <Link to="/auth/login" className="cmn-btn"> */}
+				<Link to="/contact" className="cmn-btn">
+				Schedule a Call
 				</Link>
 			</div>
 		</>

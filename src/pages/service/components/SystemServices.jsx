@@ -12,13 +12,14 @@ import img1 from "../img/system-services/1.png";
 import img2 from "../img/system-services/2.png";
 import img3 from "../img/system-services/3.png";
 import img4 from "../img/system-services/4.png";
+import { useMediaQuery } from "react-responsive";
 const SystemServices = ({ systemData }) => {
 	const [showData, setShowData] = useState(data);
 
 	useEffect(() => {
 		systemData && setShowData(systemData);
 	}, [systemData]);
-
+	const isMobile = useMediaQuery({ maxWidth: 479 });
 	return (
 		<>
 			<div className="system-solutions">
@@ -26,7 +27,7 @@ const SystemServices = ({ systemData }) => {
 				<div className="container">
 								<h2
 									className="title "
-									style={{ textAlign:"center",justifyContent:"center",paddingTop:"130px",paddingBottom:"40px",marginBottom:"0"}}
+									style={{ textAlign:"center",justifyContent:"center",paddingTop:isMobile ? "100px" : "130px",paddingBottom: isMobile ? "25px" : "40px",marginBottom:"0"}}
 								>
 									Automate All Your Marketing Processes
 								</h2>

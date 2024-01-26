@@ -96,15 +96,14 @@ const Header = ({ floating }) => {
 											}}
 										>
 											<span className="menu-link">
-												Products
+											Services
 												<CaretRight />
 											</span>
 											<span className="sub-txt">
-												Products build to simplify and automate
-												borrowing
+											Products Build to power seamless lending.
 											</span>
 										</li>
-										<li
+										{/* <li
 											className="position-relative d-lg-none"
 											onClick={() => {
 												setSubmenuOpen(true);
@@ -118,7 +117,7 @@ const Header = ({ floating }) => {
 											<span className="sub-txt">
 												Products Build to power seamless lending.
 											</span>
-										</li>
+										</li> */}
 										<li className="position-relative d-none d-lg-block">
 											<div className="menu-link">
 												{/* Products & Services{" "} */}

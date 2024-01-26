@@ -6,6 +6,7 @@ import img2 from "./img/2.png";
 import img3 from "./img/3.png";
 import img from "./img/about-shape.png";
 import white from "./img/white.png";
+import mobile from "./img/mobilemission.png";
 
 const AboutUsSection = () => {
 	const shouldRenderButton = (title) => {
@@ -13,13 +14,17 @@ const AboutUsSection = () => {
 	  };
 	return (
 		<>
-			<section className="about-section">
+			<section className="about-section" style={{background: `url(${window.innerWidth > 479 ? " ": mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",}}>
+			{window.innerWidth > 479 && (
 				<div className="service-section-bg"></div>
+				)}
+				{window.innerWidth > 479 && (
 				<img
 					src={img}
 					alt=""
 					className="service-bottom-shape d-none d-md-block"
 				/>
+				)}
 				<div className="container">
 					<div className="d-flex flex-column ">
 						{data?.map((item, i) => (

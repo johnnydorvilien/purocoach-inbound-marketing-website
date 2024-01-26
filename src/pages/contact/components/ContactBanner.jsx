@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 import img from "../../../assets/img/banner/banner-shape.png";
 import ContactSalesForm from "../../../components/ContactSalesForm";
 import { Email, Phone, Pin } from "../../../components/Icon";
+import bg from "../bgc.png";
+import mobile from "../mobilebgc.png";
 
 const ContactBanner = () => {
 	return (
-		<section className="banner-section contact-banner">
-			<div
+		<section className="banner-section contact-banner" style={{
+			background: `url(${window.innerWidth > 479 ? bg : mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}}>
+			{/* <div
 				className="shapes-bg"
 				style={{
 					WebkitMask: `url(${img}) no-repeat left bottom / cover`,
@@ -17,9 +20,9 @@ const ContactBanner = () => {
 				<span></span>
 				<span></span>
 				<span></span>
-			</div>
+			</div> */}
 			<div className="container">
-				<div className="banner-wrapper">
+				<div className="banner-wrapper" >
 					<div className="banner-content">
 						<h1
 							className="title"
@@ -64,7 +67,6 @@ const ContactBanner = () => {
 					</div>
 				</div>
 			</div>
-			
 		</section>
 	);
 };

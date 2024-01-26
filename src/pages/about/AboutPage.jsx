@@ -18,11 +18,11 @@ const AboutPage = () => {
 			<AboutUsSection />
 			<ValuesSection />
 			<PartnerWithUs />
-			<ShapeViews>
+			{/* <ShapeViews> */}
 				{/* <Team /> */}
 				{/* <BlackDivider /> */}
 				<QuoteSection />
-			</ShapeViews>
+			{/* </ShapeViews> */}
 			{/* <br className="d-none d-md-block" />
 			<br className="d-none d-md-block" /> */}
 			<Footer />

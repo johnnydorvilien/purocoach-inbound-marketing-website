@@ -10,31 +10,37 @@ import {
 import Title from "../../components/Title";
 // import service from "./img/service.png";
 import img from "./img/shape1.png";
+import mobile from "./img/mobileservice.png";
 
 const Service = () => {
 	return (
 		<section className="service-section position-relative">
-			<div className="service-section-bg max-b-0"></div>
+			{/* <div className="service-section-bg max-b-0"></div>
 			<img
 				src={img}
 				alt=""
 				className="service-bottom-shape d-none d-md-block"
-			/>
+			/> */}
+			{window.innerWidth > 479 && (
+				<div className="service-section-bg max-b-0"></div>
+			)}
+			{window.innerWidth > 479 && (
+				<img
+					src={img}
+					alt=""
+					className="service-bottom-shape d-none d-md-block"
+				/>
+			)}
 			<div className="container">
-				{/* <div className="text-center">
-					<img
-						src={service}
-						className="d-lg-none mw-100 mb-5"
-						style={{ width: "280px" }}
-						alt=""
-					/>
-				</div> */}
-				<br className="d-lg-none" />
-				<br className="d-lg-none" />
+				
+				{/* <br className="d-lg-none" />
+				<br className="d-lg-none" /> */}
+				<div style={{background: `url(${window.innerWidth > 479 ? " ": mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",padding:"30px 10px"}}>
+				
 				<div className="boost-title">
 					<Title
 						className="text-base text-start text-md-center shape-full"
-						title="Your One Stop Shop For All Your Business Needs"
+						title="Your One Stop Shop for All Your Marketing Business Needs"
 					/>
 				</div>
 				<div className="row gy-3 gx-4 service-card-wrapper">
@@ -47,6 +53,7 @@ const Service = () => {
 							</div>
 						</div>
 					))}
+				</div>
 				</div>
 			</div>
 		</section>

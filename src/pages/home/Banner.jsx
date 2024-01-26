@@ -12,78 +12,66 @@ import useScreen from "../../hooks/useScreen";
 import BannerVideo from "./BannerVideo";
 import bannerMan from "./img/banner-man.png";
 import bg from "./img/bg1.png";
+import mobile from "./img/mobile.png";
+import { useMediaQuery } from "react-responsive";
+
 const Banner = () => {
 	const [open, setOpen] = useState(false);
 	const screen = useScreen();
+	const isMobile = useMediaQuery({ maxWidth: 479 });
 	return (
 		<>
 			<section className="banner-section" style={{
-						background: `url(${bg}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}}>
-				{/* <div
-					className="shapes-bg"
-					style={{
-						WebkitMask: `url(${img}) no-repeat left bottom / cover`,
-						opacity: "1",
-					}}
-				>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div> */}
-				<Swiper
-					// slidesPerView={0}
-					// effect={"fade"}
-					// modules={[EffectFade, Pagination]}
-					// pagination={{ clickable: true }}
-					className="swiper-overflow-hidden"
-				>
-					{data?.map((item, i) => (
-						<SwiperSlide key={i}>
-							<div className="container">
+						background: `url(${window.innerWidth > 479 ? bg : mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",
+					
+						}}>
+							
+				<div>
+							<div className="container" >
 								<div className="banner-wrapper">
 									<div className="banner-content">
-										<h1 className="title">Inbound Marketing</h1>
+										<h1 className="title" style={{fontSize: isMobile ? "32px" : " ", textAlign: isMobile ? "center" : ""}}>Inbound Marketing</h1>
 										<h2 className="subtitle">
 											 for{" "}
-											<span style={{ color: "#FEC15A" , fontStyle:"italic"}}>Coaches</span>{" "}
+											<span style={{ color: "#FF9D2A" , fontStyle:"italic"}}>Coaches</span>{" "}
 											 &{" "}
-                                            <span style={{ color: "#FEC15A" , fontStyle:"italic"}}>Consltants</span>
+                                            <span style={{ color: "#FF9D2A" , fontStyle:"italic"}}>Consltants</span>
 										</h2>
-										<div className="txt">{item?.txt}</div>
-										<BtnGrp open={open} setOpen={setOpen} />
+										{/* <div className="txt">{item?.txt}</div> */}
+										<div className="txt" style={{fontSize: isMobile ? "20px " : " ",  textAlign: isMobile ? "center" : "", maxWidth: isMobile ? "74%" : " "}}>
+										{screen > 479 ? "Get  Noticed - Generate Leads - Win Customers" : "Get  Noticed  Generate Leads  Win Customers"}
+											{/* {screen > 479
+												? item?.txt
+												: item?.txt.replace(/-/g, "")} */}
+										</div>
+										<BtnGrp open={open} setOpen={setOpen} screenWidth={screen}/>
 									</div>
-									<div className="banner-thumb">
+									{screen >479 && (
+										<div className="banner-thumb">
 										<img
-											src={screen >= 576 ? bannerImage : bannerMan}
+											src={bannerImage}
 											alt=""
-											style={{marginLeft:"-110px",paddingTop:"70px"}}
+											style={{ marginLeft: "-110px", paddingTop: "70px",paddingBottom:"30px",}}
 										/>
-									</div>
+										</div>
+                 			 		)}
 								</div>
 							</div>
-						</SwiperSlide>
-					))}
-				</Swiper>
+				</div>
 			</section>
 			<BannerVideo open={open} setOpen={setOpen} />
 		</>
 	);
 };
-export const BtnGrp = ({ open, setOpen }) => {
+export const BtnGrp = ({ open, setOpen, screenWidth}) => {
+	const isMobile = useMediaQuery({ maxWidth: 479 });
 	return (
 		<>
 			<div className="btn-grp">
-				<Link className="cmn-btn btn-white" to="/trial-signup">
-					{/* Start Free Trial */}
-					Get Started
-				</Link>
-				{/* <button
-					type="button"
-					className="cmn-btn btn-shade"
-					onClick={() => setOpen(!open)}
-				>
-					<VideoIcon /> Watch a Demo
-				</button> */}
+			<Link className="cmn-btn btn-white" to="/trial-signup" style={{marginTop:isMobile ? "40px" : ""}}>
+          		{screenWidth > 479 ? "Get Started" : "Schedule a Free Consultation"}
+        	</Link>
+
 			</div>
 		</>
 	);

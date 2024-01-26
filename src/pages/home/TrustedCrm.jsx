@@ -19,10 +19,11 @@ const TrustedCrm = () => {
 						<div className="col-lg-6 ps-xl-4">
 							<div className="crm-content">
 								<h2 className="title d-none d-sm-block">
-								Traffic, Visibility, Conversion – We Deliver
+									Traffic, Visibility, Conversion – We Deliver
 								</h2>
 								<h2 className="title d-sm-none">
-									The Trusted <br /> CRM For Coache
+									{/* The Trusted <br /> CRM For Coache */}
+									Traffic, Visibility, Conversion – We Deliver
 								</h2>
 								{/* <ul className="infos-data-crm">
 									{infodata?.map(({ text }, i) => (

@@ -13,7 +13,10 @@ import ShapeViewsTwo from "./components/ShapeViewsTwo";
 import SystemServices from "./components/SystemServices";
 import shape from "./img/yellow-top.png";
 import bg from "./img/yellow.png";
-import serices from "./img/sevices.png"
+import serices from "./img/sevices.png";
+import mobile from "./img/mobileyellow.png";
+import servicesmobile from "./img/mobileservices.png";
+
 const ServicePage = () => {
 	return (
 		<>
@@ -21,7 +24,7 @@ const ServicePage = () => {
 			<ServicePageHeader sectionContent />
 			{/* <ShapeViewsTwo> */}
 			<section style={{
-						background: `url(${bg}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}}>
+						background: `url(${window.innerWidth > 479 ? bg : mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}}>
 				<PuroCRM />
 				<WhiteDivider />
 				<ServiceFeatures />
@@ -32,7 +35,7 @@ const ServicePage = () => {
 			<OurMeteorology />
 			{/* <ShapeViewsTwo parentShape={shape}> */}
 			<section style={{
-						background: `url(${serices}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}}>
+						background: `url(${window.innerWidth > 479 ? serices : servicesmobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}}>
 				<SystemServices />
 				</section>
 			{/* </ShapeViewsTwo> */}
