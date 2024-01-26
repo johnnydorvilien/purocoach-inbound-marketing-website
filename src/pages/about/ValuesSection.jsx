@@ -9,7 +9,7 @@ const ValuesSection = () => {
 				<div className="section-title section-title-2">
 					<h2 className="title text-base">Our Values</h2>
 					<p className="text">
-					We run our business according to our seven core principles to ensure every client get the best support.
+						We run our business according to our seven core principles to ensure every client get the best support.
 					</p>
 				</div>
 				<div className="row g-3">
@@ -19,7 +19,7 @@ const ValuesSection = () => {
 					<div className="col-md-6">
 						<FaqItems data={data2} id="values-2" firstClose="undefined" />
 					</div>
-					<img src={img} className="w-100 rounded-15 mt-16" style={{paddingTop:"60px"}} alt="" />
+					<img src={img} className="w-100 rounded-15 mt-16" style={{paddingTop:"0px"}} alt="" />
 				</div>
 				
 			</div>

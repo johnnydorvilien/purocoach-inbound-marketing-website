@@ -19,164 +19,107 @@ import img2 from "./img/feature/2.png";
 import img3 from "./img/feature/3.png";
 import img4 from "./img/feature/4.png";
 import img5 from "./img/feature/5.png";
+import mobile from "./img/mobileinbound.png";
 const Feature = () => {
 	const [imagesNavSlider, setImagesNavSlider] = useState(null);
 
 	const screen = useScreen();
-
 	const navigate = useNavigate();
-
+	const isMobile = window.innerWidth <= 479;
 	return (
 		<>
-			<section className="feature-section">
+			<section className="feature-section" style={{background: `url(${window.innerWidth > 479 ? " ": mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",}}>
+			{window.innerWidth > 479 && (
 				<div className="feature-bg"></div>
+				)}
+				{window.innerWidth > 479 && (
 				<img src={shape} className="top-right-shape" alt="" />
+			)}
 				<div className="overflow-hidden">
-					<div className="container container-1320">
+					<div className="container">
 						<Title
 							title="Your Inbound Marketing is at Our Care"
 							className="text-white text-start text-md-center"
 						/>
-						{screen >= 992 ? (
+					
 							<div className="slider">
 								<div className="slider__flex">
 									<div className="slider__images">
-										{/* <Swiper
-											thumbs={{
-												swiper:
-													imagesNavSlider &&
-													!imagesNavSlider.destroyed
-														? imagesNavSlider
-														: null,
-											}}
-											// direction="vertical"
-											slidesPerView={1}
-											spaceBetween={32}
-											// breakpoints={{
-											// 	0: {
-											// 		direction: "vertical",
-											// 	},
-											// 	768: {
-											// 		direction: "vertical",
-											// 	},
-											// }}
-											className="swiper-container2"
-											modules={[Navigation, Pagination, Thumbs]}
-											pagination={{
-												clickable: true,
-											}}
-										> */}
-											{slides?.map((slide, index) => {
-												return (
-													<SwiperSlide key={`${index}-d`}>
-														<div className="slider__image">
-															<img src={slide?.img} alt="" />
-														</div>
-													</SwiperSlide>
-												);
-											})}
-										{/* </Swiper> */}
+										<div className="slider__image">
+											<img src={img1} alt="" />
+										</div>
 									</div>
+									
 									<div className="slider__col">
 										<div className="slider__thumbs">
-											<Swiper
-												onSwiper={(swiper) =>
-													setImagesNavSlider(swiper)
-												}
-												mousewheel={true}
-												direction="vertical"
-												spaceBetween={24}
-												slidesPerView={2}
-												className="swiper-container1"
-												breakpoints={{
-													0: {
-														direction: "horizontal",
-													},
-													768: {
-														direction: "vertical",
-													},
-													1200: {
-														spaceBetween: 42,
-													},
-													1420: {
-														spaceBetween: 52,
-													},
-												}}
-												modules={[
-													Navigation,
-													Thumbs,
-													Mousewheel,
-													Scrollbar,
-												]}
-												scrollbar={{ draggable: true }}
-											>
-												{slides?.map((slide, index) => {
-													return (
-														<SwiperSlide key={index}>
-															<div className="feature-content-card">
-																<h3 className="title">
-																	{slide?.title}
-																</h3>
-																<p>{slide?.text}</p>
-																<Link
-																	to={`#${slide?.modalId}`}
-																	data-bs-toggle={
-																		slide?.modalId
-																			? "modal"
-																			: ""
-																	}
-																	className="cmn-btn btn-white"
-																>
-																	{slide?.btnTxt}
-																</Link>
-															</div>
-														</SwiperSlide>
-													);
-												})}
+										{isMobile
+          									? slides?.map((slide, index) => (
+              									<div key={index} className="feature-content-card">
+                									<h3 className="title">{slide?.title}</h3>
+                									<p>{slide?.text}</p>
+                									<Link
+                  										to={`#${slide?.modalId}`}
+                  										data-bs-toggle={slide?.modalId ? "modal" : ""}
+                  										className="cmn-btn btn-white"
+                									>
+                  										{slide?.btnTxt}
+                									</Link>
+              									</div>
+            								))
+          									: (
+												<Swiper
+													onSwiper={(swiper) =>
+														setImagesNavSlider(swiper)
+													}
+													mousewheel={true}
+													direction="vertical"
+													spaceBetween={24}
+													slidesPerView={2}
+													className="swiper-container1"
+													breakpoints={{
+														0: {
+															direction: "horizontal",
+														},
+														768: {
+															direction: "vertical",
+														},
+														1200: {
+															spaceBetween: 42,
+														},
+														1420: {
+															spaceBetween: 52,
+														},
+													}}
+													modules={[
+														Navigation,
+														Thumbs,
+														Mousewheel,
+														Scrollbar,
+													]}
+													scrollbar={{ draggable: true }}
+												>
+													{slides?.map((slide, index) => (
+                										<SwiperSlide key={index}>
+                  											<div className="feature-content-card">
+                    											<h3 className="title">{slide?.title}</h3>
+                    											<p>{slide?.text}</p>
+                    											<Link
+                      												to={`#${slide?.modalId}`}
+                      												data-bs-toggle={slide?.modalId ? "modal" : ""}
+                      												className="cmn-btn btn-white"
+                    											>
+                      												{slide?.btnTxt}
+                    											</Link>
+                  											</div>
+                										</SwiperSlide>
+              										))}
 											</Swiper>
+											)}
 										</div>
 									</div>
 								</div>
 							</div>
-						) : (
-							<Swiper
-								spaceBetween={0}
-								slidesPerView={1.2}
-								modules={[Pagination, Autoplay]}
-								autoplay
-								pagination
-								autoHeight
-								centeredSlides
-								breakpoints={{
-									0: {
-										slidesPerView: 1.1,
-									},
-									768: {
-										slidesPerView: 1.4,
-									},
-								}}
-							>
-								{slides?.map((slide, index) => {
-									return (
-										<SwiperSlide key={index}>
-											<div className="feature-content-card">
-												<img src={slide?.img} alt="" />
-												<div className="content">
-													<h3 className="title">{slide?.title}</h3>
-													<p>{slide?.text}</p>
-													<Link
-														to={`#${slide?.modalId}`}
-														className="cmn-btn btn-white"
-													>
-														{slide?.btnTxt}
-													</Link>
-												</div>
-											</div>
-										</SwiperSlide>
-									);
-								})}
-							</Swiper>
-						)}
+					
 					</div>
 				</div>
 			</section>
@@ -352,7 +295,7 @@ const Feature = () => {
 
 const slides = [
 	{
-		img: img1,
+		// img: img1,
 		title: "We Know Marketing Strategies That Work",
 		text: `We know that coaching your clients is your main concern; let us handle the marketing, while offering you consulting and business support...`,
 		btnTxt: "Work with Us",
@@ -360,7 +303,7 @@ const slides = [
 	},
 
 	{
-		img: img2,
+		// img: img2,
 		title: "Business Planning",
 		text: "PUROCoac is dedicated to helping you with all facets of launching your business and reaching success. To achieve your goals, we offer services in three areas: marketing, business coaching, and business consulting...",
 		btnTxt: "Get a Free Quote",
@@ -368,7 +311,7 @@ const slides = [
 	},
 
 	{
-		img: img3,
+		// img: img3,
 		title: "Who We Work With",
 		text: "We support and serve coaches of all types. Whether your business is financial coaching, career coaching, or relationship coaching, one thing remains the same: attracting and maintaining loyal customers is at the heart of your business strategy.",
 		btnTxt: "Learn More",
@@ -376,14 +319,14 @@ const slides = [
 	},
 
 	{
-		img: img4,
+		// img: img4,
 		title: "What You’ll Gain",
 		text: "We care about building strong relationships with our clients to serve as partners in the business-growth process. As more than just consultants, we are here to truly understand the heart of your business and develop a plan to help you realize your full potential.",
 		btnTxt: "Learn More About Us",
 		modalId: "freeQuote",
 	},
 	{
-		img: img5,
+		// img: img5,
 		title: "Strategic Planning",
 		text: "We don’t take a one-size-fits-all approach when it comes to developing business plans and marketing strategies. Diving deep into the numbers, data, and analysis of your business performance, we identify areas for improvement, key value points, and solid pillars that can serve as the center of your business strategy moving forward.",
 		btnTxt: "Explore Our Services",

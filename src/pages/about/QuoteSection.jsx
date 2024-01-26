@@ -1,9 +1,10 @@
 import React from "react";
 import { QuoteIcon } from "../../components/Icon";
 import quoteImg from "./img/quote-img.png";
+import mobile from "./img/mobilejohn.png";
 const QuoteSection = () => {
 	return (
-		<section className="quote-section">
+		<section className="quote-section" style={{background: `url(${window.innerWidth > 479 ? " ": mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",}}>
 			<div className="container">
 				<div className="row gy-4 align-items-center">
 					<div className="col-md-6 text-center">

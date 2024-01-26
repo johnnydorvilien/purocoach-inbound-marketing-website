@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import RangeSlider from "react-range-slider-input";
 import Select from "../../components/Select";
 import img from "./img/yourgrowth.png";
+import mobile from "./img/mobilegrowth.png";
 const EarningEstimator = () => {
 	const [industry, setIndustry] = useState();
 	const [coach, setCoach] = useState("10-50");
@@ -26,7 +27,7 @@ const EarningEstimator = () => {
 	return (
 		<>
 			<section className="earning-estimator-section" style={{
-						background: `url(${img}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}}>
+						background: `url(${window.innerWidth > 479 ? img : mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}}>
 				{/* <div className="earning-estimator-bg"></div> */}
 				<div>
 

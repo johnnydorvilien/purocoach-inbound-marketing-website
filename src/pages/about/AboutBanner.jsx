@@ -4,11 +4,12 @@ import { HashLink } from "react-router-hash-link";
 import img from "../../assets/img/banner/banner-shape.png";
 import bannerImage from "./img/about-banner.png";
 import bg from "./img/about.png";
+import mobile from "./img/mobileabout.png";
 const AboutBanner = () => {
 	const [open, setOpen] = useState(false);
 	return (
 		<section className="banner-section about-banner" style={{
-			background: `url(${bg}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}}>
+			background: `url(${window.innerWidth > 479 ? bg : mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}}>
 			{/* <div
 				className="shapes-bg"
 				// style={{
@@ -44,7 +45,7 @@ const AboutBanner = () => {
 							</div>
 						</div> */}
 
-						<div className="btn-grp d-sm-none">
+						{/* <div className="btn-grp d-sm-none">
 							<Link className="cmn-btn btn-white" to="/trial-signup">
 								Start Free Trial
 							</Link>
@@ -55,10 +56,10 @@ const AboutBanner = () => {
 							>
 								Watch a Demo
 							</button>
-						</div>
+						</div> */}
 					</div>
-					<div className="banner-thumb about-thumb">
-						<img src={bannerImage} style={{paddingBottom:"30px",paddingTop:"110px"}} alt="" />
+					<div className="banner-thumb about-thumb text-center">
+						<img src={bannerImage} style={{paddingBottom:"40px",paddingTop:"100px"}} alt="" />
 					</div>
 				</div>
 			</div>

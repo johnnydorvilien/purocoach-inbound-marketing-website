@@ -117,13 +117,13 @@ h6 {
 img{
 	max-width: 100%;
 }
-.swiper-wrapper{
-	// min-height:-webkit-fill-available!important;
-	min-height: 90vh !important;
-	// @include breakpoint(xl){
-	// 	min-height: 64vh !important;
-	// }
-}
+// .swiper-wrapper{
+// 	// min-height:-webkit-fill-available!important;
+// 	min-height: 90vh !important;
+// 	// @include breakpoint(max-xs){
+// 	// 	min-height: 100vh !important;
+// 	// }
+// }
 
 
 @include breakpoint(max-md) {
@@ -235,10 +235,11 @@ a {
 	background: var(--section) !important;
 }
 section{
+	// background-size: cover !important;
 	margin-bottom: 100px;
 	// padding-bottom: 80px;
 	@include breakpoint(max-xs){
-		// margin-bottom: 24px;
+		margin-bottom: 30px;
 
 	}
 }
@@ -417,6 +418,9 @@ section{
 	border: 1px solid #ebebeb;
 	border-radius: 10px;
 	height: 40px;
+	@include breakpoint(max-xs){
+		height: 35px;
+	}
 	box-shadow: none !important;
 	&:focus {
 		background-color: var(--section);
@@ -428,6 +432,9 @@ section{
 	line-height: 18px;
 	&::placeholder {
 		color: #9e9e9e;
+	}
+	@include breakpoint(max-xs){
+		font-size: 12px;
 	}
 }
 .form--label {
@@ -483,6 +490,12 @@ section{
 			height: 48px;
 		}
 	}
+	@include breakpoint(max-xs){
+		&[type="submit"] {
+			height: 45px;
+			font-size: 14px;
+		}
+	}
 	&:hover {
 		color: var(--base);
 		background: transparent;
@@ -506,6 +519,10 @@ section{
 	&.btn-white {
 		background: var(--white);
 		color: #6969d0;
+		@include breakpoint(max-xs){
+			height: 45px;
+			margin-bottom: 20px;
+		}
 	}
 	&.btn-standard {
 		@include breakpoint(sm) {
@@ -514,7 +531,7 @@ section{
 	}
 	@include breakpoint(xl){
 		font-size: 14px;
-		padding: 5px 15px;
+		padding: 10px 15px;
 		&.btn-standard {
 			padding: 15.5px 25px;
 			height: 40px;
@@ -658,15 +675,30 @@ header {
 .section-title {
 	text-align: center;
 	margin-bottom: 60px;
+	@include breakpoint(max-xs){
+		margin-bottom: 0 !important;
+	}
 	.title {
 		margin: 0;
 		font-weight: 600;
 		font-family: var(--body-fonts);
 		padding-bottom: 50px;
 		font-size: 50px;
+		@include breakpoint(max-sm){
+			text-align: center;
+			// font-family: Lato;
+			font-size: 20px !important;
+			font-weight: 600;
+			line-height: 30px
+		}
+		@include breakpoint(max-xs){
+			font-size: 24px !important;
+			// text-align: center !important;
+		}
 	}
 	h2{
 		font-size: 37px !important;
+		
 	}
 	
 	@include breakpoint(max-sm) {
@@ -702,6 +734,14 @@ header {
 	&.text-start {
 		h2{
 			font-size: 30px !important;
+			@include breakpoint(max-sm){
+				font-size: 20px !important;
+			}
+			@include breakpoint(max-xs){
+				font-size: 20px !important;
+				text-align: center;
+				padding-bottom: 10px;
+			}
 		}
 		
 		.shadow-border {
@@ -711,6 +751,9 @@ header {
 				#333399 0,
 				rgba(51, 51, 153, 0) 100%
 			);
+			@include breakpoint(max-xs){
+				margin: auto;
+			}
 		}
 	}
 	&.text-md-center {
@@ -746,6 +789,9 @@ header {
 					var(--white) 0%,
 					rgba(51, 51, 153, 0) 100%
 				);
+				@include breakpoint(max-xs){
+					margin: auto;
+				}
 			}
 		}
 		&.text-md-center {
@@ -821,6 +867,9 @@ header {
 	@include breakpoint(xl){
 		gap: 20px;
 	}
+	@include breakpoint(max-xs){
+		gap: 16px;
+	}
 }
 .accordion-item {
 	border: none;
@@ -892,6 +941,13 @@ header {
 				margin-left: 75px;
 			}
 		}
+		@include breakpoint(max-xs){
+			padding: 10px;
+			width: 100%;
+			p{
+				max-width: 100%;
+			}
+		}
 	}
 	@include breakpoint(max-xl) {
 		font-size: 16px;
@@ -912,6 +968,17 @@ header {
 	@include breakpoint(xl){
 		.accordion-button {
 			padding-inline: 15px !important;
+			padding-block: 10px !important;
+			span{
+				font-size: 15px !important;
+			}
+			
+			// min-height: 100%;
+		}
+	}
+	@include breakpoint(max-xs){
+		.accordion-button {
+			padding-inline: 10px !important;
 			padding-block: 10px !important;
 			span{
 				font-size: 15px !important;
@@ -1062,6 +1129,9 @@ header {
 }
 .gap-25px {
 	gap: 28px;
+	@include breakpoint(max-xs){
+		gap:16px;
+	}
 	// @include breakpoint(xl){
 	// 	gap: 19px;
 	// }
@@ -1743,6 +1813,15 @@ header {
 				}
 			}
 		}
+		@include breakpoint(max-xs){
+			padding-inline: 0;
+			padding: 10 0;
+			.row {
+				.col-sm-6 {
+					margin-top: 15px;
+				}
+			}
+		}
 	}
 	.sub-item {
 		display: flex;
@@ -1848,6 +1927,9 @@ header {
 	}
 	@include breakpoint(max-xs){
 		padding-bottom: 0px;
+	}
+	@include breakpoint(max-xs){
+		padding-top: 30px;
 	}
 	@include breakpoint(max-sm) {
 		&:not(.contact-banner) {
@@ -2153,28 +2235,41 @@ header {
 			width: 100%;
 			.title {
 				font-size: 32px;
+				line-height: 32px;
+				text-align: center;
+				font-weight: 400;
+				padding-bottom: 10px;
 			}
 			.subtitle {
 				font-size: 30px;
+				line-height: 45px;
+				font-weight: 500;
+				text-align: center;
 				margin-bottom: 8px;
 			}
 			.txt {
-				font-size: 17px;
-				max-width: 100%;
+				text-align: center;
+				font-size: 20px;
+				line-height: 35px;
+				font-weight: 500;
+				max-width: 75%;
+				margin: auto;
 				margin-bottom: 12px;
 			}
 			.btn-grp{
-				padding-bottom: 10px;
-				justify-content: left;
+				// padding-bottom: 100px;
+				justify-content: center;
 				
 				.cmn-btn {
 					flex-grow: 0;
 					height: 35px;
-					padding: 10px 20px;
+					// padding: 10px 20px;
 					gap: 8px;
 					flex-shrink: 0;
 					width: fit-content;
 					font-size: 14px !important;
+					justify-content: center;
+					font-weight: 500;
 				}
 				
 			}
@@ -2411,6 +2506,9 @@ header {
 	.container{
 		// padding-bottom: 90px;
 		padding-bottom: 150px;
+		@include breakpoint(max-xs){
+			padding-bottom:10px;
+		}
 	}
 	// padding: 52px 0 143px;
 	// padding-bottom: 60px;
@@ -2457,6 +2555,13 @@ header {
 			}
 		}
 	}
+	@include breakpoint(max-xs){
+		.title{
+			font-size: 16px;
+			line-height: 25px;
+			font-weight: 600;
+		}
+	}
 	@include breakpoint(xl){
 		.icon {
 			margin-bottom: 10px;
@@ -2488,15 +2593,28 @@ header {
 		border-radius: 15px;
 		
 	}
+	@include breakpoint(max-xs){
+		padding: 0px 0 10px;
+		background: none;
+		p{
+			font-size: 12px;
+			align-self: stretch;
+			font-weight: 400;
+			line-height: 24px;
+		}
+	}
 }
 .crm-content {
 	width: 80%;
 	.title {
 		color: var(--base);
-		margin-bottom: 25px;
+		padding-bottom: 25px;
 		@include breakpoint(xl) {
 			font-size: 32px;
 			// width: 80%;
+		}
+		@include breakpoint(max-xl){
+			padding-bottom: 0px;
 		}
 	}
 	span{
@@ -2530,6 +2648,20 @@ header {
 	@include breakpoint(xl){
 		p {
 			font-size: 13px;
+		}
+	}
+	@include breakpoint(max-xs){
+		width: 100%;
+		.title {
+			font-size: 24px;
+			line-height: 37px;
+			font-weight: 700;
+		}
+		p{
+			font-size: 13px;
+			font-weight: 300;
+			line-height: 25px;
+			letter-spacing: 0.56px;
 		}
 	}
 }
@@ -2577,6 +2709,9 @@ header {
 		min-height: 40px;
 		max-height: 45px;
 		}
+	}
+	@include breakpoint(max-xs){
+		padding-inline: 0;
 	}
 }
 .trusted-crm-section {
@@ -2655,7 +2790,7 @@ header {
 				}
 			}
 		}
-		margin-bottom: 34px;
+		padding-bottom: 34px;
 	}
 	.btn-white {
 		background: var(--white);
@@ -2696,6 +2831,23 @@ header {
 			font-size: 15px;
 		}
 	}
+	@include breakpoint(max-xs){
+		.title{
+			font-size: 24px;
+			font-weight: 600;
+			line-height: 34px;
+		}
+		.list-info{
+			gap: 15px;
+			padding-bottom: 20px;
+		}
+		.cmn-btn{
+			padding: 10px !important;
+			font-size: 12px;
+			height: 40px;
+			margin-top: 20px;
+		}
+	}
 }
 .earning-estimator {
 	padding: 30px 35px;
@@ -2714,13 +2866,13 @@ header {
 	}
 	.light-label {
 		color: var(--base);
-		margin-bottom: 25px;
+		padding-bottom: 25px;
 		padding-left: 16px;
 		font-weight: 400;
 		span{
 			color: rgba(51, 51, 153, 1);
 			font-weight: 700;
-			margin-right: 10px;
+			padding-right: 5px;
 		}
 		// &::before {
 		// 	content: "";
@@ -2764,7 +2916,24 @@ header {
 				font-size: 30px;
 		}
 		.light-label {
-			margin-bottom: 15px;
+			padding-bottom: 15px;
+		}
+	}
+	@include breakpoint(max-xs){
+		padding:25px 15px;
+		.title{
+			font-size: 24px;
+			font-weight: 600;
+			line-height: 34px;
+		}
+		.light-label {
+			padding-left: 0;
+			font-size: 15px;
+			font-weight: 300;
+			line-height: 26px;
+			letter-spacing: 0.64px;
+			padding-bottom: 10px;
+			
 		}
 	}
 }
@@ -2861,6 +3030,9 @@ header {
 .earning-estimator-section {
 	.container{
 		padding-top: 150px;
+		@include breakpoint(max-xs){
+			padding-top: 90px;
+		}
 	}
 	position: relative;
 	&::before {
@@ -2895,10 +3067,13 @@ header {
 	// padding-block: 260px 140px;
 	padding-block: 100px 80px;
 	position: relative;
+	@include breakpoint(max-xs){
+		padding-block: 20px 0;
+	}
 	.container{
-		padding: 50px 0;
-		// padding-top: 50px;
-		// padding-bottom: 100px;
+		
+		padding-top: 50px;
+		padding-bottom: 50px;
 	}
 
 	.feature-bg {
@@ -2952,6 +3127,9 @@ header {
 	}
 	@include breakpoint(xl){
 		// padding-top: 80px;
+	}
+	@include breakpoint(max-xs){
+		padding-top: 0;
 	}
 }
 .who-we-are-item {
@@ -3086,6 +3264,9 @@ header {
 	@include breakpoint(max-xl) {
 		gap: 30px;
 	}
+	@include breakpoint(max-xs){
+		display: block;
+	}
 }
 .slider__col {
 	display: flex;
@@ -3094,10 +3275,14 @@ header {
 	flex-grow: 1;
 	overflow: hidden;
 	border-radius: 15px;
+	@include breakpoint(max-xs){
+		width: 100%;
+		padding-top: 50px;
+	}
 }
 .slider__images {
-	height: 774px;
-	width: 530px;
+	height: 100%;
+	width: 50%;
 	border-radius: 15px;
 	overflow: hidden;
 	@include breakpoint(max-xxl) {
@@ -3106,6 +3291,10 @@ header {
 	@include breakpoint(max-xl) {
 		width: 400px;
 		height: 700px;
+	}
+	@include breakpoint(max-xs){
+		width: 100%;
+		height: 100%;
 	}
 	.swiper-pagination {
 		position: absolute !important;
@@ -3128,6 +3317,9 @@ header {
 	@include breakpoint(max-xl) {
 		height: 700px;
 	}
+	@include breakpoint(max-xs){
+		height: 100%;
+	}
 	.swiper {
 		@include breakpoint(lg) {
 			&::before {
@@ -3148,13 +3340,29 @@ header {
 	}
 }
 .slider__images .slider__image img {
-	transition: 3s;
+	transition: 0;
 }
 .slider__images .slider__image:hover img {
-	transform: scale(1.1);
+	transform: 0;
 }
 .feature-content-card {
 	padding: 57px 45px 79px 57px;
+
+	@include breakpoint(max-xs){
+		padding: 30px 20px !important;
+		margin-bottom: 20px;
+		.title{
+			font-size: 20px !important;
+		}
+		p{
+			font-size: 12px !important;
+		}
+		.cmn-btn{
+			font-size: 14px !important;
+			height: 30px !important;
+			padding: 20px !important;
+		}
+	}
 	cursor: pointer;
 	background: linear-gradient(
 		180deg,
@@ -3303,6 +3511,11 @@ header {
 			font-size: 15px !important;
 		}
 	}
+	@include breakpoint(max-xs){
+		.accordion-button span{
+			font-size: 13px !important;
+		}
+	}
 }
 .why-choose-us {
 	// padding-bottom: 120px;
@@ -3334,8 +3547,23 @@ header {
 	@include breakpoint(xl){
 		font-size: 14px;
 	}
+	@include breakpoint(max-xs){
+		font-size: 10px;
+		font-weight: 300;
+		line-height: 15px;
+	}
 }
 .why-choose-us {
+	@include breakpoint(max-sm){
+		.section-title{
+			.title{
+				text-align: left;
+			}
+			.shadow-border{
+				margin: 10px 0;
+			}
+		}
+	}
 	@include breakpoint(md) {
 		.section-title {
 			.title {
@@ -3387,6 +3615,9 @@ header {
 				border-radius: 15px;
 				@include breakpoint(max-sm) {
 					height: 193px;
+				}
+				@include breakpoint(max-xs){
+					height: 130px;
 				}
 			}
 			.skill-progress {
@@ -3467,6 +3698,9 @@ header {
 	}
 	.container{
 		padding-bottom: 60px;
+		@include breakpoint(max-xs){
+			padding-bottom: 0;
+		}
 	}
 	position: relative;
 	@include breakpoint(max-md) {
@@ -3502,6 +3736,9 @@ header {
 		flex-grow: 1;
 		position: relative;
 		padding: 40px  43px;
+		@include breakpoint(max-xs){
+			padding: 10px 16px;
+		}
 		// padding: 21px  20px;
 		// margin-top: 56px;
 		&::before {
@@ -3536,6 +3773,9 @@ header {
 				// margin-bottom: 30px;
 				@include breakpoint(xl){
 					margin-bottom: 15px;
+				}
+				@include breakpoint(max-xs){
+					font-size: 12px;
 				}
 			}
 			.cmn-btn {
@@ -3589,6 +3829,13 @@ header {
 			}
 		}
 	}
+	@include breakpoint(max-xs){
+		.about-item-img {
+			// max-width: 350px;
+			// width: 100%;
+			margin-inline: 0px !important;
+		}
+	}
 	@include breakpoint(max-sm) {
 		.about-item-img {
 			margin-inline: 20px;
@@ -3609,6 +3856,17 @@ header {
 			&::before {
 				left: 0;
 				right: -250px;
+			}
+		}
+	}
+	@include breakpoint(max-xs){
+		.about-item-cont {
+			// padding: 20px;
+			.title {
+				font-size: 24px;
+			}
+			.cmn-btn {
+				height: 45px;
 			}
 		}
 	}
@@ -3717,9 +3975,15 @@ header {
 	.white-divider,
 	.divider-white {
 		margin: 0 auto;
+		@include breakpoint(max-xs){
+			margin: 20px auto;
+		}
 	}
 	.boost-title{
 		padding-top: 50px;
+		@include breakpoint(max-xs){
+			padding-top: 0px;
+		}
 	}
 	// .container{
 	// 	padding-bottom: 250px;
@@ -3818,6 +4082,25 @@ header {
 			margin-bottom: 18px;
 		}
 	}
+	@include breakpoint(max-xs){
+		.title{
+			font-size: 24px;
+			font-weight: 600;
+			line-height: 34px;
+		}
+		.text{
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 23px;
+		}
+		.cmn-btn {
+			height: 45px;
+		}
+		.info{
+			font-size: 12px !important;
+			gap: 20px !important;
+		}
+	}
 	@include breakpoint(xl){
 		.title {
 			font-size: 35px;
@@ -3874,6 +4157,12 @@ header {
 	}
 }
 .partner-with-us {
+	@include breakpoint(max-xs){
+		.container{
+			// padding-bottom: 60px !important;
+			padding-bottom: 60px;
+		}
+	}
 	.partner-content {
 		.info {
 			font-size: 16px;
@@ -4016,6 +4305,9 @@ header {
 	@include breakpoint(xl){
 		margin-block: 70px;
 	}
+	@include breakpoint(max-xs){
+		margin: 0px  !important;
+	}
 }
 .quote-image {
 	
@@ -4102,6 +4394,9 @@ header {
 	}
 }
 .service-page-header {
+	@include breakpoint(max-xs){
+		padding-top: 15px;
+	}
 	padding-top: 50px;
 	position: relative;
 	.section-title {
@@ -4143,6 +4438,11 @@ header {
 	.title {
 		font-size: 28px;
 		margin-bottom: 20px;
+		@include breakpoint(max-xs){
+			font-size: 24px;
+			font-weight: 600;
+			line-height: 34px;
+		}
 	}
 	@include breakpoint(md) {
 		font-size: 15px;
@@ -4203,12 +4503,20 @@ header {
 }
 .inbound-marketing-section {
 	// padding: 120px 0 90px;
-	@include breakpoint(max-md) {
+	@include breakpoint(max-xs) {
+		.cmn-btn{
+			height: 45px;
+			// max-width: 100% !important;
+		}
 		// padding: 60px 0;
 	}
+	
 }
 .system-solutions {
 	padding-bottom: 150px;
+	@include breakpoint(max-xs){
+		padding-bottom: 100px;
+	}
 	font-size: 15px;
 	font-weight: 300;
 	line-height: 1.95;
@@ -4256,6 +4564,14 @@ header {
 				width: 40px;
 			}
 		}
+		@include breakpoint(max-xs){
+			font-size: 24px !important;
+			span{
+				font-size: 20px;
+				font-weight: 600;
+				line-height: 30px;
+			}
+		}
 	}
 	color: var(--white);
 	p {
@@ -4266,6 +4582,9 @@ header {
 		}
 		@include breakpoint(xl){
 			margin-bottom: 10px
+		}
+		@include breakpoint(max-xs){
+			font-size: 10px;
 		}
 	}
 	@include breakpoint(xl){
@@ -4369,6 +4688,15 @@ header {
 			font-size: 24px;
 		}
 	}
+	@include breakpoint(max-xs){
+		.title{
+			font-size: 20px;
+		}
+		p{
+			font-size: 12px;
+			line-height: normal;
+		}
+	}
 	@include breakpoint(xl){
 		padding: 20px 25px 50px;
 		p {
@@ -4426,6 +4754,9 @@ header {
 	margin: 0 35px;
 }
 .business-consulting-content {
+	@include breakpoint(max-xs){
+		background-color: #304880;
+	}
 	// padding: 140px 0 0;
 	@include breakpoint(max-md) {
 		padding-top: 80px;
@@ -4439,6 +4770,9 @@ header {
 		.swiper-pagination .swiper-pagination-bullet::before {
 			background: var(--base);
 		}
+	}
+	@include breakpoint(max-xs){
+		padding-top: 0 !important;
 	}
 }
 .business-consulting-content-wrapper {
@@ -4499,6 +4833,44 @@ header {
 			font-size: 24px;
 		}
 	}
+	@include breakpoint(max-xs){
+		.title{
+			font-size: 16px;
+			font-weight: 600;
+			line-height: 23px;
+		}
+		.txt{
+			font-size: 10px;
+			font-weight: 300;
+			line-height: 15px;
+			letter-spacing: 0.4px;
+		}
+		ul{
+			li{
+				font-size: 10px;
+			}
+		}
+		p{
+			font-size: 10px;
+			font-weight: 300;
+			line-height: 15px;
+			letter-spacing: 0.4px;
+		}
+		.cmn-btn{
+			height: 45px;
+		}
+	}
+	@include breakpoint(max-sm){
+		.row.g-0 {
+			display: flex;
+			flex-direction: column-reverse;
+		  }
+		
+		  .col-lg-6 {
+			width: 100%;
+			margin-bottom: 15px; 
+		  }
+	}
 }
 .pricing_Shape {
 	position: absolute;
@@ -4519,6 +4891,12 @@ header {
 	@include breakpoint(xl){
 		top: -100px;
 		right: calc(50% + 200px);
+	}
+	@include breakpoint(max-sm){
+		top: -60px;
+	}
+	@include breakpoint(max-xs){
+		top: -30px;
 	}
 }
 .pricing-tag {
@@ -4571,6 +4949,13 @@ header {
 	}
 	@include breakpoint(xl){
 		padding-top: 40px
+	}
+	@include breakpoint(max-xs){
+		// .txt{
+		// 	font-size: 14px !important;
+		// 	text-align: left;
+		// }
+		
 	}
 }
 .tab-btn-grp {
@@ -4758,6 +5143,11 @@ header {
 		font-weight: 500;
 		font-family: var(--body-fonts);
 		text-align: center;
+		@include breakpoint(max-xs){
+			font-size: 19px;
+			text-align: left;
+			margin-bottom: 10px;
+		}
 	}
 	.price {
 		font-size: 30px;
@@ -4779,9 +5169,15 @@ header {
 		line-height: 195%;
 		letter-spacing: 0.56px;
 		text-align: center;
+		@include breakpoint(max-xs){
+			font-size: 10px;
+		}
 	}
 	hr {
 		margin-block: 24px;
+		@include breakpoint(max-xs){
+			margin-block:10px;
+		}
 	}
 	ul {
 		display: flex;
@@ -4809,6 +5205,10 @@ header {
 		border: none;
 		height: 50px;
 		align-items: center;
+		@include breakpoint(max-xs){
+			height: 45px;
+			font-size: 14px;
+		}
 	}
 	transition: all ease 0.3s;
 	&:hover,
@@ -4971,7 +5371,7 @@ header {
 	}
 	.banner-wrapper {
 		align-items: flex-start;
-		padding-top: 113px;
+		padding-top: 100px;
 		column-gap: 45px;
 		.banner-content {
 			width: 0;
@@ -5438,6 +5838,10 @@ body {
 	@include breakpoint(xl){
 		font-size: 14px;
 	}
+	@include breakpoint(max-xs){
+		text-align: center;
+		letter-spacing: 0;
+	}
 }
 .request-demo-section {
 	// background-image: url(./pages//home//img//req.png);
@@ -5447,6 +5851,10 @@ body {
 	.container{
 		padding-top: 200px;
 		padding-bottom: 200px;
+		@include breakpoint(max-xs){
+			padding-top: 10px;
+			padding-bottom: 100px;
+		}
 		// padding: 200px 0;
 	
 	}
@@ -5483,7 +5891,15 @@ body {
 			padding: 0 !important;
 		}
 	}
-	position: relative;
+	@include breakpoint(max-xs)
+	{
+	.contact-sales-form-wrapper {
+		box-shadow: none !important;
+		border: none !important;
+		padding: 10px !important;
+	}
+	}	
+position: relative;
 	@include breakpoint(max-xl) {
 		padding: 120px 0 100px;
 	}
@@ -5700,6 +6116,15 @@ body {
 				font-weight: 400;
 		}
 	}
+	@include breakpoint(max-xs){
+		.form-control {
+			height: 35px;
+			font-size: 14px;
+		}
+		.cmn-btn{
+			align-items: center;
+		}
+	}
 }
 footer {
 	@include breakpoint(max-sm) {
@@ -5709,6 +6134,10 @@ footer {
 	}
 }
 .footer-top {
+	@include breakpoint(max-xs){
+		padding: 40px 0 !important;
+	
+	}
 	// padding-top: 70px;
 	// padding-bottom: 91px;
 	@include breakpoint(max-sm) {
@@ -5740,6 +6169,9 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	gap: 40px;
+	@include breakpoint(max-xs){
+		gap: 20px;
+	}
 	.widget-left {
 		width: 100%;
 		max-width: 460px;
@@ -5762,12 +6194,23 @@ footer {
 			@include breakpoint(xl){
 				font-size: 20px;
 			}
+			@include breakpoint(max-xs){
+				font-size: 16px;
+			}
 		}
 		.input-group {
 			margin-bottom: 30px;
 		}
 		p {
 			margin-bottom: 32px;
+			@include breakpoint(max-xs){
+				font-size: 14px;
+				line-height: 20px;
+			}
+			@include breakpoint(max-xs){
+				margin-bottom: 0;
+				font-size: 13px;
+			}
 		}
 	}
 	.widget-right {
@@ -5805,6 +6248,7 @@ footer {
 				}
 			}
 		}
+		
 	}
 	@include breakpoint(xl){
 		.widget-left {
@@ -5831,11 +6275,35 @@ footer {
 		}
 
 	}
+	@include breakpoint(max-xs){
+		.widget-right {
+			// max-width: 450px;
+			// justify-content: space-around;
+			// column-gap: 0px;
+			.subtitle {
+				font-size: 17px !important;
+			}
+			.links {
+				gap: 10px;
+				li {
+					a {
+						font-size: 12px !important;
+					}
+				}
+			}
+		}
+	}
 	@include breakpoint(max-lg) {
 		flex-wrap: wrap;
 		.widget-right {
 			flex-wrap: wrap;
 		}
+	}
+	@include breakpoint(max-xs){
+		.widget-right {
+		max-width: 100%;
+		display: flex;
+		flex-wrap: nowrap;}
 	}
 	@include breakpoint(max-sm) {
 		.widget-right {
@@ -5844,7 +6312,7 @@ footer {
 				width: 100%;
 				&:not(:last-child) {
 					padding-bottom: 20px;
-					border-bottom: 1px solid var(--border);
+					// border-bottom: 1px solid var(--border);
 				}
 				.links {
 					gap: 10px;
@@ -5868,6 +6336,7 @@ footer {
 						width: 10px;
 						height: 10px;
 					}
+					
 				}
 				.inner-div {
 					&:not(.active) {
@@ -6143,6 +6612,11 @@ footer {
 		padding-top: 90px;
 	}
 }
+@include breakpoint(max-xs){
+	.crm-trusted-2 {
+		padding-top: 0px;
+	}
+}
 .shape-full {
 	.shadow-border {
 		max-width: 1070px;
@@ -6232,7 +6706,7 @@ footer {
 		direction: ltr !important;
 		img {
 			@include breakpoint(max-sm) {
-				max-height: 250px;
+				// max-height: 250px;
 			}
 		}
 	}
@@ -6279,7 +6753,7 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 20px;
+	// padding: 20px;
 	form {
 		width: 100%;
 		max-width: 445px;
@@ -6394,6 +6868,77 @@ footer {
 		.container {
 			width: 100%;
 			padding-inline: 30px !important;
+		}
+	}
+}
+
+.banner-wrapper,
+.flex-row{
+	@include breakpoint(max-xs){
+		.banner-content{
+			.title{
+				font-size: 32px;
+				font-weight: 400;
+				text-align: left;
+				margin-bottom: 0 !important;
+			}
+			.txt{
+				font-size: 12px;
+				font-weight: 500;
+				line-height: 175%; 
+				letter-spacing: 0.42px;
+				text-align: left;
+				max-width: 100%;
+			}
+			// .about-banner {
+				
+			// }
+		}
+		.banner-thumb {
+			img{
+				max-width: 100%;
+				max-height: 100% !important;
+				padding-top: 0px !important;
+				padding-bottom: 15px !important;
+			}
+		}
+	}
+}
+.section-title, 
+.section-title-2{
+	@include breakpoint(max-xs){
+		.title{
+			padding-bottom: 10px !important;
+		}
+		.text{
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 21px;
+		}
+	}
+}
+.quote-section{
+	@include breakpoint(max-xs){
+		p{
+			font-size: 12px !important;
+			font-weight: 400;
+			line-height: 19px;
+			letter-spacing: 0.48px;
+			padding-bottom: 40px
+		}
+	}
+	
+}
+.puro-crm-section{
+	@include breakpoint(max-xs){
+		padding-top: 100px ;
+		p{
+			font-size: 10px;
+			line-height: 15px;
+			font-weight: 300;
+		}
+		.cmn-btn{
+			height: 45px;
 		}
 	}
 }

@@ -9,11 +9,14 @@ import img1 from "../img/partners/1.png";
 import img2 from "../img/partners/2.png";
 import img3 from "../img/partners/3.png";
 import img4 from "../img/partners/4.png";
+import mobile from "../img/mobilepower.png";
+import { useMediaQuery } from "react-responsive";
 const BusinessStartups = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [service, setService] = useState("Large Enterprise");
 	const [message, setMessage] = useState("");
+	const isMobile = useMediaQuery({ maxWidth: 479 });
 
 	// const handleSubmit = (e) => {
 	// 	e.preventDefault();
@@ -53,13 +56,17 @@ const BusinessStartups = () => {
 	};
 
 	return (
-		<section className="business-startup-section">
+		<section className="business-startup-section" style={{background: `url(${window.innerWidth > 479 ? " ": mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",}}>
+			{window.innerWidth > 479 && (
 			<div className="service-section-bg"></div>
+			)}
+			{window.innerWidth > 479 && (
 			<img
 				src={img}
 				alt=""
 				className="service-bottom-shape d-none d-md-block"
 			/>
+			)}
 			<div className="container">
 				<div className="section-title mb-60">
 					<h2 className="title title-xl-title text-start text-sm-center text-base pb-0">
@@ -131,7 +138,7 @@ const BusinessStartups = () => {
 									</ul>
 								</div>
 							</div>
-							<div className="col-sm-6">
+							<div className="col-sm-6" style={{paddingBottom:isMobile ? "50px" : " "}}>
 								<div className="small-shadow-card">
 									<h4 className="title" style={{fontSize:"25px"}}>Count on Us!</h4>
 									<ul>

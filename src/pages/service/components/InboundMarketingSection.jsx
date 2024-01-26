@@ -37,7 +37,7 @@ const InboundMarketingSection = ({ title }) => {
 							<br className="d-none d-sm-block" />
 							<button
 								className="cmn-btn btn-standard"
-								style={{ minWidth: "273px" }}
+								// style={{ minWidth: "273px" }}
 								onClick={() => setOpen(!open)}
 							>
 								Talk with us!

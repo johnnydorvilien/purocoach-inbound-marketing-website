@@ -7,13 +7,16 @@ import callbg from "./img/call-bg.png";
 import consult from "./img/consulting-img.png";
 import shape from "./img/shape.png";
 import img from "./img/shape123.png";
+import mobile from "./img/shapemobile.png";
+import { useMediaQuery } from "react-responsive";
 const BusinessBoost = () => {
 	const [tab, setTab] = useState("Business Consulting");
 	const screen = useScreen();
+	const isMobile = useMediaQuery({ maxWidth: 479 });
 	return (
 		<>
 			<section className="partner-with-us" style={{
-						background: `url(${img}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}} >
+						background: `url(${window.innerWidth > 479 ? img : mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}} >
 				{/* <div className="feature-bg"></div>
 				<img
 					src={shape}
@@ -30,7 +33,7 @@ const BusinessBoost = () => {
 					alt=""
 					className="service-bottom-shape d-md-none w-50"
 				/> */}
-				<div className="container" style={{paddingTop:"100px",paddingBottom:"0"}}>
+				<div className="container" style={{paddingTop:"100px",paddingBottom:isMobile ? "0" :" 0"}}>
 					<div className="boost-title">
 						<Title
 							title="Our Process"
@@ -79,7 +82,7 @@ const BusinessBoost = () => {
 						</button>
 					</li>
 				</ul>
-				<div className="container" style={{paddingBottom:"180px"}}>
+				<div className="container" style={{paddingBottom: isMobile ? "50px" : "150px"}}>
 					{screen < 768 ? (
 						<>
 							<TabItem title="Business Consulting" openmenu="true" />

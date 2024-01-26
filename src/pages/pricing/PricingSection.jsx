@@ -11,11 +11,15 @@ import PlanFeatureDetails from "./PlanFeatureDetails";
 import contactSalesImage from "./img/contactSalesImage.png";
 import img from "./img/pricing-bottom.png";
 import pricingShape from "./img/pricing-shape.png";
+import bg from "./img/bg.png";
+import mobile from "./img/mobilebg.png";
+import { useMediaQuery } from "react-responsive";
+
 const PricingSection = () => {
 	const [yearly, setYearly] = useState(false);
 	const [featureOpen, setFeatureOpen] = useState(false);
 	const location = useLocation();
-
+	const isMobile = useMediaQuery({ maxWidth: 479 });
 	return (
 		<>
 			<section className="pricing-section pb-0 overflow-hidden">
@@ -31,6 +35,7 @@ const PricingSection = () => {
 								We Offer a Variety of Packages
 							</h2>
 							{/* <span className="shadow-border my-30px"></span> */}
+							{window.innerWidth > 479 && (
 							<p className="txt mx-auto" style={{ maxWidth: "1170px" ,fontSize:"14px"}}>
 								Eager to meet the needs of any coach we work with, we
 								have various price points available to suit your
@@ -38,19 +43,26 @@ const PricingSection = () => {
 								investment, with an increase in clients and inbound
 								inquiries as a result of working with us.
 							</p>
+							)}
+							{window.innerWidth < 479 && (
+									<p className="txt mx-auto" style={{ maxWidth: "1170px" ,fontSize:"13px", textAlign:"center"}}>
+									We’re eager to meet the needs of any coach or consultant we work with. We have various package points available to suit your business needs. You will see a high return on your investment, with an increase in clients and inbound inquiries as a result of working with us.
+								</p>
+							)}
 						</div>
 					</div>
 				</div>
 			</section>
-			<ShapeViewsTwo bg="var(--section)">
-				<img
+			<section style={{
+						background: `url(${window.innerWidth > 479 ? bg : mobile}) no-repeat top right`,display:"block", backgroundSize: " cover ", backgroundPosition: " left "}}>
+				{/* <img
 					src={img}
 					alt=""
 					className="service-bottom-shape d-none d-md-block"
-				/>
+				/> */}
 				<div className="container">
 					
-					<div className="row g-3 justify-content-center" style={{paddingTop:"120px"}}>
+					<div className="row g-3 justify-content-center" style={{paddingTop: isMobile ? "50px" : "120px"}}>
 						{data?.map((item, i) => (
 							<div className="col-lg-3 col-md-6 col-sm-9" key={i}>
 								<PlanCard {...item} index={i} yearly={yearly} />
@@ -59,11 +71,11 @@ const PricingSection = () => {
 					</div>
 				</div>
 				{/* {featureOpen && <PlanFeatureDetails />} */}
-				<div className="container" style={{paddingBottom:"150px",paddingTop:"150px"}}>
+				<div className="container" style={{paddingBottom:isMobile ? "60px" : "150px",paddingTop:isMobile ? "60px" : "150px"}}>
 				
 					<div className="row align-items-center flex-wrap-reverse">
 						<div className="col-lg-6">
-							<div style={{ maxWidth: "699px" }}>
+							<div style={{ maxWidth: "699px", paddingTop:isMobile ? "50px" : " " }}>
 								<ContactSalesForm />
 							</div>
 						</div>
@@ -72,7 +84,7 @@ const PricingSection = () => {
 						</div>
 					</div>
 				</div>
-			</ShapeViewsTwo>
+			</section>
 		</>
 	);
 };
@@ -98,6 +110,7 @@ const data = [
 			"Lead Nurturing",
 			"Social Media Marketing Strategies",
 			"2 Marketing Training Blocks",
+		
 		],
 	},
 	{
@@ -120,6 +133,7 @@ const data = [
 			"Landing Pages",
 			"Website Optimization",
 			"Ongoing Email of Technical Support",
+			
 		],
 	},
 	{

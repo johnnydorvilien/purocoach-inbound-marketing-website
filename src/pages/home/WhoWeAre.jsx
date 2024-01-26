@@ -4,14 +4,16 @@ import { Link, useNavigate } from "react-router-dom";
 import { AngleRight } from "../../components/Icon";
 import Title from "../../components/Title";
 import img from "./img/shape1.png";
+import mobile from "./img/mobileframe.png";
 const WhoWeAre = () => {
 	const navigate = useNavigate();
 	return (
 		<>
 			<section className="service-section position-relative who-we-are">
-				<div className="service-section-bg"></div>
-				<img src={img} alt="" className="service-bottom-shape" />
+			{window.innerWidth > 479 && <div className="service-section-bg"></div>}
+                <img src={img} alt="" className="service-bottom-shape" />
 				<div className="container">
+				<div style={{background: `url(${window.innerWidth > 479 ? " ": mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",padding:"30px 10px"}}>
 					<div className="boost-title">
 						<Title
 							className="text-base text-start text-md-center"
@@ -38,6 +40,7 @@ const WhoWeAre = () => {
 						))}
 					</div>
 				</div>
+			</div>
 			</section>
 
 			{/* Who we are */}
