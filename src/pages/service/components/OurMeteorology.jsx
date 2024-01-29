@@ -6,17 +6,25 @@ import Title from "../../../components/Title";
 const OurMeteorology = () => {
 	return (
 		<>
-			<section className="why-choose-us">
+			<section className="why-choose-us meteorology">
 				<div className="container">
 					<div className="row gy-5">
 						<div className="col-lg-6">
-							<Title className="text-start" title="Our Meteorology" />
+							<div className="section-title">
+								<h2 className="title">Our Meteorology</h2>
+		 						<span className="shadow-border"></span>
+							</div>
+							{/* <Title className="text-start" title="Our Meteorology" /> */}
 							<div className="title-dark">
 								<FaqItems data={data} id="meteorology" />
 							</div>
 						</div>
 						<div className="col-lg-6 ps-xl-5">
-							<Title className="text-start" title="Our Results" />
+						<div className="section-title">
+								<h2 className="title">Our Results</h2>
+		 						<span className="shadow-border"></span>
+							</div>
+							{/* <Title className="text-start" title="Our Results" /> */}
 							{/* <div
 								className="light-txt mb-3 mb-lg-4"
 								style={{ marginTop: "-10px" }}
@@ -48,8 +56,8 @@ const SkillItem = () => {
 								style={{ height: item?.progress }}
 							></span>
 						</div>
-						<div>{item?.title}</div>
 						<div>{item?.progress}</div>
+						<div>{item?.title}</div>
 					</li>
 				))}
 			</ul>
@@ -59,16 +67,16 @@ const SkillItem = () => {
 
 const data2 = [
 	{
-		title: "Attract result",
-		progress: "98%",
+		title: "Success Rate",
+		progress: "97%",
 	},
 	{
-		title: "Engage result",
-		progress: "94%",
+		title: "Star Rating on Google",
+		progress: "4.8",
 	},
 	{
-		title: "Delight result",
-		progress: "88%",
+		title: "Happy Clients",
+		progress: "78+",
 	},
 ];
 

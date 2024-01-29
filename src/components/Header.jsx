@@ -136,8 +136,8 @@ const Header = ({ floating }) => {
 												className="menu-link"
 												to="/pricing?inbound-marketing"
 											>
-												{/* Pricing */}
-												Packages
+												Pricing
+												{/* Packages */}
 											</NavLink>
 										</li>
 										<li>
@@ -265,13 +265,14 @@ const HeaderRight = ({ setShow }) => {
 				<Link to="/trial-signup" className="cmn-btn">
 				Get a Free Consultation
 				</Link>
-				<button
+				{/* <button
 					className="btn p-0 border-0 outline-0 login-btn"
 					type="button"
 					onClick={() => setShow(true)}
 				>
-					{/* <SearchIcon /> */}
-				</button>
+					Login
+					<SearchIcon />
+				</button> */}
 			</div>
 		</>
 	);

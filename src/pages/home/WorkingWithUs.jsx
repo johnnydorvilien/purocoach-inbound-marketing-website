@@ -9,7 +9,7 @@ const WorkingWithUs = () => {
 	const screen = useScreen();
 	return (
 		<>
-			<section className="trusted-crm-section crm-trusted-2">
+			<section className="trusted-crm-section crm-trusted-2 how">
 				<div className="container">
 					<div className="boost-title">
 						<div className="section-title m-0">

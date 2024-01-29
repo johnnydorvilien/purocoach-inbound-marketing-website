@@ -11,20 +11,17 @@ import Title from "../../components/Title";
 // import service from "./img/service.png";
 import img from "./img/shape1.png";
 import mobile from "./img/mobileservice.png";
+import { useMediaQuery } from "react-responsive";
+import tablet from "./img/tabletstop.png";
 
 const Service = () => {
+	const istablet = useMediaQuery({ maxWidth: 991 });
 	return (
-		<section className="service-section position-relative">
-			{/* <div className="service-section-bg max-b-0"></div>
-			<img
-				src={img}
-				alt=""
-				className="service-bottom-shape d-none d-md-block"
-			/> */}
-			{window.innerWidth > 479 && (
+		<section className="service-section position-relative youronestop">
+			{window.innerWidth > 991 && (
 				<div className="service-section-bg max-b-0"></div>
 			)}
-			{window.innerWidth > 479 && (
+			{window.innerWidth > 991 && (
 				<img
 					src={img}
 					alt=""
@@ -35,13 +32,14 @@ const Service = () => {
 				
 				{/* <br className="d-lg-none" />
 				<br className="d-lg-none" /> */}
-				<div style={{background: `url(${window.innerWidth > 479 ? " ": mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",padding:"30px 10px"}}>
+				<div className="yourone" style={{background: `url(${window.innerWidth > 479 ? " ": mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",padding:"50px 10px 30px"}}>
 				
 				<div className="boost-title">
-					<Title
-						className="text-base text-start text-md-center shape-full"
-						title="Your One Stop Shop for All Your Marketing Business Needs"
-					/>
+					<div className="section-title">
+						<h2 className="text-base text-start text-md-center shape-full">
+							Your One Stop Shop for All Your Marketing Business Needs
+						</h2>
+					</div>
 				</div>
 				<div className="row gy-3 gx-4 service-card-wrapper">
 					{data?.map((item, i) => (
@@ -56,6 +54,9 @@ const Service = () => {
 				</div>
 				</div>
 			</div>
+			<style>
+       
+      </style>
 		</section>
 	);
 };

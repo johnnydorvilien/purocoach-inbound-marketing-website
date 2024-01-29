@@ -23,8 +23,7 @@ const ServicePage = () => {
 			<Header />
 			<ServicePageHeader sectionContent />
 			{/* <ShapeViewsTwo> */}
-			<section style={{
-						background: `url(${window.innerWidth > 479 ? bg : mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}}>
+			<section className="consulting">
 				<PuroCRM />
 				<WhiteDivider />
 				<ServiceFeatures />
@@ -34,8 +33,7 @@ const ServicePage = () => {
 			<InboundMarketingSection />
 			<OurMeteorology />
 			{/* <ShapeViewsTwo parentShape={shape}> */}
-			<section style={{
-						background: `url(${window.innerWidth > 479 ? serices : servicesmobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}}>
+			<section className="systemservices" >
 				<SystemServices />
 				</section>
 			{/* </ShapeViewsTwo> */}

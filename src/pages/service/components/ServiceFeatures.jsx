@@ -5,7 +5,7 @@ const ServiceFeatures = () => {
 	const isMobile = useMediaQuery({ maxWidth: 479 });
 	return (
 		<section className="features-section">
-			<div className="container" style={{paddingBottom: isMobile ? "50px" : "150px"}}>
+			<div className="container" >
 				<div className="section-title mb-60">
 					<h2 className="title title-xl-title text-white pb-0">
 					Service Features

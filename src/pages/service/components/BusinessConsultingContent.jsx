@@ -5,12 +5,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { NextIcon, PrevIcon } from "../../../components/Icon";
 import BlackDivider from "../../about/BlackDivider";
 import img from "../img/consulting-content.png";
+import { useMediaQuery } from "react-responsive";
 
 const BusinessConsultingContent = () => {
 	const ref = useRef();
-
+	const isMobile = useMediaQuery({ maxWidth: 479 });
 	return (
-		<section className="business-consulting-content">
+		<section className="business-consulting-content" style={{marginTop:isMobile ? "-30px" : ""}}>
 			<div className="container">
 				<div className="position-relative">
 					<div className="business-consulting-content-wrapper">

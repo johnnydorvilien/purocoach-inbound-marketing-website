@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useMediaQuery } from "react-responsive";
 import { Link, useNavigate } from "react-router-dom";
 import { AngleRight } from "../../components/Icon";
 import Title from "../../components/Title";
@@ -7,13 +7,14 @@ import img from "./img/shape1.png";
 import mobile from "./img/mobileframe.png";
 const WhoWeAre = () => {
 	const navigate = useNavigate();
+	const isMobile = useMediaQuery({ maxWidth: 479 });
 	return (
 		<>
 			<section className="service-section position-relative who-we-are">
-			{window.innerWidth > 479 && <div className="service-section-bg"></div>}
-                <img src={img} alt="" className="service-bottom-shape" />
+			{window.innerWidth > 991 && <div className="service-section-bg"></div>}
+			{window.innerWidth > 991 && <img src={img} alt="" className="service-bottom-shape" />}
 				<div className="container">
-				<div style={{background: `url(${window.innerWidth > 479 ? " ": mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",padding:"30px 10px"}}>
+				<div style={{background: `url(${window.innerWidth > 479 ? " ": mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",padding:isMobile ? "50px 10px 30px" : "30px 10px", marginTop: isMobile ? "-48px" : "0"}}>
 					<div className="boost-title">
 						<Title
 							className="text-base text-start text-md-center"

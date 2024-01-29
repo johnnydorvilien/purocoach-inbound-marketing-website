@@ -56,11 +56,11 @@ const BusinessStartups = () => {
 	};
 
 	return (
-		<section className="business-startup-section" style={{background: `url(${window.innerWidth > 479 ? " ": mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",}}>
-			{window.innerWidth > 479 && (
+		<section className="business-startup-section">
+			{window.innerWidth > 991 && (
 			<div className="service-section-bg"></div>
 			)}
-			{window.innerWidth > 479 && (
+			{window.innerWidth > 991 && (
 			<img
 				src={img}
 				alt=""

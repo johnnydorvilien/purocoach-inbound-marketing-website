@@ -8,8 +8,7 @@ import mobile from "./img/mobileabout.png";
 const AboutBanner = () => {
 	const [open, setOpen] = useState(false);
 	return (
-		<section className="banner-section about-banner" style={{
-			background: `url(${window.innerWidth > 479 ? bg : mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}}>
+		<section className="banner-section about-banner" >
 			{/* <div
 				className="shapes-bg"
 				// style={{
@@ -59,7 +58,7 @@ const AboutBanner = () => {
 						</div> */}
 					</div>
 					<div className="banner-thumb about-thumb text-center">
-						<img src={bannerImage} style={{paddingBottom:"40px",paddingTop:"100px"}} alt="" />
+						<img src={bannerImage} alt="" />
 					</div>
 				</div>
 			</div>

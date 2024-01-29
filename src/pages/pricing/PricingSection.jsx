@@ -22,24 +22,24 @@ const PricingSection = () => {
 	const isMobile = useMediaQuery({ maxWidth: 479 });
 	return (
 		<>
-			<section className="pricing-section pb-0 overflow-hidden">
+			<section className="pricing-section pb-0 overflow-hidden offer">
 				<img src={pricingShape} alt="" className="pricing_Shape" />
 				<div className="container">
 					<div className="pricing-tag">
-						{/* Pricing */}
-						Packages
+						Pricing
+						{/* Packages */}
 						</div>
 					<div className="pricing-spacing">
 						<div className="section-title mb-0">
-							<h2 className="title pb-0 text-base font-xl-57" style={{marginBottom:"10px"}}>
+							<h2 className="title pb-0 text-base font-xl-57" style={{marginBottom: isMobile ? " " : "10px"}}>
 								We Offer a Variety of Packages
 							</h2>
-							{/* <span className="shadow-border my-30px"></span> */}
+							<span className= {isMobile ? "shadow-border my-20px": "" }></span>
 							{window.innerWidth > 479 && (
 							<p className="txt mx-auto" style={{ maxWidth: "1170px" ,fontSize:"14px"}}>
 								Eager to meet the needs of any coach we work with, we
 								have various price points available to suit your
-								business. <br /> You will see a high return on your
+								business.  You will see a high return on your
 								investment, with an increase in clients and inbound
 								inquiries as a result of working with us.
 							</p>
@@ -53,8 +53,7 @@ const PricingSection = () => {
 					</div>
 				</div>
 			</section>
-			<section style={{
-						background: `url(${window.innerWidth > 479 ? bg : mobile}) no-repeat top right`,display:"block", backgroundSize: " cover ", backgroundPosition: " left "}}>
+			<section className="cards">
 				{/* <img
 					src={img}
 					alt=""
@@ -71,9 +70,9 @@ const PricingSection = () => {
 					</div>
 				</div>
 				{/* {featureOpen && <PlanFeatureDetails />} */}
-				<div className="container" style={{paddingBottom:isMobile ? "60px" : "150px",paddingTop:isMobile ? "60px" : "150px"}}>
+				<div className="container con2">
 				
-					<div className="row align-items-center flex-wrap-reverse">
+					<div className="row align-items-center flex-wrap-reverse reverse">
 						<div className="col-lg-6">
 							<div style={{ maxWidth: "699px", paddingTop:isMobile ? "50px" : " " }}>
 								<ContactSalesForm />

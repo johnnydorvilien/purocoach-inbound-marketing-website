@@ -18,7 +18,7 @@ const Footer = () => {
 								{/* <div className="mb-3">
 									<Logo />
 								</div> */}
-								{window.innerWidth > 479 && (
+								{window.innerWidth > 991 && (
           							<div className="mb-3">
             							<Logo />
           							</div>

@@ -13,22 +13,7 @@ const RequestDemo = () => {
 	const [message, setMessage] = useState("");
 	const [phone, setPhone] = useState("");
 	const isMobile = useMediaQuery({ maxWidth: 479 });
-	// const handleSubmit = (e) => {
-	// 	e.preventDefault();
-	// 	if (!name) {
-	// 		toast.error("Please Enter a name");
-	// 	} else if (!email) {
-	// 		toast.error("Please Enter an email address");
-	// 	} else if (!service) {
-	// 		toast.error("Please Select a service");
-	// 	} else if (!message) {
-	// 		toast.error("Please Enter message");
-	// 	} else if (!phone) {
-	// 		toast.error("Please Enter phone");
-	// 	} else {
-	// 		toast.success("Message Sent");
-	// 	}
-	// };
+	
 
 	const [submit, setSubmit] = useState(false);
 
@@ -56,8 +41,7 @@ const RequestDemo = () => {
 
 	return (
 		<>
-			<section className="request-demo-section" style={{
-						background: `url(${window.innerWidth > 479 ? bg : mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",marginTop:isMobile ? "-70px" : "-200px"}} >
+			<section className="request-demo-section" >
 				{/* <div
 					className="service-section-bg d-none d-md-block"
 					style={{

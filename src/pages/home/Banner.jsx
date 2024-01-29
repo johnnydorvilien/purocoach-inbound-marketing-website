@@ -19,9 +19,10 @@ const Banner = () => {
 	const [open, setOpen] = useState(false);
 	const screen = useScreen();
 	const isMobile = useMediaQuery({ maxWidth: 479 });
+	const istablet = useMediaQuery({ maxWidth: 991 });
 	return (
 		<>
-			<section className="banner-section" style={{
+			<section className="banner-section home" style={{
 						background: `url(${window.innerWidth > 479 ? bg : mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",
 					
 						}}>
@@ -51,7 +52,7 @@ const Banner = () => {
 										<img
 											src={bannerImage}
 											alt=""
-											style={{ marginLeft: "-110px", paddingTop: "70px",paddingBottom:"30px",}}
+											style={{ marginLeft:istablet ?  " ": "-110px", paddingTop:istablet ? "0" : "70px",paddingBottom:istablet ? "0" : "30px",}}
 										/>
 										</div>
                  			 		)}
