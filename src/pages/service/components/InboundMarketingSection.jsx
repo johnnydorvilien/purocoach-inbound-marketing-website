@@ -34,7 +34,7 @@ const InboundMarketingSection = ({ title }) => {
 								to meet your needs. So, when the inevitable 
 								marketing priority change happens, we easily change right alongside you.  
 							</p>
-							<br className="d-none d-sm-block" />
+							{/* <br className="d-none d-sm-block" /> */}
 							<button
 								className="cmn-btn btn-standard"
 								// style={{ minWidth: "273px" }}

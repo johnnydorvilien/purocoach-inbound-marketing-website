@@ -6,11 +6,13 @@ import partner2 from "./img/how-we-work.png";
 import partner from "./img/partner.png";
 import shape from "./img/shape.png";
 import mobile from "./img/mobilepartner.png";
+import { useMediaQuery } from "react-responsive";
 const PartnerWithUs = () => {
+	const isMobile = useMediaQuery({ maxWidth: 479 });
 	return (
 		<>
-			<section className="partner-with-us" style={{background: `url(${window.innerWidth > 479 ? " ": mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",}}>
-			{window.innerWidth > 479 && (
+			<section className="partner-with-us growyour" >
+			{window.innerWidth > 991 && (
 				<div className="feature-bg"></div>
 				)}
 				{/* <img
@@ -18,11 +20,8 @@ const PartnerWithUs = () => {
 					className="top-right-shape d-none d-sm-block"
 					alt=""
 				/> */}
-				<div className="container" style={{paddingBottom:"100px"}}>
-					
-					<div className="row align-items-center">
-						{window.innerWidth > 479 ? (
-                            <>
+				<div className="container">
+					<div className="row align-items-center partner">
                                 <div className="col-lg-6">
                                     <div className="partner-content text-white">
                                         <h2 className="title text-white" style={{ maxWidth: "525px" }}>
@@ -45,33 +44,6 @@ const PartnerWithUs = () => {
 								<div className="col-lg-6">
                                     <img src={partner} className="w-100 rounded-15" alt="" />
                                 </div>
-                            </>
-                        ) : (
-                            <>
-							<div className="col-lg-6">
-                                    <img src={partner} className="w-100 rounded-15" alt="" />
-                                </div>
-                                <div className="col-lg-6">
-                                    <div className="partner-content text-white">
-                                        <h2 className="title text-white" style={{ maxWidth: "525px" }}>
-                                            Partner With Us to Grow Your Business
-                                        </h2>
-                                        <p className="text" style={{ maxWidth: "625px" }}>
-                                            Our model is that we put our clients first and at the core of our business in order to provide a positive experience and build long-term relationships. That model is simple: we connect, we serve, and we support.
-                                        </p>
-                                        <div className="d-flex">
-                                            <Link
-                                                to="#partnerWithUs"
-                                                data-bs-toggle="modal"
-                                                className="cmn-btn btn-white"
-                                            >
-                                                Connect with Us Now
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </>
-                        )}
 					</div>
 					<div className="divider-white"></div>
 					<div className="row align-items-center ">

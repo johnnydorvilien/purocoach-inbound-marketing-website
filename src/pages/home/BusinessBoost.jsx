@@ -15,8 +15,7 @@ const BusinessBoost = () => {
 	const isMobile = useMediaQuery({ maxWidth: 479 });
 	return (
 		<>
-			<section className="partner-with-us" style={{
-						background: `url(${window.innerWidth > 479 ? img : mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}} >
+			<section className="partner-with-us our-process" >
 				{/* <div className="feature-bg"></div>
 				<img
 					src={shape}
@@ -33,7 +32,7 @@ const BusinessBoost = () => {
 					alt=""
 					className="service-bottom-shape d-md-none w-50"
 				/> */}
-				<div className="container" style={{paddingTop:"100px",paddingBottom:isMobile ? "0" :" 0"}}>
+				<div className="container con1">
 					<div className="boost-title">
 						<Title
 							title="Our Process"
@@ -82,7 +81,7 @@ const BusinessBoost = () => {
 						</button>
 					</li>
 				</ul>
-				<div className="container" style={{paddingBottom: isMobile ? "50px" : "150px"}}>
+				<div className="container con2">
 					{screen < 768 ? (
 						<>
 							<TabItem title="Business Consulting" openmenu="true" />
@@ -134,7 +133,7 @@ const TabItem = ({ title, openmenu }) => {
 					<div className="row g-4">
 						<div className="col-xl-6">
 							<div className="about--company">
-								<img src={consult} alt="" />
+								<img src={consult} className="leftimg" alt="" />
 								<div className="statement-left">
 									<h5>Requirement Gathering</h5>
 									<p>

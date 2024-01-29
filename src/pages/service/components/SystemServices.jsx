@@ -24,7 +24,7 @@ const SystemServices = ({ systemData }) => {
 		<>
 			<div className="system-solutions">
 			
-				<div className="container">
+				<div className="container space">
 								<h2
 									className="title "
 									style={{ textAlign:"center",justifyContent:"center",paddingTop:isMobile ? "100px" : "130px",paddingBottom: isMobile ? "25px" : "40px",marginBottom:"0"}}

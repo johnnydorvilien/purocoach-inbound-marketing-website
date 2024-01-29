@@ -4,16 +4,18 @@ import { Check2, VideoIcon } from "../../components/Icon";
 import BannerVideo from "./BannerVideo";
 import crmModalImg from "./img/crm-modal.png";
 import crm from "./img/crm.png";
+import { useMediaQuery } from "react-responsive";
 
 const TrustedCrm = () => {
 	const [open, setOpen] = useState(false);
 	const navigate = useNavigate();
+	const istablet = useMediaQuery({ maxWidth: 991 });
 	return (
 		<>
 			<section className="trusted-crm-section">
 				<div className="container">
 					<div className="row align-items-center gy-2">
-						<div className="col-lg-6">
+						<div className="col-lg-6 img">
 							<img src={crm} className="mw-100" alt="" />
 						</div>
 						<div className="col-lg-6 ps-xl-4">

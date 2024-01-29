@@ -8,7 +8,7 @@ const PuroCRM = () => {
 		<section className="puro-crm-section">
 			<div className="target-id" id="crm"></div>
 			<div className="container" style={{paddingBottom:"0px"}}>
-				<div className="row gy-5 align-items-center" style={{paddingTop:isMobile ? "0px" : "100px"}}>
+				<div className="row gy-5 align-items-center" >
 					<div className="col-lg-6">
 						<div className="crm-txt text-white">
 							<h2 className="title text-white">Consulting Services</h2>

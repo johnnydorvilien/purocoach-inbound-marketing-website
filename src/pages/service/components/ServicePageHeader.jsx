@@ -43,7 +43,7 @@ const ServicePageHeader = ({ title, sectionContent }) => {
 						className="text-base text-start"
 					/>
 					{sectionContent && (
-						<div className="row g-4" style={{marginTop:isMobile ? "40px" : "100px",}}>
+						<div className="row g-4" >
 							<div className="col-lg-6">
 								<FaqItems  data={data} id="service-1" />
 							</div>
@@ -55,26 +55,9 @@ const ServicePageHeader = ({ title, sectionContent }) => {
 				</div>
 				<img
 					src={img}
-					className="w-50"
-					style={{
-						maxWidth: "585px",
-						position: "absolute",
-						top: isMobile ? "0px" : "-60px",
-						right: isMobile? "0px":"0",
-					}}
+					className="w-50 back"
 					alt=""
 				/>
-				{/* <img
-					src={mobile}
-					className="w-50"
-					style={{
-						maxWidth: "585px",
-						position: "absolute",
-						top: "0px",
-						right: "0",
-					}}
-					alt=""
-				/> */}
 			</section>
 
 			{/* Who we are */}

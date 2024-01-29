@@ -1,20 +1,20 @@
 import React from "react";
 import { FaqItems } from "../../components/FaqItems";
 import Title from "../../components/Title";
-
+import { useMediaQuery } from "react-responsive";
 const WhayChooseUs = () => {
+	const isMobile = useMediaQuery({ maxWidth: 479 });
 	return (
 		<>
-			<section className="why-choose-us">
+			<section className="why-choose-us our-client">
 				<div className="container">
 					<div className="row gy-3">
 						<div className="col-lg-6">
 							<div className="choose-title">
-								<Title
-									className="text-start"
-									// title="Why Customers Choose Us"
-									title="Why Choose Us"
-								/>
+								<div className="section-title">
+									<h2 className="title">Why Choose Us</h2>
+						 			<span className="shadow-border"></span>
+								</div>
 							</div>
 							<div className="title-dark">
 								<FaqItems firstClose data={data} id="choose" />
@@ -22,11 +22,14 @@ const WhayChooseUs = () => {
 						</div>
 						<div className="col-lg-6 ps-xl-5">
 							<div className="choose-title">
-								<Title className="text-start" title="Our Client Success" />
+								<div className="section-title">
+									<h2 className="title">Our Client Success</h2>
+						 			<span className="shadow-border"></span>
+								</div>
 							</div>
 							<div
 								className="light-txt mb-3 mb-lg-5"
-								style={{ marginTop: "-10px" }}
+								style={{ marginTop:isMobile ? "0" : "-10px" }}
 							>
 								We strive to bring the best and brightest together from around the country to create successful digital strategies and a collaborative environment that caters to professional growth.
 							</div>
