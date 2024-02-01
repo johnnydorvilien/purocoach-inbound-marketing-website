@@ -2,14 +2,13 @@ import React from "react";
 import { FaqItems } from "../../../components/FaqItems";
 import { useMediaQuery } from "react-responsive";
 const ServiceFeatures = () => {
-	const isMobile = useMediaQuery({ maxWidth: 767 });
+	const isMobile = useMediaQuery({ maxWidth: 479 });
 	return (
 		<section className="features-section">
 			<div className="container" >
 				<div className="section-title mb-60">
 					<h2 className="title title-xl-title text-white pb-0">
-						Service Features
-						<span className="shadow-border"></span>
+					Service Features
 					</h2>
 				</div>
 				<div className="row g-4">

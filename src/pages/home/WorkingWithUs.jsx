@@ -39,7 +39,7 @@ const WorkingWithUs = () => {
 								</p>
 								<div className="d-flex flex-wrap gap-3 __crm-btn-grp">
 									<HashLink
-										to="/trial-signup"
+										to="/#request-demo"
 										className="cmn-btn"
 										style={{
 											// maxWidth: "238px",
@@ -49,7 +49,7 @@ const WorkingWithUs = () => {
 											alignItems: "center",
 										}}
 									>
-										{screen < 767 ? "Get in Touch" : "Get in Touch"}
+										{screen < 575 ? "Get in Touch" : "Get in Touch"}
 									</HashLink>
 								</div>
 							</div>

@@ -41,7 +41,7 @@ const BannerVideo = ({ open, setOpen, contactButton }) => {
 							</button>
 							{contactButton ? (
 								<HashLink
-									to="/trial-signup"
+									to="/#request-demo"
 									className="cmn-btn px-xl-5"
 									onClick={() => {
 										setTimeout(() => {

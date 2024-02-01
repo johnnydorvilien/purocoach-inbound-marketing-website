@@ -16,7 +16,7 @@ const BusinessStartups = () => {
 	const [email, setEmail] = useState("");
 	const [service, setService] = useState("Large Enterprise");
 	const [message, setMessage] = useState("");
-	const isMobile = useMediaQuery({ maxWidth: 767});
+	const isMobile = useMediaQuery({ maxWidth: 479 });
 
 	// const handleSubmit = (e) => {
 	// 	e.preventDefault();
@@ -60,19 +60,18 @@ const BusinessStartups = () => {
 			{window.innerWidth > 991 && (
 			<div className="service-section-bg"></div>
 			)}
-			{/* {window.innerWidth > 991 && (
+			{window.innerWidth > 991 && (
 			<img
 				src={img}
 				alt=""
 				className="service-bottom-shape d-none d-md-block"
 			/>
-			)} */}
+			)}
 			<div className="container">
-				<div className="section-title d-flex mb-60">
-					<Rocket />
+				<div className="section-title mb-60">
 					<h2 className="title title-xl-title text-start text-sm-center text-base pb-0">
 						{/* <Rocket /> Business Startups */}
-						Power Your Start-Up Forward With a Business Coach
+						<Rocket />Power Your Start-Up Forward With a Business Coach
 					</h2>
 				</div>
 				<div className="row g-3">

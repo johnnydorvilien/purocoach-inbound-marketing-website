@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
 import RangeSlider from "react-range-slider-input";
 import Select from "../../components/Select";
 import img from "./img/yourgrowth.png";
@@ -27,7 +26,8 @@ const EarningEstimator = () => {
 
 	return (
 		<>
-			<section className="earning-estimator-section">
+			<section className="earning-estimator-section" style={{
+						background: `url(${window.innerWidth > 479 ? img : mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%"}}>
 				{/* <div className="earning-estimator-bg"></div> */}
 				<div>
 
@@ -47,12 +47,12 @@ const EarningEstimator = () => {
 									<label className="light-label">
 										{/* 1. What is the amount you are targeting (1 -5
 										years)? */}
-										<span>1.</span><div>Increase online visibility</div>
+										<span>1.</span> Increase online visibility
 									</label>
 									
 									<label className="light-label">
 										{/* 2. What is your coaching industry? */}
-										<span>2.</span><div> Reach your exact targeted audience</div>
+										<span>2.</span> Reach your exact targeted audience
 									</label>
 									{/* <Select
 										value={industry}
@@ -62,7 +62,7 @@ const EarningEstimator = () => {
 									<div className="left-line bg-dark"></div> */}
 									<label className="light-label">
 										{/* 3. How many client do you want to coach a week? */}
-										<span>3.</span> <div>Generate and attract qualified leads</div>
+										<span>3.</span> Generate and attract qualified leads
 									</label>
 									{/* <Select
 										value={coach}
@@ -77,19 +77,19 @@ const EarningEstimator = () => {
 									</button> */}
 									<label className="light-label">
 										{/* 3. How many client do you want to coach a week? */}
-										<span>4.</span><div> Keep your prospects engaged</div>
+										<span>4.</span> Keep your prospects engaged
 									</label>
 									<label className="light-label">
 										{/* 3. How many client do you want to coach a week? */}
-										<span>5.</span><div> Delight each prospect with great content</div>
+										<span>5.</span> Delight each prospect with great content
 									</label>
 									<label className="light-label">
 										{/* 3. How many client do you want to coach a week? */}
-										<span>6.</span><div>Measure results and track progress</div>
+										<span>6.</span> Measure results and track progress
 									</label>
 									<label className="light-label">
 										{/* 3. How many client do you want to coach a week? */}
-										<span>7.</span> <div>Continue to scale and grow</div>
+										<span>7.</span> Continue to scale and grow
 									</label>
 								</div>
 							</form>
@@ -115,14 +115,13 @@ const EarningEstimator = () => {
 									your targeted outcome) */}
 									Reach out, and let us cultivate success together.  
 								</p>
-								<Link
+								<button
 									type="button"
 									className="cmn-btn btn-fullwidth btn-white mt-40"
-									to="/trial-signup"
 								>
 									{/* Lets Draw you the plan */}
 									Let’s us draw you a strategy plan
-								</Link>
+								</button>
 							</div>
 							{/* )} */}
 						</div>
