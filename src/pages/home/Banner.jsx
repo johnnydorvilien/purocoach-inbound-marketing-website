@@ -59,6 +59,7 @@ const Banner = () => {
 								</div>
 							</div>
 				</div>
+				
 			</section>
 			<BannerVideo open={open} setOpen={setOpen} />
 		</>
